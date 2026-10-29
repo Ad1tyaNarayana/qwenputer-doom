@@ -1,0 +1,30 @@
+{
+  "phase": "full-frame",
+  "full_frame_completed": false,
+  "wall_limit_seconds": 120.0,
+  "mode": "DMC port on faithful compact Triton circuit, fp32 CUDA graph; not stock HF",
+  "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+  "reference_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+  "reference_tokens_total": 6342933,
+  "reference_tokens_used_as_inputs": false,
+  "reference_machine_run_called": false,
+  "torch": "2.14.1+cu130",
+  "triton": "3.8.0",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "ram_base": 16777216,
+  "ram_bytes": 65536,
+  "drom_base": 33554432,
+  "drom_bytes": 4194304,
+  "graph": {
+    "chip_layers": 44,
+    "dims": 2679
+  },
+  "setup_seconds": 3.5030108000000837,
+  "source_adaptation": "Standalone FreeRun omits merged-chat-only Q embedding table family. Memory map uses frozen prepare.py. Executor2 arithmetic kernels unchanged.",
+  "capture_warmup_seconds": 1.0409492999997383,
+  "stop_reason": "requested_token_boundary",
+  "checkpoint_offset": 6230066,
+  "generated_tokens": 6230066,
+  "gpu_strips_extracted": 24,
+  "compute_seconds_total": 2990.4883565000196
+}

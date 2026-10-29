@@ -1,0 +1,16 @@
+{
+  "reason": "Windows sharing violation replacing progress.json while a reader held it",
+  "circuit_arithmetic_changes": false,
+  "game_reset": false,
+  "failed_attempt_generated_tokens_validated": 6311969,
+  "saved_actual_checkpoint_offset": 6230049,
+  "discarded_but_validated_tokens_regenerated": 81920,
+  "failed_actual_trace_sha256": "983165bd8c809feda191f874106916c10eb93e83dd0d8abbb41ca5da87fb220c",
+  "failure_report_original_sha256": "ba3246f12703fb07e53e00c7adfbd606c271ccca3faa208aa8efec8e7b3d56f6",
+  "checkpoint_recovery_smoke_future_tokens": 17,
+  "recovered_checkpoint_offset": 6230066,
+  "final_checkpoint_offset": 6342933,
+  "fix": "Bounded external-file replacement retry; status reader uses FileShare.ReadWrite|Delete",
+  "retained_path_compute_seconds": 3044.574422900019,
+  "timing_note": "Retained-path sum excludes regenerated discarded work, setup, capture, IO, checks, extraction and recovery downtime. The first long attempt was interrupted only by IO."
+}

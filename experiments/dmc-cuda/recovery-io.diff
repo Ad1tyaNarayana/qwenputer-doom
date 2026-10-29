@@ -1,0 +1,27 @@
+--- a/full_worker.py
++++ b/full_worker.py
+@@ -5,14 +5,22 @@
+ FRAME_SHA='6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2'
+ FINAL_RAM_SHA='b9ea6e4ad1a05162f571970604e1a085078d8cf6ae21da48749b47f4dd80b3ef'
+ 
++def replace_shared(temporary,path):
++ for attempt in range(100):
++  try:
++   temporary.replace(path);return
++  except PermissionError:
++   if attempt==99:raise
++   time.sleep(0.05)
++
+ def atomic_json(path,value):
+- temp=path.with_suffix('.tmp');temp.write_text(json.dumps(value,indent=2));temp.replace(path)
++ temp=path.with_suffix('.tmp');temp.write_text(json.dumps(value,indent=2));replace_shared(temp,path)
+ 
+ def save_state(fr,offset,path,compute_seconds):
+  import torch
+  heads=[s for s in fr.ex.steps if s['kind']=='head'];assert torch.count_nonzero(fr.ex.y).item()==0
+  data={'elf_sha256':ELF_SHA,'offset':offset,'x':fr.x.detach().cpu().clone(),'tok':fr.tok.detach().cpu().clone(),'heads':[{'S':s['S'].detach().cpu().clone(),'hist':s['hist'].detach().cpu().clone()} for s in heads],'compute_seconds':compute_seconds}
+- temp=path.with_suffix('.tmp');torch.save(data,temp);temp.replace(path)
++ temp=path.with_suffix('.tmp');torch.save(data,temp);replace_shared(temp,path)
+ 
+ def draw_strip(frame,coverage,descriptor,palette,indices):
+  import numpy as np

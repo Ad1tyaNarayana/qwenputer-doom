@@ -1,0 +1,11 @@
+Engine: DMC100-Doom by Artur Bieniek, derived from id Software Doom and
+Doomgeneric. GPL-2.0-or-later. User-supplied source fork and platform:
+https://github.com/atc1441/Vape_DOOM_ScreenShare/tree/710f452b59decb07e8b34bad9a66875657d63484/PixoAspire_DOOM_Port
+platform.c preserves the upstream GPL notice because it derives from the
+upstream engine/stub/stub_platform.c and supplies real Qwenputer I/O.
+New files are MIT where marked. Linking them to Doom produces a GPL-covered
+combined program. See COPYING and preserve all upstream author notices.
+The sibling doom-baremetal glue supplies minilib.c/libc_extra.c and builds
+Zig compiler_rt. Its LICENSE-Zig-MIT notice must accompany any distribution
+containing that runtime. No game assets, derived tables or binaries are
+part of this source export.

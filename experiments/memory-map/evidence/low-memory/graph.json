@@ -1,0 +1,9 @@
+{
+  "chip_layers": 44,
+  "dims": 2679,
+  "key_heads": 627,
+  "logical_value_heads": 1247,
+  "ram_key_heads": 64,
+  "drom_key_heads": 512,
+  "logical_recurrent_fp32_bytes": 81723392
+}

@@ -1,0 +1,8 @@
+{
+  "gpu_trace_matches_mac_circuit_trace": true,
+  "tokens_compared": 142,
+  "gpu_ram_matches_mac_ram_sha256": true,
+  "gpu_recurrent_ram_matches_expected_bytes": 65536,
+  "mismatches": 0,
+  "actual_ram_sha256": "dd36a338b92a798beb89a3b2eda21de78bc685dfc401409866b86432809c31d3"
+}

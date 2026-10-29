@@ -1,0 +1,23 @@
+[
+  {
+    "case": "small",
+    "actual_chip_layers": 14,
+    "estimated_dense_parameters": 2485657984,
+    "estimated_dense_bf16_parameter_bytes": 4971315968,
+    "basis": "Same standalone HF hidden2816, intermediate9216 and16key/32valueheads as earlier32/64KiB reports. Analytical extrapolation only. Dense weights were not emitted."
+  },
+  {
+    "case": "low-memory",
+    "actual_chip_layers": 44,
+    "estimated_dense_parameters": 6212045824,
+    "estimated_dense_bf16_parameter_bytes": 12424091648,
+    "basis": "Same standalone HF hidden2816, intermediate9216 and16key/32valueheads as earlier32/64KiB reports. Analytical extrapolation only. Dense weights were not emitted."
+  },
+  {
+    "case": "scale",
+    "actual_chip_layers": 584,
+    "estimated_dense_parameters": 73287026944,
+    "estimated_dense_bf16_parameter_bytes": 146574053888,
+    "basis": "Same standalone HF hidden2816, intermediate9216 and16key/32valueheads as earlier32/64KiB reports. Analytical extrapolation only. Dense weights were not emitted."
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "held_reader_released_after_seconds": 0.2,
+  "replacement_succeeded": true,
+  "elapsed_seconds": 0.25377060000027996,
+  "changes": "External file replacement only; no circuit or game state changes"
+}

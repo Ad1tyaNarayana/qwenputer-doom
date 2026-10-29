@@ -1,0 +1,15 @@
+{
+  "generated_tokens_compared": 6342933,
+  "token_mismatches": 0,
+  "gpu_rgb565_equals_independent_mac_reference": true,
+  "gpu_png_pixels_equal_independent_mac_reference": true,
+  "gpu_ram_bytes_equal_independent_mac_reference": 65536,
+  "actual_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+  "actual_rgb565_sha256": "6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+  "actual_png_sha256": "2c2a974e27c1444d2dceab9451c3e22c6d1e3b7408a52a6f983b222351076dc4",
+  "actual_ram_sha256": "b9ea6e4ad1a05162f571970604e1a085078d8cf6ae21da48749b47f4dd80b3ef",
+  "gpu_strips": 25,
+  "coverage_pixels": 76800,
+  "checkpoint_offset": 6342933,
+  "reference_pixels_or_reference_state_used_as_gpu_inputs": false
+}

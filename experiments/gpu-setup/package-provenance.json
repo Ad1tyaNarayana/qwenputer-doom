@@ -1,0 +1,31 @@
+{
+  "project_urls": {
+    "Homepage": "https://github.com/triton-lang/triton-windows"
+  },
+  "version": "3.8.0.post29",
+  "wheel": {
+    "comment_text": null,
+    "core-metadata": {
+      "sha256": "6a9d58d650350dfb83e35ee2af46ccb858ab38cd3bc8dd7d9cb9dd3c7e30515d"
+    },
+    "digests": {
+      "blake2b_256": "0c3c6be3de0febab8f0708b32377c59d6f963a492622ce79762ec08ddc7496a8",
+      "md5": "3663b57e4d495fcc95cacce7ae36c6a8",
+      "sha256": "1d0fd6a6cf36ba5cced997177068e328d015e42cd4300f6995fff5a6f8707aff"
+    },
+    "downloads": -1,
+    "filename": "triton_windows-3.8.0.post29-cp314-cp314-win_amd64.whl",
+    "has_sig": false,
+    "md5_digest": "3663b57e4d495fcc95cacce7ae36c6a8",
+    "packagetype": "bdist_wheel",
+    "python_version": "cp314",
+    "requires_python": "<3.15,>=3.10",
+    "size": 54097540,
+    "upload_time": "2026-09-28T21:59:03",
+    "upload_time_iso_8601": "2026-09-28T21:59:03.500524Z",
+    "url": "https://files.pythonhosted.org/packages/0c/3c/6be3de0febab8f0708b32377c59d6f963a492622ce79762ec08ddc7496a8/triton_windows-3.8.0.post29-cp314-cp314-win_amd64.whl",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "documentation": "https://github.com/triton-lang/triton-windows/blob/readme/README.md"
+}

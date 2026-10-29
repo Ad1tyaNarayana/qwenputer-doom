@@ -1,0 +1,12 @@
+The new port glue and scripts are SPDX MIT, as marked per file.
+Doomgeneric and its original Doom engine are GPL-2.0-or-later. The build script
+requires the unmodified upstream source at e257a09527062bfb986b6e5e0780839b6cbd5b71.
+No engine source, engine binary, or game data is included in this directory.
+Any combined executable remains subject to Doom's GPL terms. Preserve its
+upstream notices and make corresponding source available when distributing it.
+Zig compiler_rt is built from the user's Zig installation; its MIT notice is
+included as LICENSE-Zig-MIT. No Linux musl code is linked: only its headers
+are used to compile the engine and port.
+The shareware IWAD is an external, local build input. No rights in that data
+are supplied by these code licenses. Never publish a WAD-bearing ELF, RAM dump,
+converted game-data pack, or raw extracted framebuffer as part of the source.

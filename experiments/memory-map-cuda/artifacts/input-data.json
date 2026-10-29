@@ -1,0 +1,32 @@
+{
+  "drom_nonzero_words_offset_value": [
+    [
+      0,
+      2147581824
+    ],
+    [
+      2097152,
+      2864434397
+    ],
+    [
+      4194300,
+      305419896
+    ]
+  ],
+  "boot_ram_words_offset_value": [
+    [
+      4,
+      305441741
+    ],
+    [
+      32832,
+      2309737967
+    ],
+    [
+      65528,
+      1437209140
+    ]
+  ],
+  "drom_sha256": "6d20377b1e847ab92e9f12e8490b6232ac022b7e602bc924abd53bfe3370c97f",
+  "case_name": "widths-banks-and-rom"
+}

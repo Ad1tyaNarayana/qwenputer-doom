@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "stop_reason": null,
+  "peak_sampled_rss_bytes": 6885097472,
+  "wall_limit_seconds": 300.0,
+  "rss_limit_bytes": 8589934592
+}

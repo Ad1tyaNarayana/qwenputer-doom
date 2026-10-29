@@ -1,0 +1,50 @@
+{
+  "rv/spec.py": {
+    "original_sha256": "30b0095b23d2c9b963a25ff60cff6d21281f100e777adb8b99e024201af600ad",
+    "scratch_sha256": "c1a16147a688c06fd7ece0364b85fcfe46a5451fa098d07abbcd8a940389acf2",
+    "replacements": [
+      [
+        "DROM_BASE, DROM_WORDS = 0x20000, 1 << 15",
+        "DROM_BASE, DROM_WORDS = 0x02000000, 65536"
+      ],
+      [
+        "RAM_BASE, RAM_WORDS = 0x0, 1 << 13",
+        "RAM_BASE, RAM_WORDS = 0x01000000, 16384"
+      ],
+      [
+        "DATA_BASE = 0x100",
+        "DATA_BASE = RAM_BASE + 0x100"
+      ]
+    ]
+  },
+  "rv/core.py": {
+    "original_sha256": "2205b32147b9fd8e17819934ace20b0cf33336c2b98c51ddc760b95788c54210",
+    "scratch_sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0",
+    "replacements": [
+      [
+        "def build(target:",
+        "def region_literals(bits, base, size):\n    \"\"\"Upper address literals for an aligned power-of-two memory window.\"\"\"\n    if size <= 0 or size & (size - 1) or base % size or not 0 <= base < base + size <= 1 << 32:\n        raise ValueError((base, size))\n    width = size.bit_length() - 1\n    return [bits[i] if base >> i & 1 else 1 - bits[i] for i in range(width, 32)]\n\n\ndef build(target:"
+      ],
+      [
+        "    c = RvCore(target, text)",
+        "    if text is not None:\n        raise ValueError(\"This memory-map prototype supports the standalone CPU only.\")\n    c = RvCore(target, text)"
+      ],
+      [
+        "hl = lits_of(EA[13:17], h)",
+        "hl = lits_of(EA[13:(4 * S.DROM_WORDS).bit_length() - 1], h)"
+      ],
+      [
+        "in_ram = c.and_([1 - b for b in EA[15:32]], \"in_ram\")",
+        "in_ram = c.and_(region_literals(EA, S.RAM_BASE, 4 * S.RAM_WORDS), \"in_ram\")"
+      ],
+      [
+        "in_drom = c.and_([1 - b for b in EA[18:32]] + [EA[17]], \"in_drom\")",
+        "in_drom = c.and_(region_literals(EA, S.DROM_BASE, 4 * S.DROM_WORDS), \"in_drom\")"
+      ],
+      [
+        "    for h in range(S.RAM_WORDS >> 8):\n        r0, r1 = {}, {}\n        for wi in range(S.RAM_WORDS):\n            if (wi & 15 | (wi >> 12) << 4) != h or not m.ram[wi]:\n                continue\n            row = np.zeros(HD)\n            row[list(REF_COLS)] = A_REF\n            for i in range(32):\n                row[2 + i] = A_BIT * (m.ram[wi] >> i & 1)\n            (r1 if wi >> 4 & 1 else r0)[wi >> 5 & 127] = row\n        c.tables[f\"ram{h}\"].init = [r0, r1]",
+        "    for h in range(S.RAM_WORDS >> 8):\n        c.tables[f\"ram{h}\"].init = [{}, {}]\n    for wi, value in enumerate(m.ram):\n        if not value:\n            continue\n        h = wi & 15 | (wi >> 12) << 4\n        row = np.zeros(HD)\n        row[list(REF_COLS)] = A_REF\n        for i in range(32):\n            row[2 + i] = A_BIT * (value >> i & 1)\n        c.tables[f\"ram{h}\"].init[wi >> 4 & 1][wi >> 5 & 127] = row"
+      ]
+    ]
+  }
+}

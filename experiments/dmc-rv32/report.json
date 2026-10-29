@@ -1,0 +1,73 @@
+{
+  "kind": "DMC E1M1 software reference execution; no compiled neural execution",
+  "instructions": 3885544,
+  "tokens": 6342933,
+  "halted": true,
+  "exit_code": 0,
+  "fault": null,
+  "pc": 409012,
+  "elapsed_seconds": 6.308970928192139,
+  "output": "QWENPUTER_DMC_START\nQWENPUTER_DMC_FRAME_READY\n",
+  "memory": {
+    "frame_base": 16791248,
+    "frame_bytes": 15200,
+    "plan_arena_bytes": 3848,
+    "arena_end": 16834560,
+    "stack_top": 16842752,
+    "minimum_sp": 16841840,
+    "stack_used": 912
+  },
+  "strips": 25,
+  "written_pixels": 76800,
+  "frame_sha256": "6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+  "unique_colors": 147,
+  "game_state": {
+    "gamestate": 0,
+    "gameepisode": 1,
+    "gamemap": 1,
+    "gametic": 2,
+    "leveltime": 2
+  },
+  "elf": {
+    "sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+    "entry": 262144,
+    "elf_flags": 0,
+    "sections": [
+      {
+        "name": ".text",
+        "address": 262144,
+        "bytes": 149072,
+        "write": false,
+        "execute": true
+      },
+      {
+        "name": ".rodata",
+        "address": 33554432,
+        "bytes": 31328,
+        "write": false,
+        "execute": false
+      },
+      {
+        "name": ".nor",
+        "address": 33585760,
+        "bytes": 2453504,
+        "write": false,
+        "execute": false
+      },
+      {
+        "name": ".data",
+        "address": 16777472,
+        "bytes": 260,
+        "write": true,
+        "execute": false
+      },
+      {
+        "name": ".bss",
+        "address": 16777744,
+        "bytes": 13504,
+        "write": true,
+        "execute": false
+      }
+    ]
+  }
+}

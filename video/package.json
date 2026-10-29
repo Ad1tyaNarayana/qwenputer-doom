@@ -1,0 +1,22 @@
+{
+  "name": "qwenputer-doom-launch-video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio",
+    "render:vertical": "remotion render LaunchVertical out/qwenputer-doom-vertical.mp4",
+    "render:landscape": "remotion render LaunchLandscape out/qwenputer-doom-landscape.mp4",
+    "render": "npm run render:vertical && npm run render:landscape"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.530",
+    "@remotion/google-fonts": "4.0.530",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.530"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}

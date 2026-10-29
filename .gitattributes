@@ -1,0 +1,5 @@
+# Preserve the original Windows execution reports and GPU samples byte for byte.
+# Raw tool logs and patch context retain their original whitespace.
+experiments/memory-map-cuda/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/dmc-cuda/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+experiments/dmc-cuda/*.diff -whitespace

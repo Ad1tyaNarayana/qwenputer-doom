@@ -1,0 +1,25 @@
+{
+  "upstream_revision": "ca13310e2f9f788d1dd3feeea8213c1b0c23913c",
+  "files": {
+    "source/full_worker.py": "d231698c75d1562b68c77cdc7b5802bdb80dc4d869c0d8f856074ce4a81f0da9",
+    "source/prefix_probe.py": "b02b2706225809d69d1d207a09b5e70f5e76fba07c9127deb13040ee33fc0313",
+    "source/io_retry_probe.py": "67c57bb40fda80a9902ab341058f2090c7c85f5de529234a6c03d0d68608ca0a",
+    "source/runtime.py": "8f9ff6803b9f67df458bafd1878b2dbba63adc14addef8795deb3268635ed2a0",
+    "source/reference_trace_original.py": "055b974e58a0460a17f8d840eda43d8ffe29dbf27e47366d15227ca8bf5b91c2",
+    "source/collect_proof.py": "10d5e429ca72e34ab632a6b3e27421bade4369d3ba905e98b1b229a4e7d846e3",
+    "source/full_worker_original.py": "f19808722556d163211c41bfd14bfe870cf93195914cdf3f4756cb2cebb93944",
+    "source/reference_trace.py": "3b2939df25d2d9d643c39b5e082fc60783062eb6e6015fb86bbdf3342f4e1a1b",
+    "source/helpers/prepare.py": "54e47fd4b31e34825805b25583e558554dc78851691d9e7f17faf1808b73e9ba",
+    "source/helpers/state.py": "d87fb4c0b4918d6043bbc03ee9e4d4a46f11e35df41816e5dc9b06ecb71ccb34"
+  },
+  "excluded_private_inputs": [
+    "WAD-bearing doom.elf",
+    "reference.tokens.u32",
+    "actual.tokens.u32",
+    "failed actual trace",
+    "checkpoint.pt",
+    "RAM snapshots",
+    "raw palette/strip buffers"
+  ],
+  "actual_frame_png": "Provided separately for local use, not part of this safe source export."
+}

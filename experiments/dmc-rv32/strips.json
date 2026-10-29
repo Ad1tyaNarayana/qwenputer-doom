@@ -1,0 +1,292 @@
+{
+  "kind": "Reference-derived stop offsets only; no pixels or model state",
+  "token_offsets": "Cumulative record tokens; excludes prefill and GO",
+  "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+  "metadata_addresses": {
+    "pump_lut": 16790688,
+    "qp_strip_ptr": 16791216,
+    "qp_strip_x": 16791220,
+    "qp_strip_y": 16791224,
+    "qp_strip_h": 16791228,
+    "qp_strip_n": 16791232,
+    "qp_strip_flags": 16791236,
+    "qp_strip_serial": 16791240
+  },
+  "strips": [
+    {
+      "ptr": 16794448,
+      "x": 0,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 1,
+      "generated_token_offset": 1187959,
+      "instruction_offset": 718375
+    },
+    {
+      "ptr": 16791248,
+      "x": 16,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 2,
+      "generated_token_offset": 1344153,
+      "instruction_offset": 811231
+    },
+    {
+      "ptr": 16794448,
+      "x": 32,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 3,
+      "generated_token_offset": 1521228,
+      "instruction_offset": 918207
+    },
+    {
+      "ptr": 16791248,
+      "x": 48,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 4,
+      "generated_token_offset": 1689326,
+      "instruction_offset": 1018319
+    },
+    {
+      "ptr": 16794448,
+      "x": 64,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 5,
+      "generated_token_offset": 1859109,
+      "instruction_offset": 1120619
+    },
+    {
+      "ptr": 16791248,
+      "x": 80,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 6,
+      "generated_token_offset": 2115438,
+      "instruction_offset": 1281116
+    },
+    {
+      "ptr": 16794448,
+      "x": 96,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 7,
+      "generated_token_offset": 2345447,
+      "instruction_offset": 1425456
+    },
+    {
+      "ptr": 16791248,
+      "x": 112,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 8,
+      "generated_token_offset": 2567579,
+      "instruction_offset": 1563801
+    },
+    {
+      "ptr": 16794448,
+      "x": 128,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 9,
+      "generated_token_offset": 2843094,
+      "instruction_offset": 1736663
+    },
+    {
+      "ptr": 16791248,
+      "x": 144,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 10,
+      "generated_token_offset": 3116716,
+      "instruction_offset": 1907177
+    },
+    {
+      "ptr": 16794448,
+      "x": 160,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 11,
+      "generated_token_offset": 3386708,
+      "instruction_offset": 2075394
+    },
+    {
+      "ptr": 16791248,
+      "x": 176,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 12,
+      "generated_token_offset": 3626983,
+      "instruction_offset": 2225239
+    },
+    {
+      "ptr": 16794448,
+      "x": 192,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 13,
+      "generated_token_offset": 3849944,
+      "instruction_offset": 2363670
+    },
+    {
+      "ptr": 16791248,
+      "x": 208,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 14,
+      "generated_token_offset": 4076136,
+      "instruction_offset": 2505201
+    },
+    {
+      "ptr": 16794448,
+      "x": 224,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 15,
+      "generated_token_offset": 4272494,
+      "instruction_offset": 2626211
+    },
+    {
+      "ptr": 16791248,
+      "x": 240,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 16,
+      "generated_token_offset": 4436923,
+      "instruction_offset": 2725103
+    },
+    {
+      "ptr": 16794448,
+      "x": 256,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 17,
+      "generated_token_offset": 4589566,
+      "instruction_offset": 2815675
+    },
+    {
+      "ptr": 16791248,
+      "x": 272,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 18,
+      "generated_token_offset": 4776972,
+      "instruction_offset": 2929064
+    },
+    {
+      "ptr": 16794448,
+      "x": 288,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 19,
+      "generated_token_offset": 4977217,
+      "instruction_offset": 3050536
+    },
+    {
+      "ptr": 16791248,
+      "x": 304,
+      "y": 0,
+      "h": 200,
+      "n": 16,
+      "flags": 0,
+      "serial": 20,
+      "generated_token_offset": 5162273,
+      "instruction_offset": 3163392
+    },
+    {
+      "ptr": 16794448,
+      "x": 0,
+      "y": 200,
+      "h": 8,
+      "n": 320,
+      "flags": 0,
+      "serial": 21,
+      "generated_token_offset": 5191854,
+      "instruction_offset": 3178465
+    },
+    {
+      "ptr": 16791248,
+      "x": 0,
+      "y": 208,
+      "h": 32,
+      "n": 100,
+      "flags": 0,
+      "serial": 22,
+      "generated_token_offset": 5550355,
+      "instruction_offset": 3399254
+    },
+    {
+      "ptr": 16794448,
+      "x": 100,
+      "y": 208,
+      "h": 32,
+      "n": 100,
+      "flags": 0,
+      "serial": 23,
+      "generated_token_offset": 5933875,
+      "instruction_offset": 3633751
+    },
+    {
+      "ptr": 16791248,
+      "x": 200,
+      "y": 208,
+      "h": 32,
+      "n": 100,
+      "flags": 0,
+      "serial": 24,
+      "generated_token_offset": 6230049,
+      "instruction_offset": 3814366
+    },
+    {
+      "ptr": 16794448,
+      "x": 300,
+      "y": 208,
+      "h": 32,
+      "n": 20,
+      "flags": 0,
+      "serial": 25,
+      "generated_token_offset": 6342214,
+      "instruction_offset": 3885116
+    }
+  ]
+}

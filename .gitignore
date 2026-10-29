@@ -1,0 +1,9 @@
+.upstream/
+.venv/
+.cache/
+__pycache__/
+.DS_Store
+# Private Doom inputs and run products: WADs, converted data, ELFs, traces, checkpoints
+private/
+*.wad
+*.WAD
