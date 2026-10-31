@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import subprocess
 from elf_info import inspect
+from workload import configure
 
 REVISION = '710f452b59decb07e8b34bad9a66875657d63484'
 p = argparse.ArgumentParser(description=__doc__)
@@ -15,6 +16,8 @@ p.add_argument('--gen', type=Path, required=True, help='Private converter genera
 p.add_argument('--nor', type=Path, required=True, help='Private E1M1 NOR image from mknor.py')
 p.add_argument('--libc', type=Path, required=True, help='Sibling doom-baremetal glue directory')
 p.add_argument('--out', type=Path, required=True)
+p.add_argument('--frames', type=int, help='Opt-in continuing mode, 1 to 1000000 displayed frames')
+p.add_argument('--input', type=Path, help='JSON per-tic key states; requires --frames')
 a = p.parse_args()
 r, gen, libc, out = (v.resolve() for v in (a.source, a.gen, a.libc, a.out))
 here = Path(__file__).resolve().parent
@@ -24,6 +27,10 @@ if revision != REVISION:
 if subprocess.check_output(['git', '-C', str(r), 'status', '--porcelain', '--untracked-files=all'], text=True):
     raise ValueError('Use a clean pinned source checkout.')
 out.mkdir(parents=True, exist_ok=True)
+if a.input and a.frames is None:
+    p.error('--input requires --frames')
+if a.frames is not None:
+    configure(a.frames, a.input, out)
 cc = [str(a.zig.resolve()), 'cc', '-target', 'riscv32-linux-musl',
       '-mcpu=generic_rv32+m+zba', '-mabi=ilp32', '-Oz', '-g',
       '-ffunction-sections', '-fdata-sections', '-ffreestanding', '-fno-builtin',
@@ -55,6 +62,8 @@ with (out / 'build.log').open('w') as log:
         obj = out / f'{i}_{source.stem}.o'
         flags = [v for v in cc if 'engine/stub/include' not in v] if source.name in (
             'minilib.c', 'libc_extra.c', 'platform.c') else cc
+        if a.frames is not None and source == here / 'platform.c':
+            flags = flags + ['-DQP_CONTINUING', '-I' + str(out)]
         command = flags + ['-c', str(source), '-o', str(obj)]
         commands.append(command)
         subprocess.run(command, check=True, stdout=log, stderr=log)
@@ -69,10 +78,17 @@ with (out / 'build.log').open('w') as log:
     command = cc + ['-nostdlib', '-static', '-fuse-ld=lld', '-Wl,--gc-sections',
                     '-Wl,-T,' + str(here / 'dmc.ld'), *objects, str(runtime),
                     '-o', str(out / 'doom.elf')]
+    if a.frames is not None:
+        command += ['-Wl,--wrap=TryRunTics']
     commands.append(command)
     subprocess.run(command, check=True, stdout=log, stderr=log)
 (out / 'commands-private.json').write_text(json.dumps(commands, indent=2) + '\n')
 info = inspect(out / 'doom.elf')
+if a.frames is not None:
+    workload_path = out / 'workload.json'
+    workload = json.loads(workload_path.read_text())
+    workload['elf_sha256'] = info['sha256']
+    workload_path.write_text(json.dumps(workload, indent=2) + '\n')
 info.pop('symbols')
 (out / 'elf-info.json').write_text(json.dumps(info, indent=2) + '\n')
 print(out / 'doom.elf')

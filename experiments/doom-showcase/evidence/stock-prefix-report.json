@@ -1,0 +1,247 @@
+{
+  "status": "pass",
+  "generated_tokens": 4096,
+  "mismatches": 0,
+  "stock_generate": true,
+  "initial_snapshot_only": true,
+  "reference_tokens_used_as_inputs": false,
+  "layer_offload_used": false,
+  "worker_sha256": "46ce55b0e33739c6e8d5dd652dd1aa00f24cd564d8512eafd7d704fc63dde76d",
+  "allocator_cap_bytes": 16106127360,
+  "free_vram_guard_bytes": 536870912,
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.21.0",
+  "minimum_free_bytes": 1143996416,
+  "prepare_manifest": {
+    "rv/spec.py": {
+      "original_sha256": "30b0095b23d2c9b963a25ff60cff6d21281f100e777adb8b99e024201af600ad",
+      "scratch_sha256": "dc10c15049ed87937b854e626e0940dc26e88ea2504518f95df738e3e507a016",
+      "replacements": [
+        [
+          "DROM_BASE, DROM_WORDS = 0x20000, 1 << 15",
+          "DROM_BASE, DROM_WORDS = 0x02000000, 1048576"
+        ],
+        [
+          "RAM_BASE, RAM_WORDS = 0x0, 1 << 13",
+          "RAM_BASE, RAM_WORDS = 0x01000000, 16384"
+        ],
+        [
+          "DATA_BASE = 0x100",
+          "DATA_BASE = RAM_BASE + 0x100"
+        ]
+      ]
+    },
+    "rv/core.py": {
+      "original_sha256": "2205b32147b9fd8e17819934ace20b0cf33336c2b98c51ddc760b95788c54210",
+      "scratch_sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0",
+      "replacements": [
+        [
+          "def build(target:",
+          "def region_literals(bits, base, size):\n    \"\"\"Upper address literals for an aligned power-of-two memory window.\"\"\"\n    if size <= 0 or size & (size - 1) or base % size or not 0 <= base < base + size <= 1 << 32:\n        raise ValueError((base, size))\n    width = size.bit_length() - 1\n    return [bits[i] if base >> i & 1 else 1 - bits[i] for i in range(width, 32)]\n\n\ndef build(target:"
+        ],
+        [
+          "    c = RvCore(target, text)",
+          "    if text is not None:\n        raise ValueError(\"This memory-map prototype supports the standalone CPU only.\")\n    c = RvCore(target, text)"
+        ],
+        [
+          "hl = lits_of(EA[13:17], h)",
+          "hl = lits_of(EA[13:(4 * S.DROM_WORDS).bit_length() - 1], h)"
+        ],
+        [
+          "in_ram = c.and_([1 - b for b in EA[15:32]], \"in_ram\")",
+          "in_ram = c.and_(region_literals(EA, S.RAM_BASE, 4 * S.RAM_WORDS), \"in_ram\")"
+        ],
+        [
+          "in_drom = c.and_([1 - b for b in EA[18:32]] + [EA[17]], \"in_drom\")",
+          "in_drom = c.and_(region_literals(EA, S.DROM_BASE, 4 * S.DROM_WORDS), \"in_drom\")"
+        ],
+        [
+          "    for h in range(S.RAM_WORDS >> 8):\n        r0, r1 = {}, {}\n        for wi in range(S.RAM_WORDS):\n            if (wi & 15 | (wi >> 12) << 4) != h or not m.ram[wi]:\n                continue\n            row = np.zeros(HD)\n            row[list(REF_COLS)] = A_REF\n            for i in range(32):\n                row[2 + i] = A_BIT * (m.ram[wi] >> i & 1)\n            (r1 if wi >> 4 & 1 else r0)[wi >> 5 & 127] = row\n        c.tables[f\"ram{h}\"].init = [r0, r1]",
+          "    for h in range(S.RAM_WORDS >> 8):\n        c.tables[f\"ram{h}\"].init = [{}, {}]\n    for wi, value in enumerate(m.ram):\n        if not value:\n            continue\n        h = wi & 15 | (wi >> 12) << 4\n        row = np.zeros(HD)\n        row[list(REF_COLS)] = A_REF\n        for i in range(32):\n            row[2 + i] = A_BIT * (value >> i & 1)\n        c.tables[f\"ram{h}\"].init[wi >> 4 & 1][wi >> 5 & 127] = row"
+        ]
+      ]
+    }
+  },
+  "constructor": {
+    "base_sha256": "a746a1d9826ca99a4a93c905fe2e9f0560cc900cc435e6fc97bc6e546409f620",
+    "constructor_sha256": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+    "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+    "arithmetic_sha256": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+    "reuse_sha256": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+    "reduced": true,
+    "stock_integer_counters": true,
+    "integer_counters_sha256": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+    "counter_ir_sha256": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+    "replacement_sites": [
+      "from chipformer.rv import ref as RF",
+      "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+      "    n_plain = len(srcs)",
+      "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+      "\"imm\": imm, \"r\": r, \"val\": val,"
+    ]
+  },
+  "geometry": {
+    "layers": 64,
+    "dims": 2113,
+    "heads": 627,
+    "ffn_units": 68923,
+    "max_units": 8260,
+    "max_heads": 16
+  },
+  "model": {
+    "parameters": 7115541760,
+    "bf16_parameter_bytes": 14231083520,
+    "hidden": 2304,
+    "config": {
+      "transformers_version": "5.21.0",
+      "architectures": null,
+      "output_hidden_states": false,
+      "return_dict": true,
+      "dtype": null,
+      "chunk_size_feed_forward": 0,
+      "is_encoder_decoder": false,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "problem_type": null,
+      "vocab_size": 230336,
+      "hidden_size": 2304,
+      "intermediate_size": 9216,
+      "num_hidden_layers": 65,
+      "num_attention_heads": 8,
+      "num_key_value_heads": 2,
+      "hidden_act": "silu",
+      "max_position_embeddings": 262144,
+      "initializer_range": 0.02,
+      "rms_norm_eps": 1e-06,
+      "use_cache": true,
+      "tie_word_embeddings": true,
+      "rope_parameters": {
+        "rope_type": "default",
+        "rope_theta": 10000000,
+        "partial_rotary_factor": 0.25,
+        "mrope_section": [
+          11,
+          11,
+          10
+        ],
+        "mrope_interleaved": true
+      },
+      "attention_bias": false,
+      "attention_dropout": 0.0,
+      "head_dim": 256,
+      "linear_conv_kernel_dim": 4,
+      "linear_key_head_dim": 128,
+      "linear_value_head_dim": 128,
+      "linear_num_key_heads": 16,
+      "linear_num_value_heads": 32,
+      "layer_types": [
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "linear_attention",
+        "full_attention"
+      ],
+      "pad_token_id": 230324,
+      "bos_token_id": 230324,
+      "eos_token_id": 230321,
+      "_name_or_path": "",
+      "attn_output_gate": true,
+      "model_type": "qwen3_5_text",
+      "output_attentions": false
+    },
+    "streamed_emitter": "def iter_layers(g: Graph, lay: Layout, tc: dict, first: int, prefix: str,\n                alloc: Alloc | None = None, keep: set[int] | None = None) -> dict:\n    \"\"\"Weights of the chip layers, named ``{prefix}layers.{first + i}.*``.\n\n    With ``keep``, the MLP sublayer of the nodes named ``exit.*`` also clears every chip dim\n    except ``keep`` (and the ballast), so nothing of the circuit is left for later layers.\n    \"\"\"\n    h, nk, nv = tc[\"hidden_size\"], tc[\"linear_num_key_heads\"], tc[\"linear_num_value_heads\"]\n    inter = tc[\"intermediate_size\"]\n    # With more value heads than key heads (4B: 32 vs 16), value head i reads key head\n    # i // r; a circuit head uses the first value head of its group and leaves the rest at zero.\n    r = nv // nk\n    assert r * nk == nv\n    f32 = torch.float32\n    out = {}\n    exit_level = None\n    if keep is not None:\n        exit_level = max(n.level for n in g.nodes if n.name.startswith(\"exit.\"))\n        assert all(n.level < exit_level for n in g.nodes if not n.name.startswith(\"exit.\"))\n        live = alloc.final if alloc else list(range(1, len(g.dims)))\n        exit_clear = [d for d in live if d not in keep]\n    one = Expr({ONE: 1})\n    for L in range(g.n_layers()):\n        p = f\"{prefix}layers.{first + L}.\"\n        qkv = torch.zeros(2 * nk * HD + nv * HD, h, dtype=f32)\n        convw = torch.zeros(2 * nk * HD + nv * HD, 1, tc[\"linear_conv_kernel_dim\"], dtype=f32)\n        zw = torch.zeros(nv * HD, h, dtype=f32)\n        bw = torch.zeros(nv, h, dtype=f32)\n        aw = torch.zeros(nv, h, dtype=f32)\n        ow = torch.zeros(h, nv * HD, dtype=f32)\n        gate = torch.zeros(inter, h, dtype=f32)\n        up = torch.zeros(inter, h, dtype=f32)\n        down = torch.zeros(h, inter, dtype=f32)\n        heads = [n for n in g.nodes if isinstance(n, Head) and n.level == 2 * L + 1]\n        for j, n in enumerate(heads):\n            vhs = n.vheads()\n            assert len(vhs) <= r, (n.name, len(vhs), r)\n            for base, chans in ((j * HD, n.q), (nk * HD + j * HD, n.k)):\n                for i, ch in chans.items():\n                    row(ch.expr, lay, qkv[base + i])\n                    for lag, w in enumerate(ch.taps):\n                        convw[base + i, 0, -1 - lag] = w\n            for x, vhd in enumerate(vhs):\n                vh = j * r + x  # value head x of this key head\n                base = 2 * nk * HD + vh * HD\n                for i, ch in vhd.v.items():\n                    row(ch.expr, lay, qkv[base + i])\n                    for lag, w in enumerate(ch.taps):\n                        convw[base + i, 0, -1 - lag] = w\n                # beta = sigmoid(128) = 1, or a write gate: sigmoid(256 g - 128), 1 or exactly 0\n                beta = Expr({ONE: 128}) if vhd.beta is None else 256 * vhd.beta - 128 * one\n                row(beta, lay, bw[vh])\n                row(vhd.a, lay, aw[vh])\n                for col, e in vhd.z.items():\n                    row(e, lay, zw[vh * HD + col])\n                for col, d, w in vhd.out:\n                    ow[lay.dim(d), vh * HD + col] += w\n        one = Expr({ONE: 1})\n        units = []  # (coef, a, b, output dim)\n        for n in g.nodes:\n            if not (isinstance(n, FFN) and n.level == 2 * L + 2):\n                continue\n            units += [(coef, a, b, n.out) for coef, a, b in n.terms]\n            if alloc and n.out in alloc.subtract:  # hand the slot over: remove the old value\n                units.append((-1, Expr({alloc.subtract[n.out]: 1}), one, n.out))\n        units += [(-1, Expr({o: 1}), one, o) for o in (alloc.clears.get(2 * L + 2, [])\n                                                       if alloc else [])]\n        if exit_level == 2 * L + 2:\n            units += [(-1, Expr({o: 1}), one, o) for o in exit_clear]\n        assert len(units) <= inter, (L, len(units), inter)\n        for u, (coef, a, b, d) in enumerate(units):\n            row(b, lay, gate[u], K)\n            row(a, lay, up[u], 1 / K)\n            down[lay.dim(d), u] = float(coef)\n        if exit_level == 2 * L + 2:  # the ballast goes too: -B per ballast dim\n            for i in range(lay.m):\n                u = len(units) + i\n                row(Expr({ONE: K}), lay, gate[u])\n                up[u, lay.off + i] = (lay.ballast / K) / (lay.ballast * lay.scale)\n                down[lay.off + i, u] = -1.0\n        layer = {\n            \"input_layernorm.weight\": torch.zeros(h, dtype=f32),\n            \"post_attention_layernorm.weight\": torch.zeros(h, dtype=f32),\n            \"linear_attn.in_proj_qkv.weight\": qkv,\n            \"linear_attn.in_proj_z.weight\": zw,\n            \"linear_attn.in_proj_a.weight\": aw,\n            \"linear_attn.in_proj_b.weight\": bw,\n            \"linear_attn.conv1d.weight\": convw,\n            \"linear_attn.dt_bias\": torch.full((nv,), -110.0, dtype=f32),\n            \"linear_attn.A_log\": torch.zeros(nv, dtype=f32),\n            \"linear_attn.norm.weight\": torch.ones(HD, dtype=f32),\n            \"linear_attn.out_proj.weight\": ow,\n            \"mlp.gate_proj.weight\": gate,\n            \"mlp.up_proj.weight\": up,\n            \"mlp.down_proj.weight\": down,\n        }\n        for k, t in layer.items():\n            check_bf16(p + k, t)\n        yield {p + k: t for k, t in layer.items()}\n\n",
+    "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+    "wrapper_sha256": "7bb6064a0d35afcdfc64c94ca7e32bbb263e3634a96ac0b55e77aa0cf389f2dc"
+  },
+  "elapsed_seconds": 240.619920000001,
+  "minimum_nvidia_free_bytes": 1143996416,
+  "nvidia_sampling_interval_seconds": 5,
+  "tokens_per_second": 17.022697040211728,
+  "actual_sha256": "8b31674511c9302aa7544fd50d2b85b2f68c10de61ec0a1625908724f58958eb",
+  "reference_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+  "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+  "peak_allocated_bytes": 14446153728,
+  "peak_reserved_bytes": 14459863040,
+  "timed_work": "PAD prefill, initial snapshot injection and stock greedy generate, including guard and observer; excludes construction",
+  "physical_memory": {
+    "minimum_free_bytes": 1143996416,
+    "below_guard": false,
+    "error": null
+  },
+  "allocator": {
+    "configuration": "expandable_segments:True",
+    "allocated_bytes": 14411548672,
+    "reserved_bytes": 14417920000,
+    "peak_allocated_bytes": 14446153728,
+    "peak_reserved_bytes": 14459863040,
+    "inactive_split_bytes": 0
+  },
+  "finished_utc": "2026-10-30T09:36:35.077964+00:00"
+}

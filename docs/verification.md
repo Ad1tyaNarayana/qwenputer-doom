@@ -1,0 +1,37 @@
+# Verify the CHIP-8 milestone
+
+The complete recorded game uses the upstream compact circuit tensor executor on the Mac CPU. The separate stock Hugging Face checks use compiled RISC-V weights without pretrained language-model weights.
+
+Run `.venv/bin/python tools/check_game.py` to check the saved evidence. It rebuilds two input schedules in temporary directories and verifies their distinct hit and miss outcomes with the reference machine. It then checks all 54,570 saved compact tokens against a fresh reference run of the saved firmware, reconstructs the emitted frames, checks frame hashes, and compares the stock-model prefix with the same trace. It also checks all 5,415 CUDA tokens, decodes their output bytes, and verifies that the resulting frame matches the first compact frame.
+
+The check passed during implementation and again during orchestration and independent review. The original execution generated every next token from the circuit's previous output. The reference only supplied a check and stopping budget. The saved game has 12 distinct frames.
+
+An independent GPT-6.1 Sol reviewer checked every GIF frame, the final PNG, and the HTML's embedded frame data against the saved pixels. Pause and frame selection were also exercised in the local browser. Review used the same model family requested for implementation.
+
+The stock model's five-token hello program was rerun independently and printed `H` before halting. The 16-token game-prefix result refers to the same firmware hash as the complete compact run. It proves a boot prefix, not a rendered frame.
+
+The subsequent Windows CUDA run generated one complete frame through stock Transformers layers using the same firmware. All 5,415 tokens matched; peak PyTorch allocation was 4,361,678,848 bytes. The single 76.37-second run includes prefill, state injection, generation, online checking, and checkpoint writes. It excludes compilation and reference generation. The executed harnesses and environment are preserved under `experiments/cuda`. This is a bounded correctness result, not a hardware benchmark or a full pretrained-model run.
+
+The separate 64 KiB RAM prototype was independently rerun using its exported wrapper on the Mac. All 27 generated tokens matched and printed `ABXY`: upper-half writes at `0x8000` and `0xfffc` preserved the lower-half alias sentinels. This checks the expanded address decoding and bank allocation in actual stock-model execution. It does not establish Doom compatibility or exhaustive memory correctness. The prototype overlaps the existing text bridge and is limited to the standalone CPU.
+
+Review found and corrected two reproducibility issues. The runner now saves the actual supplied firmware and its adjacent ROM and input files. A new two-frame run from a different source directory generated 10,484 matching tokens and saved the correct files. Setup now rejects modified upstream checkouts even when their HEAD is the pinned revision; this rejection was exercised with a temporary untracked file.
+
+The preserved ELF includes compiler debug paths for this project's source files. It is retained byte for byte because the execution and stock-model prefix identify it by SHA-256. No model credentials or private SSH material are included.
+
+The original Doom audit is a source and object-compilation experiment. Its memory calculation was rerun independently, and its corrected object section totals were recomputed during review. That audit itself does not link or run Doom. Subsequent experiments contain reproducible Doomgeneric and DMC ports with separate software-reference first-frame evidence. The later DMC CUDA experiment also completed an actual circuit-generated frame, as described below.
+
+The expanded memory runtime was independently rerun with its direct sparse constructor: 296 self-fed tokens across 12 cases, with all 65,536 recurrent RAM bytes matching after each case. The upstream-constructor comparison was inspected; an independent attempt exceeded a deliberately smaller 4 GiB guard before reaching the comparison. The existing successful comparison covers 188 tensors. The 8 MiB / 8 MiB run retains its narrower 121-token scope and does not claim full-state extraction.
+
+For compact GPU acceleration, independent review checked both traces against the stock-model trace and recomputed all five-run medians and ranges. The isolated token-table adaptation omits the merged-chat-only Q family, whose position at the end preserves standalone family IDs. The timing loop includes graph replay, next-token decoding and embedding, output copies, and CPU transfer; setup, reset, and warm-up are excluded.
+
+The complete GPU run subsequently generated all 54,570 tokens and twelve frames. Independent review compared the full trace, every GIF frame, PNG and embedded HTML frame data with the Mac evidence. The expanded-memory GPU probe separately generated 142 tokens and matched all 65,536 extracted RAM bytes. Its preparation and state helpers match the CPU experiment.
+
+Review also tightened the Doomgeneric reproduction gates. Modified upstream source is rejected before compilation, and a run that exhausts its instruction budget without producing the expected frame exits unsuccessfully. Both failures were exercised. Game assets and the executable that embeds them remain local; source exports preserve licensing notices and first-frame scope.
+
+The DMC compact Triton circuit subsequently generated all 6,342,933 tokens with zero mismatches and reached HALT. At each of 25 generated strip markers, the observer read descriptors, palette and pixel indices from actual recurrent GPU RAM. It assembled 76,800 pixels without reference pixels as inputs. Independent local comparison checked every token, every RGB565 byte, decoded PNG pixels and all 65,536 final RAM bytes against the Mac reference. The orchestration check separately recomputed the trace, framebuffer and RAM SHA-256 values.
+
+Later review found that upstream `Executor2.reset([row])` zeroes an advanced-indexing copy of the lag histories, so a row reset leaves the stored histories unchanged. The first-frame run therefore began its retained prefix with histories left by warm-up, not fresh zero histories. Its recorded token, framebuffer and RAM matches remain valid. A run from freshly zeroed state has not been established. See [the ROM fusion diagnosis](../experiments/dmc-rom-fusion/README.md).
+
+A Windows file-sharing conflict interrupted progress-file replacement near the end. The worker resumed from its own saved GPU checkpoint at token 6,230,049 after a bounded file-replacement retry and a delete-sharing fix in the read-only viewer. A 17-token resume check passed before the final continuation. Arithmetic kernels and game inputs were unchanged. The source export retains the original worker, recovery evidence and final worker. Its 3,044.57-second retained-path generation time excludes discarded work and recovery downtime.
+
+The live browser recording began at strip 6 of 25 and continued through completion, including the recovery. The local upload-ready H.264 video is 1920×1080 at 60× speed with explicit labels; the unedited WebM is retained. The export trims 15 seconds of initial encoder warm-up, adds a two-second opening hold and five-second final hold, and was checked by decoding its opening and completed-frame images. Neither the video nor this single-frame result establishes interactive Doom or a full pretrained-model run.

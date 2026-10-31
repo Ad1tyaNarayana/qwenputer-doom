@@ -1,0 +1,3023 @@
+{
+  "scope": "Unchanged compact circuit performance only. Frame 2 is reference-seeded.",
+  "base": {
+    "mode": "DMC port on faithful compact Triton circuit, fp32 CUDA graph; not stock HF",
+    "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+    "reference_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+    "reference_tokens_total": 6342933,
+    "reference_tokens_used_as_inputs": false,
+    "reference_machine_run_called": false,
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "ram_base": 16777216,
+    "ram_bytes": 65536,
+    "drom_base": 33554432,
+    "drom_bytes": 4194304,
+    "graph": {
+      "chip_layers": 44,
+      "dims": 2679
+    },
+    "setup_seconds": 3.3859277999999904,
+    "source_adaptation": "Standalone FreeRun omits merged-chat-only Q embedding table family. Memory map uses frozen prepare.py. Executor2 arithmetic kernels unchanged.",
+    "capture_warmup_seconds": 0.33881229999951756
+  },
+  "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cuda_runtime": "13.0",
+  "upstream": "ca13310e2f9f788d1dd3feeea8213c1b0c23913c",
+  "nsys": null,
+  "ncu": null,
+  "logical_cpus": 12,
+  "walk_elf_sha256": "6de1e43084ed734da7793f8c7794ef2b93750bd9f6da02655fcf7eef41a2e109",
+  "seed": {
+    "frame": 2,
+    "token_offset": 6470215,
+    "instruction_offset": 3966856,
+    "pc": 407652,
+    "render_entry_token_offset": 6370214,
+    "reference_seeded": true,
+    "lag_history": "reset by snapshot/load at record boundary"
+  },
+  "windows": {
+    "boot": {
+      "reference_seeded": false,
+      "runs": [
+        {
+          "seconds": 31.480437100000017,
+          "tokens_per_second": 2081.8008273461987,
+          "match": {
+            "tokens": 65536,
+            "mismatches": 0,
+            "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+          }
+        },
+        {
+          "seconds": 31.5091551000005,
+          "tokens_per_second": 2079.9034373345976,
+          "match": {
+            "tokens": 65536,
+            "mismatches": 0,
+            "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+          }
+        },
+        {
+          "seconds": 32.71876649999922,
+          "tokens_per_second": 2003.0094960945903,
+          "match": {
+            "tokens": 65536,
+            "mismatches": 0,
+            "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+          }
+        },
+        {
+          "seconds": 31.619013599999562,
+          "tokens_per_second": 2072.6769287958086,
+          "match": {
+            "tokens": 65536,
+            "mismatches": 0,
+            "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+          }
+        },
+        {
+          "seconds": 31.599504299999353,
+          "tokens_per_second": 2073.95658418608,
+          "match": {
+            "tokens": 65536,
+            "mismatches": 0,
+            "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+          }
+        }
+      ],
+      "rate_median": 2073.95658418608,
+      "rate_range": [
+        2003.0094960945903,
+        2081.8008273461987
+      ],
+      "submission_diagnostic": {
+        "tokens": 8192,
+        "host_graph_replay_seconds": 0.04613779998544487,
+        "host_trace_copy_submission_seconds": 3.716717800043625,
+        "device_stream_elapsed_ms": 3997.189453125,
+        "terminal_sync_wait_seconds": 0.23246230000040669,
+        "trace_d2h_seconds": 0.0007191000004240777,
+        "match": {
+          "tokens": 8192,
+          "mismatches": 0,
+          "sha256": "22e98bc844ef5ab3b30d490097e7c016776e2a78b0a71068124b17d0a5c8d97d"
+        }
+      },
+      "profiler_match": {
+        "tokens": 256,
+        "mismatches": 0,
+        "sha256": "1c863e84529e3bcdc295a0c982676cc6b2a4929c96de55dfb821f3d104f47bf7"
+      },
+      "profiler_summary": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                    Command Buffer Full        53.15%      70.249ms        53.15%      70.249ms      11.708ms       0.000us         0.00%       0.000us       0.000us             6  \n                                  cudaDeviceSynchronize        30.40%      40.176ms        30.40%      40.176ms      20.088ms       0.000us         0.00%       0.000us       0.000us             2  \n                                        cudaGraphLaunch        12.77%      16.874ms        66.17%      87.461ms     341.645us      13.376us         0.01%      13.376us       0.052us           256  \n                                        cudaMemcpyAsync         1.34%       1.777ms         1.34%       1.777ms       6.916us       0.000us         0.00%       0.000us       0.000us           257  \n                                Activity Buffer Request         0.76%       1.004ms         0.90%       1.189ms     396.433us       0.000us         0.00%       2.496us       0.832us             3  \n                                       cudaLaunchKernel         0.51%     671.300us         0.51%     671.300us     671.300us       0.000us         0.00%       0.000us       0.000us             1  \n                                            aten::copy_         0.46%     604.178us         1.81%       2.386ms       9.286us     215.482us         0.18%     215.482us       0.838us           257  \n                                           aten::select         0.34%     445.095us         0.41%     538.993us       2.105us       0.000us         0.00%       0.000us       0.000us           256  \n                                           Buffer Flush         0.12%     159.300us         0.12%     161.100us     161.100us       0.000us         0.00%       0.000us       0.000us             1  \n                                       aten::as_strided         0.07%      93.898us         0.07%      93.898us       0.367us       0.000us         0.00%       0.000us       0.000us           256  \n                                            aten::empty         0.02%      30.999us         0.02%      30.999us      30.999us       0.000us         0.00%       0.000us       0.000us             1  \n                                            aten::fill_         0.02%      30.890us         0.80%       1.051ms       1.051ms       0.896us         0.00%       0.896us       0.896us             1  \n                                            aten::zeros         0.01%      14.300us         0.84%       1.104ms       1.104ms       0.000us         0.00%       0.896us       0.896us             1  \n                                    aten::empty_strided         0.01%      10.000us         0.01%      10.000us      10.000us       0.000us         0.00%       0.000us       0.000us             1  \n                                         aten::_to_copy         0.01%       8.200us         0.06%      78.899us      78.899us       0.000us         0.00%       1.376us       1.376us             1  \n                                            aten::zero_         0.01%       7.900us         0.80%       1.059ms       1.059ms       0.000us         0.00%       0.896us       0.896us             1  \n                                               aten::to         0.00%       4.200us         0.06%      83.099us      41.550us       0.000us         0.00%       1.376us       0.688us             2  \n                                                 detach         0.00%       3.100us         0.00%       3.100us       3.100us       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaStreamSynchronize         0.00%       3.000us         0.00%       3.000us       3.000us       0.000us         0.00%       0.000us       0.000us             1  \n                                           aten::detach         0.00%       2.200us         0.00%       5.300us       5.300us       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaStreamIsCapturing         0.00%       1.900us         0.00%       1.900us       1.900us       0.000us         0.00%       0.000us       0.000us             1  \n                                     aten::resolve_conj         0.00%       0.500us         0.00%       0.500us       0.500us       0.000us         0.00%       0.000us       0.000us             1  \n                                      aten::resolve_neg         0.00%       0.100us         0.00%       0.100us       0.100us       0.000us         0.00%       0.000us       0.000us             1  \n_ZN2at6native29vectorized_elementwise_kernelILi2ENS0...         0.00%       0.000us         0.00%       0.000us       0.000us       0.896us         0.00%       0.896us       0.896us             1  \n                                           _head_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      84.126ms        68.34%      84.126ms       8.015us         10496  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 132.171ms\nSelf CUDA time total: 123.102ms\n",
+      "event_instrumented": {
+        "tokens": 256,
+        "sublayer_mean_ms": [
+          0.03482374992017867,
+          0.005167499961316935,
+          0.008472499941490241,
+          0.008618499949079705,
+          0.02750612467934843,
+          0.007074249975630664,
+          0.010116500088770408,
+          0.016577999987930525,
+          0.010986499964928953,
+          0.008358249977391097,
+          0.020224375002726447,
+          0.016360749994419166,
+          0.015634250037692254,
+          0.008338249986991286,
+          0.016562624950893223,
+          0.008078249971731566,
+          0.01801562494438258,
+          0.006785250023312983,
+          0.016400000007706694,
+          0.011409375012590317,
+          0.02238987505552359,
+          0.012864750045991968,
+          0.014852249943942297,
+          0.012543750101031037,
+          0.01341887504895567,
+          0.012303875126235653,
+          0.013579250025941292,
+          0.012070875149220228,
+          0.012030375033646123,
+          0.012352000092505477,
+          0.013024875017435988,
+          0.012194500101031736,
+          0.012215000038850121,
+          0.012063875088642817,
+          0.013499125077942153,
+          0.012318375080212718,
+          0.012540375031676376,
+          0.0120803750869527,
+          0.012332250080362428,
+          0.012171375074103707,
+          0.012234750047355192,
+          0.012200250082969433,
+          0.012919875072839204,
+          0.01215587507613236,
+          0.012927750060043763,
+          0.012441625072824536,
+          0.013682375036296435,
+          0.012071125100192148,
+          0.012831750042096246,
+          0.012687750113400398,
+          0.014208125070581445,
+          0.007778124996548286,
+          0.008277125018139486,
+          0.011437375062087085
+        ],
+        "feedback_mean_ms": 0.03422150024562143,
+        "match": {
+          "tokens": 256,
+          "mismatches": 0,
+          "sha256": "1c863e84529e3bcdc295a0c982676cc6b2a4929c96de55dfb821f3d104f47bf7"
+        },
+        "scope": "Separate event-instrumented graph, synchronized per token. Events perturb scheduling; not production throughput."
+      }
+    },
+    "frame2_render": {
+      "reference_seeded": true,
+      "runs": [
+        {
+          "seconds": 31.50386139999955,
+          "tokens_per_second": 2080.2529305185726,
+          "match": {
+            "tokens": 65536,
+            "mismatches": 0,
+            "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+          }
+        },
+        {
+          "seconds": 31.960284099999626,
+          "tokens_per_second": 2050.544976225689,
+          "match": {
+            "tokens": 65536,
+            "mismatches": 0,
+            "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+          }
+        },
+        {
+          "seconds": 31.55962620000082,
+          "tokens_per_second": 2076.5771934269073,
+          "match": {
+            "tokens": 65536,
+            "mismatches": 0,
+            "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+          }
+        },
+        {
+          "seconds": 31.493782399999873,
+          "tokens_per_second": 2080.918676824295,
+          "match": {
+            "tokens": 65536,
+            "mismatches": 0,
+            "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+          }
+        },
+        {
+          "seconds": 32.48194119999971,
+          "tokens_per_second": 2017.6134054451334,
+          "match": {
+            "tokens": 65536,
+            "mismatches": 0,
+            "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+          }
+        }
+      ],
+      "rate_median": 2076.5771934269073,
+      "rate_range": [
+        2017.6134054451334,
+        2080.918676824295
+      ],
+      "submission_diagnostic": {
+        "tokens": 8192,
+        "host_graph_replay_seconds": 0.12631969999620196,
+        "host_trace_copy_submission_seconds": 3.630817299973387,
+        "device_stream_elapsed_ms": 3993.59228515625,
+        "terminal_sync_wait_seconds": 0.23454589999983,
+        "trace_d2h_seconds": 0.0001218999996126513,
+        "match": {
+          "tokens": 8192,
+          "mismatches": 0,
+          "sha256": "75b2699dbeadafa781fa68983718daf0ef4f209ed9d22b7b25ad77fc8f3c4351"
+        }
+      },
+      "profiler_match": {
+        "tokens": 256,
+        "mismatches": 0,
+        "sha256": "aef9c2d1a78a1847d1101454c145f7296a3bdc27dc3ce4fbaf5351d7622cef84"
+      },
+      "profiler_summary": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                    Command Buffer Full        53.66%      69.113ms        53.66%      69.113ms      11.519ms       0.000us         0.00%       0.000us       0.000us             6  \n                                  cudaDeviceSynchronize        31.97%      41.179ms        31.97%      41.179ms      20.590ms       0.000us         0.00%       0.000us       0.000us             2  \n                                        cudaGraphLaunch        11.82%      15.220ms        65.75%      84.675ms     330.760us       0.000us         0.00%       0.000us       0.000us           256  \n                                        cudaMemcpyAsync         1.08%       1.391ms         1.08%       1.391ms       5.411us       0.000us         0.00%       0.000us       0.000us           257  \n                                Activity Buffer Request         0.55%     711.100us         0.55%     711.100us     355.550us       0.000us         0.00%       0.000us       0.000us             2  \n                                            aten::copy_         0.41%     526.479us         1.49%       1.921ms       7.473us     214.559us         0.18%     214.559us       0.835us           257  \n                                           aten::select         0.30%     385.897us         0.36%     461.297us       1.802us       0.000us         0.00%       0.000us       0.000us           256  \n                                           Buffer Flush         0.07%      93.400us         0.08%     100.600us     100.600us       0.000us         0.00%       0.000us       0.000us             1  \n                                       aten::as_strided         0.06%      75.400us         0.06%      75.400us       0.295us       0.000us         0.00%       0.000us       0.000us           256  \n                                       cudaLaunchKernel         0.02%      29.600us         0.02%      29.600us      29.600us       0.000us         0.00%       0.000us       0.000us             1  \n                                            aten::fill_         0.01%      16.995us         0.32%     416.895us     416.895us       0.768us         0.00%       0.768us       0.768us             1  \n                                            aten::empty         0.01%      13.300us         0.01%      13.300us      13.300us       0.000us         0.00%       0.000us       0.000us             1  \n                                            aten::zeros         0.01%       7.700us         0.34%     441.295us     441.295us       0.000us         0.00%       0.768us       0.768us             1  \n                                         aten::_to_copy         0.00%       6.200us         0.05%      59.699us      59.699us       0.000us         0.00%       0.480us       0.480us             1  \n                                    aten::empty_strided         0.00%       4.900us         0.00%       4.900us       4.900us       0.000us         0.00%       0.000us       0.000us             1  \n                                            aten::zero_         0.00%       3.400us         0.33%     420.295us     420.295us       0.000us         0.00%       0.768us       0.768us             1  \n                                                 detach         0.00%       3.000us         0.00%       3.000us       3.000us       0.000us         0.00%       0.000us       0.000us             1  \n                                               aten::to         0.00%       2.400us         0.05%      62.099us      31.050us       0.000us         0.00%       0.480us       0.240us             2  \n                                  cudaStreamSynchronize         0.00%       2.300us         0.00%       2.300us       2.300us       0.000us         0.00%       0.000us       0.000us             1  \n                                           aten::detach         0.00%       1.600us         0.00%       4.600us       4.600us       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaStreamIsCapturing         0.00%       1.300us         0.00%       1.300us       1.300us       0.000us         0.00%       0.000us       0.000us             1  \n                                     aten::resolve_conj         0.00%       0.400us         0.00%       0.400us       0.400us       0.000us         0.00%       0.000us       0.000us             1  \n                                      aten::resolve_neg         0.00%       0.100us         0.00%       0.100us       0.100us       0.000us         0.00%       0.000us       0.000us             1  \n_ZN2at6native29vectorized_elementwise_kernelILi2ENS0...         0.00%       0.000us         0.00%       0.000us       0.000us       0.768us         0.00%       0.768us       0.768us             1  \n                                           _head_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      83.547ms        68.31%      83.547ms       7.960us         10496  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 128.789ms\nSelf CUDA time total: 122.307ms\n",
+      "event_instrumented": {
+        "tokens": 256,
+        "sublayer_mean_ms": [
+          0.0354441251110984,
+          0.005112749957334017,
+          0.008583999975599,
+          0.008689874986885116,
+          0.025201499673130456,
+          0.007102499990651268,
+          0.010736125061157509,
+          0.018031375020655105,
+          0.010425249998661457,
+          0.008622374982223846,
+          0.020271375087759225,
+          0.015256375043463777,
+          0.015214125054626493,
+          0.008837374993163394,
+          0.015959374992235098,
+          0.0074961249683838105,
+          0.015936999985569855,
+          0.00700637499721779,
+          0.017459500002587447,
+          0.011205875016457867,
+          0.02138875006858143,
+          0.012684750043263193,
+          0.014542249959049514,
+          0.01262737511206069,
+          0.01217700000415789,
+          0.012073750142008066,
+          0.012131000028603012,
+          0.012656875151151326,
+          0.012093500063201645,
+          0.012457125158107374,
+          0.012299375055590644,
+          0.012097375154553447,
+          0.012323875031142961,
+          0.01199925015316694,
+          0.01225325003179023,
+          0.012093375131371431,
+          0.012076625036570476,
+          0.012225000136822928,
+          0.012445750064216554,
+          0.012246875136042945,
+          0.012190625056973659,
+          0.012242625140061136,
+          0.012133000058383914,
+          0.012051250112563139,
+          0.012875250071374467,
+          0.012360375087155262,
+          0.012497500003519235,
+          0.012322625123488251,
+          0.012850250081100967,
+          0.012300000111281406,
+          0.013463000021147309,
+          0.0071866249872982735,
+          0.006774999998015119,
+          0.010556625049503054
+        ],
+        "feedback_mean_ms": 0.03371400017931592,
+        "match": {
+          "tokens": 256,
+          "mismatches": 0,
+          "sha256": "aef9c2d1a78a1847d1101454c145f7296a3bdc27dc3ce4fbaf5351d7622cef84"
+        },
+        "scope": "Separate event-instrumented graph, synchronized per token. Events perturb scheduling; not production throughput."
+      }
+    }
+  },
+  "script_sha256": "c26004d9e6e162eb982d2500717f233235050e808eb94895ee923ab465e7c119",
+  "cpu_before": "{\n    \"Name\":  \"AMD Ryzen 5 9600X 6-Core Processor             \",\n    \"NumberOfLogicalProcessors\":  12,\n    \"LoadPercentage\":  null\n}\n",
+  "system_before": "Thu Oct 29 15:40:09 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 617.42                 KMD Version: 617.42        CUDA UMD Version: 13.4     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 5070 Ti   WDDM  |   00000000:01:00.0 Off |                  N/A |\n|  0%   40C    P8             14W /  300W |    1815MiB /  16303MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A             748    C+G   C:\\Windows\\System32\\dwm.exe           N/A      |\n|    0   N/A  N/A            2188    C+G   ...1g1gvanyjgm\\WhatsApp.Root.exe      N/A      |\n|    0   N/A  N/A            4568    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A            6368    C+G   ..._1mmjbktjj1mkp\\GBT_DL_LIB.exe      N/A      |\n|    0   N/A  N/A            7936    C+G   ...nmj9wpt2a\\Raycast\\Raycast.exe      N/A      |\n|    0   N/A  N/A            8336    C+G   ...GABYTE\\Control Center\\GCC.exe      N/A      |\n|    0   N/A  N/A            8500    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A            8708    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A            8964    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A            9476    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           11168    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           11208    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A           12544    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           15412    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A           15524    C+G   ...xyewy\\ShellExperienceHost.exe      N/A      |\n|    0   N/A  N/A           16076    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           16352    C+G   ...\\codex-computer-use-swift.exe      N/A      |\n|    0   N/A  N/A           17184    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n|    0   N/A  N/A           18084    C+G   ...8bbwe\\PhoneExperienceHost.exe      N/A      |\n|    0   N/A  N/A           18272    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           18840    C+G   ...yb3d8bbwe\\WindowsTerminal.exe      N/A      |\n|    0   N/A  N/A           19276    C+G   ...ntrolPanel\\SystemSettings.exe      N/A      |\n|    0   N/A  N/A           19988    C+G   ...twinkle-tray\\Twinkle Tray.exe      N/A      |\n|    0   N/A  N/A           20632    C+G   ...onsoftware\\RadeonSoftware.exe      N/A      |\n|    0   N/A  N/A           20812    C+G   ...adeonsoftware\\AMDRSSrcExt.exe      N/A      |\n|    0   N/A  N/A           21520    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n|    0   N/A  N/A           25652      C   ...pythoncore-3.14-64\\python.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+  "schedule": [
+    {
+      "index": 0,
+      "kind": "head",
+      "group": "other_head",
+      "heads": [
+        "pc",
+        "count",
+        "j",
+        "vcnt"
+      ],
+      "value_heads": 4,
+      "units": null
+    },
+    {
+      "index": 1,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 306
+    },
+    {
+      "index": 2,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 1376
+    },
+    {
+      "index": 3,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "rom0",
+        "rom1",
+        "rom2",
+        "rom3",
+        "rom4",
+        "rom5",
+        "rom6",
+        "rom7",
+        "rom8",
+        "rom9",
+        "rom10",
+        "rom11",
+        "rom12",
+        "rom13",
+        "rom14",
+        "rom15"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 4,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "rom16",
+        "rom17",
+        "rom18",
+        "rom19",
+        "rom20",
+        "rom21",
+        "rom22",
+        "rom23",
+        "rom24",
+        "rom25",
+        "rom26",
+        "rom27",
+        "rom28",
+        "rom29",
+        "rom30",
+        "rom31"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 5,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 4138
+    },
+    {
+      "index": 6,
+      "kind": "head",
+      "group": "other_head",
+      "heads": [
+        "regs.rs1",
+        "regs.rs2",
+        "regs.rd",
+        "quo0",
+        "quo1",
+        "quo2",
+        "quo3"
+      ],
+      "value_heads": 11,
+      "units": null
+    },
+    {
+      "index": 7,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 7876
+    },
+    {
+      "index": 8,
+      "kind": "head",
+      "group": "other_head",
+      "heads": [
+        "bn1.0",
+        "bn1.1",
+        "bn1.2",
+        "bn1.3",
+        "bn2.0",
+        "bn2.1",
+        "bn2.2",
+        "bn2.3"
+      ],
+      "value_heads": 16,
+      "units": null
+    },
+    {
+      "index": 9,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 6621
+    },
+    {
+      "index": 10,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "ram0",
+        "ram1",
+        "ram2",
+        "ram3",
+        "ram4",
+        "ram5",
+        "ram6",
+        "ram7",
+        "ram8",
+        "ram9",
+        "ram10",
+        "ram11",
+        "ram12",
+        "ram13",
+        "ram14",
+        "ram15"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 11,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 3751
+    },
+    {
+      "index": 12,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "ram16",
+        "ram17",
+        "ram18",
+        "ram19",
+        "ram20",
+        "ram21",
+        "ram22",
+        "ram23",
+        "ram24",
+        "ram25",
+        "ram26",
+        "ram27",
+        "ram28",
+        "ram29",
+        "ram30",
+        "ram31"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 13,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 7419
+    },
+    {
+      "index": 14,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "ram32",
+        "ram33",
+        "ram34",
+        "ram35",
+        "ram36",
+        "ram37",
+        "ram38",
+        "ram39",
+        "ram40",
+        "ram41",
+        "ram42",
+        "ram43",
+        "ram44",
+        "ram45",
+        "ram46",
+        "ram47"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 15,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 2377
+    },
+    {
+      "index": 16,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "ram48",
+        "ram49",
+        "ram50",
+        "ram51",
+        "ram52",
+        "ram53",
+        "ram54",
+        "ram55",
+        "ram56",
+        "ram57",
+        "ram58",
+        "ram59",
+        "ram60",
+        "ram61",
+        "ram62",
+        "ram63"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 17,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 793
+    },
+    {
+      "index": 18,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom0",
+        "drom1",
+        "drom2",
+        "drom3",
+        "drom4",
+        "drom5",
+        "drom6",
+        "drom7",
+        "drom8",
+        "drom9",
+        "drom10",
+        "drom11",
+        "drom12",
+        "drom13",
+        "drom14",
+        "drom15"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 19,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 1808
+    },
+    {
+      "index": 20,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom16",
+        "drom17",
+        "drom18",
+        "drom19",
+        "drom20",
+        "drom21",
+        "drom22",
+        "drom23",
+        "drom24",
+        "drom25",
+        "drom26",
+        "drom27",
+        "drom28",
+        "drom29",
+        "drom30",
+        "drom31"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 21,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom32",
+        "drom33",
+        "drom34",
+        "drom35",
+        "drom36",
+        "drom37",
+        "drom38",
+        "drom39",
+        "drom40",
+        "drom41",
+        "drom42",
+        "drom43",
+        "drom44",
+        "drom45",
+        "drom46",
+        "drom47"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 22,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom48",
+        "drom49",
+        "drom50",
+        "drom51",
+        "drom52",
+        "drom53",
+        "drom54",
+        "drom55",
+        "drom56",
+        "drom57",
+        "drom58",
+        "drom59",
+        "drom60",
+        "drom61",
+        "drom62",
+        "drom63"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 23,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom64",
+        "drom65",
+        "drom66",
+        "drom67",
+        "drom68",
+        "drom69",
+        "drom70",
+        "drom71",
+        "drom72",
+        "drom73",
+        "drom74",
+        "drom75",
+        "drom76",
+        "drom77",
+        "drom78",
+        "drom79"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 24,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom80",
+        "drom81",
+        "drom82",
+        "drom83",
+        "drom84",
+        "drom85",
+        "drom86",
+        "drom87",
+        "drom88",
+        "drom89",
+        "drom90",
+        "drom91",
+        "drom92",
+        "drom93",
+        "drom94",
+        "drom95"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 25,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom96",
+        "drom97",
+        "drom98",
+        "drom99",
+        "drom100",
+        "drom101",
+        "drom102",
+        "drom103",
+        "drom104",
+        "drom105",
+        "drom106",
+        "drom107",
+        "drom108",
+        "drom109",
+        "drom110",
+        "drom111"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 26,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom112",
+        "drom113",
+        "drom114",
+        "drom115",
+        "drom116",
+        "drom117",
+        "drom118",
+        "drom119",
+        "drom120",
+        "drom121",
+        "drom122",
+        "drom123",
+        "drom124",
+        "drom125",
+        "drom126",
+        "drom127"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 27,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom128",
+        "drom129",
+        "drom130",
+        "drom131",
+        "drom132",
+        "drom133",
+        "drom134",
+        "drom135",
+        "drom136",
+        "drom137",
+        "drom138",
+        "drom139",
+        "drom140",
+        "drom141",
+        "drom142",
+        "drom143"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 28,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom144",
+        "drom145",
+        "drom146",
+        "drom147",
+        "drom148",
+        "drom149",
+        "drom150",
+        "drom151",
+        "drom152",
+        "drom153",
+        "drom154",
+        "drom155",
+        "drom156",
+        "drom157",
+        "drom158",
+        "drom159"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 29,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom160",
+        "drom161",
+        "drom162",
+        "drom163",
+        "drom164",
+        "drom165",
+        "drom166",
+        "drom167",
+        "drom168",
+        "drom169",
+        "drom170",
+        "drom171",
+        "drom172",
+        "drom173",
+        "drom174",
+        "drom175"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 30,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom176",
+        "drom177",
+        "drom178",
+        "drom179",
+        "drom180",
+        "drom181",
+        "drom182",
+        "drom183",
+        "drom184",
+        "drom185",
+        "drom186",
+        "drom187",
+        "drom188",
+        "drom189",
+        "drom190",
+        "drom191"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 31,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom192",
+        "drom193",
+        "drom194",
+        "drom195",
+        "drom196",
+        "drom197",
+        "drom198",
+        "drom199",
+        "drom200",
+        "drom201",
+        "drom202",
+        "drom203",
+        "drom204",
+        "drom205",
+        "drom206",
+        "drom207"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 32,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom208",
+        "drom209",
+        "drom210",
+        "drom211",
+        "drom212",
+        "drom213",
+        "drom214",
+        "drom215",
+        "drom216",
+        "drom217",
+        "drom218",
+        "drom219",
+        "drom220",
+        "drom221",
+        "drom222",
+        "drom223"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 33,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom224",
+        "drom225",
+        "drom226",
+        "drom227",
+        "drom228",
+        "drom229",
+        "drom230",
+        "drom231",
+        "drom232",
+        "drom233",
+        "drom234",
+        "drom235",
+        "drom236",
+        "drom237",
+        "drom238",
+        "drom239"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 34,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom240",
+        "drom241",
+        "drom242",
+        "drom243",
+        "drom244",
+        "drom245",
+        "drom246",
+        "drom247",
+        "drom248",
+        "drom249",
+        "drom250",
+        "drom251",
+        "drom252",
+        "drom253",
+        "drom254",
+        "drom255"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 35,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom256",
+        "drom257",
+        "drom258",
+        "drom259",
+        "drom260",
+        "drom261",
+        "drom262",
+        "drom263",
+        "drom264",
+        "drom265",
+        "drom266",
+        "drom267",
+        "drom268",
+        "drom269",
+        "drom270",
+        "drom271"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 36,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom272",
+        "drom273",
+        "drom274",
+        "drom275",
+        "drom276",
+        "drom277",
+        "drom278",
+        "drom279",
+        "drom280",
+        "drom281",
+        "drom282",
+        "drom283",
+        "drom284",
+        "drom285",
+        "drom286",
+        "drom287"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 37,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom288",
+        "drom289",
+        "drom290",
+        "drom291",
+        "drom292",
+        "drom293",
+        "drom294",
+        "drom295",
+        "drom296",
+        "drom297",
+        "drom298",
+        "drom299",
+        "drom300",
+        "drom301",
+        "drom302",
+        "drom303"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 38,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom304",
+        "drom305",
+        "drom306",
+        "drom307",
+        "drom308",
+        "drom309",
+        "drom310",
+        "drom311",
+        "drom312",
+        "drom313",
+        "drom314",
+        "drom315",
+        "drom316",
+        "drom317",
+        "drom318",
+        "drom319"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 39,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom320",
+        "drom321",
+        "drom322",
+        "drom323",
+        "drom324",
+        "drom325",
+        "drom326",
+        "drom327",
+        "drom328",
+        "drom329",
+        "drom330",
+        "drom331",
+        "drom332",
+        "drom333",
+        "drom334",
+        "drom335"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 40,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom336",
+        "drom337",
+        "drom338",
+        "drom339",
+        "drom340",
+        "drom341",
+        "drom342",
+        "drom343",
+        "drom344",
+        "drom345",
+        "drom346",
+        "drom347",
+        "drom348",
+        "drom349",
+        "drom350",
+        "drom351"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 41,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom352",
+        "drom353",
+        "drom354",
+        "drom355",
+        "drom356",
+        "drom357",
+        "drom358",
+        "drom359",
+        "drom360",
+        "drom361",
+        "drom362",
+        "drom363",
+        "drom364",
+        "drom365",
+        "drom366",
+        "drom367"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 42,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom368",
+        "drom369",
+        "drom370",
+        "drom371",
+        "drom372",
+        "drom373",
+        "drom374",
+        "drom375",
+        "drom376",
+        "drom377",
+        "drom378",
+        "drom379",
+        "drom380",
+        "drom381",
+        "drom382",
+        "drom383"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 43,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom384",
+        "drom385",
+        "drom386",
+        "drom387",
+        "drom388",
+        "drom389",
+        "drom390",
+        "drom391",
+        "drom392",
+        "drom393",
+        "drom394",
+        "drom395",
+        "drom396",
+        "drom397",
+        "drom398",
+        "drom399"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 44,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom400",
+        "drom401",
+        "drom402",
+        "drom403",
+        "drom404",
+        "drom405",
+        "drom406",
+        "drom407",
+        "drom408",
+        "drom409",
+        "drom410",
+        "drom411",
+        "drom412",
+        "drom413",
+        "drom414",
+        "drom415"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 45,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom416",
+        "drom417",
+        "drom418",
+        "drom419",
+        "drom420",
+        "drom421",
+        "drom422",
+        "drom423",
+        "drom424",
+        "drom425",
+        "drom426",
+        "drom427",
+        "drom428",
+        "drom429",
+        "drom430",
+        "drom431"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 46,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom432",
+        "drom433",
+        "drom434",
+        "drom435",
+        "drom436",
+        "drom437",
+        "drom438",
+        "drom439",
+        "drom440",
+        "drom441",
+        "drom442",
+        "drom443",
+        "drom444",
+        "drom445",
+        "drom446",
+        "drom447"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 47,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom448",
+        "drom449",
+        "drom450",
+        "drom451",
+        "drom452",
+        "drom453",
+        "drom454",
+        "drom455",
+        "drom456",
+        "drom457",
+        "drom458",
+        "drom459",
+        "drom460",
+        "drom461",
+        "drom462",
+        "drom463"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 48,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom464",
+        "drom465",
+        "drom466",
+        "drom467",
+        "drom468",
+        "drom469",
+        "drom470",
+        "drom471",
+        "drom472",
+        "drom473",
+        "drom474",
+        "drom475",
+        "drom476",
+        "drom477",
+        "drom478",
+        "drom479"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 49,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom480",
+        "drom481",
+        "drom482",
+        "drom483",
+        "drom484",
+        "drom485",
+        "drom486",
+        "drom487",
+        "drom488",
+        "drom489",
+        "drom490",
+        "drom491",
+        "drom492",
+        "drom493",
+        "drom494",
+        "drom495"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 50,
+      "kind": "head",
+      "group": "memory_head",
+      "heads": [
+        "drom496",
+        "drom497",
+        "drom498",
+        "drom499",
+        "drom500",
+        "drom501",
+        "drom502",
+        "drom503",
+        "drom504",
+        "drom505",
+        "drom506",
+        "drom507",
+        "drom508",
+        "drom509",
+        "drom510",
+        "drom511"
+      ],
+      "value_heads": 32,
+      "units": null
+    },
+    {
+      "index": 51,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 4016
+    },
+    {
+      "index": 52,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 733
+    },
+    {
+      "index": 53,
+      "kind": "ffn",
+      "group": "alu_decode_ffn",
+      "heads": [],
+      "value_heads": null,
+      "units": 800
+    }
+  ],
+  "gpu_samples": [
+    {
+      "window": null,
+      "values": "2026/10/29 15:40:09.662, 0, 0, 14.99, 217, 405, 40, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:10.709, 100, 0, 25.41, 2565, 13801, 42, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:11.747, 100, 0, 75.35, 2902, 13801, 43, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:12.788, 100, 0, 75.65, 2887, 13801, 44, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:13.828, 100, 0, 75.72, 2887, 13801, 44, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:14.868, 100, 0, 75.62, 2887, 13801, 44, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:15.909, 100, 0, 75.64, 2887, 13801, 44, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:16.949, 100, 0, 75.79, 2887, 13801, 44, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:17.990, 100, 0, 75.87, 2887, 13801, 44, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:19.032, 100, 0, 75.85, 2887, 13801, 45, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:20.080, 100, 0, 75.73, 2887, 13801, 45, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:21.121, 100, 0, 75.80, 2887, 13801, 45, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:22.161, 100, 0, 75.86, 2887, 13801, 45, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:23.201, 100, 0, 75.83, 2887, 13801, 45, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:24.241, 100, 0, 76.02, 2887, 13801, 45, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:25.280, 100, 0, 76.10, 2887, 13801, 45, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:26.321, 100, 0, 76.29, 2887, 13801, 45, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:27.362, 100, 0, 76.27, 2887, 13801, 45, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:28.402, 100, 0, 76.41, 2887, 13801, 46, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:29.442, 100, 0, 76.65, 2887, 13801, 46, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:30.481, 100, 0, 76.62, 2887, 13801, 46, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:31.521, 100, 0, 76.75, 2887, 13801, 46, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:32.564, 100, 0, 76.54, 2887, 13801, 46, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:33.606, 100, 0, 76.62, 2887, 13801, 46, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:34.648, 100, 0, 76.81, 2887, 13801, 46, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:35.689, 100, 0, 76.77, 2887, 13801, 46, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:36.731, 100, 0, 76.73, 2887, 13801, 46, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:37.772, 100, 0, 76.70, 2887, 13801, 47, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:38.813, 100, 0, 76.79, 2887, 13801, 47, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:39.854, 100, 0, 76.85, 2887, 13801, 47, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:40:40.897, 100, 0, 76.82, 2887, 13801, 47, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:41.943, 46, 0, 73.00, 2887, 13801, 46, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:42.984, 100, 0, 75.94, 2887, 13801, 47, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:44.024, 100, 0, 77.29, 2887, 13801, 47, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:45.065, 100, 0, 77.29, 2887, 13801, 47, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:46.108, 100, 0, 77.31, 2887, 13801, 47, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:47.149, 100, 0, 77.26, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:48.192, 100, 0, 77.37, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:49.234, 100, 0, 77.39, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:50.276, 100, 0, 77.38, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:51.318, 100, 0, 77.47, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:52.359, 100, 0, 77.55, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:53.401, 100, 0, 77.56, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:54.442, 100, 0, 77.56, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:55.484, 100, 0, 77.67, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:56.526, 100, 0, 77.80, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:57.568, 100, 0, 77.79, 2887, 13801, 49, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:58.609, 100, 0, 77.97, 2887, 13801, 49, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:40:59.650, 100, 0, 78.02, 2887, 13801, 49, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:00.690, 100, 0, 78.00, 2887, 13801, 49, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:01.732, 100, 0, 78.00, 2887, 13801, 49, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:02.775, 100, 0, 78.12, 2887, 13801, 49, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:03.817, 100, 0, 78.06, 2887, 13801, 49, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:04.858, 100, 0, 78.13, 2887, 13801, 49, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:05.900, 100, 0, 78.08, 2887, 13801, 49, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:06.941, 100, 0, 78.31, 2887, 13801, 49, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:07.983, 100, 0, 78.36, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:09.024, 100, 0, 78.50, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:10.067, 100, 0, 78.46, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:11.109, 100, 0, 78.39, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:12.151, 100, 0, 78.27, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:13.194, 100, 0, 78.43, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:14.239, 100, 0, 74.51, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:15.279, 100, 0, 78.51, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:16.320, 100, 0, 78.53, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:17.362, 100, 0, 78.42, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:18.404, 100, 0, 78.47, 2887, 13801, 50, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:19.446, 100, 0, 78.71, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:20.488, 100, 0, 78.68, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:21.531, 100, 0, 78.73, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:22.573, 100, 0, 78.84, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:23.615, 100, 0, 78.96, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:24.657, 100, 0, 78.92, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:25.699, 100, 0, 78.93, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:26.740, 100, 0, 79.00, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:27.782, 100, 0, 79.07, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:28.823, 100, 0, 79.14, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:29.865, 100, 0, 79.19, 2887, 13801, 51, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:30.907, 100, 0, 79.16, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:31.947, 100, 0, 79.32, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:32.989, 100, 0, 79.37, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:34.029, 100, 0, 79.61, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:35.071, 100, 0, 79.69, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:36.112, 100, 0, 79.72, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:37.153, 100, 0, 79.76, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:38.194, 100, 0, 79.75, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:39.236, 100, 0, 79.65, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:40.278, 100, 0, 79.78, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:41.320, 100, 0, 79.79, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:42.361, 100, 0, 79.82, 2887, 13801, 52, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:43.401, 100, 0, 79.98, 2887, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:41:44.443, 100, 0, 79.89, 2887, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:45.489, 100, 0, 75.90, 2887, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:46.530, 100, 0, 79.96, 2887, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:47.573, 100, 0, 80.14, 2887, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:48.617, 100, 0, 80.10, 2880, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:49.660, 100, 0, 80.12, 2880, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:50.703, 100, 0, 80.11, 2880, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:51.747, 100, 0, 80.20, 2880, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:52.791, 100, 0, 80.26, 2880, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:53.834, 100, 0, 80.45, 2880, 13801, 53, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:54.878, 100, 0, 80.41, 2880, 13801, 54, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:55.921, 100, 0, 80.42, 2880, 13801, 54, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:56.964, 100, 0, 80.68, 2880, 13801, 54, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:58.008, 100, 0, 80.47, 2880, 13801, 54, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:41:59.052, 100, 0, 80.53, 2880, 13801, 54, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:00.098, 100, 0, 79.44, 2880, 13801, 53, 2128",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:01.143, 100, 0, 79.31, 2880, 13801, 54, 2128",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:02.188, 100, 0, 80.77, 2880, 13801, 54, 1833",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:03.411, 100, 0, 81.40, 2880, 13801, 54, 1833",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:04.664, 100, 2, 80.97, 2880, 13801, 54, 1586",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:05.713, 100, 1, 83.61, 2880, 13801, 54, 1586",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:06.762, 100, 1, 82.26, 2880, 13801, 54, 1585",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:07.809, 100, 0, 82.12, 2880, 13801, 55, 1582",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:08.853, 100, 0, 82.05, 2880, 13801, 55, 1581",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:09.895, 100, 0, 82.21, 2880, 13801, 55, 1576",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:10.938, 100, 0, 82.27, 2880, 13801, 55, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:11.984, 100, 0, 82.33, 2880, 13801, 55, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:13.027, 100, 0, 82.29, 2880, 13801, 55, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:14.070, 100, 0, 82.28, 2880, 13801, 55, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:15.113, 100, 1, 82.31, 2880, 13801, 55, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:16.157, 100, 0, 82.44, 2880, 13801, 55, 1569",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:42:17.219, 100, 0, 82.49, 2880, 13801, 55, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:18.263, 100, 0, 78.00, 2880, 13801, 55, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:19.307, 100, 0, 82.29, 2880, 13801, 55, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:20.350, 100, 0, 82.46, 2880, 13801, 55, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:21.393, 100, 0, 82.48, 2880, 13801, 56, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:22.436, 100, 0, 82.57, 2880, 13801, 56, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:23.480, 100, 1, 82.68, 2880, 13801, 56, 1569",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:24.526, 100, 1, 82.70, 2880, 13801, 56, 1884",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:25.575, 99, 4, 84.14, 2880, 13801, 56, 1924",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:26.625, 100, 1, 84.52, 2880, 13801, 56, 2040",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:27.675, 100, 3, 84.04, 2880, 13801, 56, 2023",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:28.724, 100, 0, 84.26, 2880, 13801, 56, 2026",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:29.769, 100, 0, 83.10, 2880, 13801, 56, 2016",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:30.817, 100, 1, 83.32, 2880, 13801, 56, 1999",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:31.864, 100, 0, 83.51, 2880, 13801, 56, 1967",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:32.912, 100, 0, 83.01, 2880, 13801, 56, 1947",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:33.960, 99, 3, 83.40, 2880, 13801, 56, 1933",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:35.005, 100, 1, 83.75, 2880, 13801, 57, 1924",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:36.056, 100, 0, 85.13, 2880, 13801, 57, 1945",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:37.092, 100, 0, 83.35, 2880, 13801, 57, 1945",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:38.142, 100, 0, 84.62, 2880, 13801, 57, 1874",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:39.192, 100, 4, 84.19, 2880, 13801, 57, 2094",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:40.242, 99, 4, 85.96, 2880, 13801, 57, 2116",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:41.289, 100, 1, 84.65, 2880, 13801, 57, 1744",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:42.332, 100, 1, 83.26, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:43.377, 100, 1, 83.23, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:44.422, 100, 1, 83.29, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:45.465, 100, 1, 83.27, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:46.510, 100, 1, 83.41, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:47.553, 100, 1, 83.48, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:48.596, 100, 1, 84.00, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:42:49.641, 100, 1, 83.87, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:50.689, 100, 1, 79.06, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:51.733, 100, 1, 83.77, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:52.777, 100, 1, 83.77, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:53.820, 100, 1, 83.80, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:54.864, 100, 1, 83.81, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:55.908, 100, 1, 83.99, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:56.951, 100, 1, 83.93, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:57.995, 100, 1, 83.89, 2880, 13801, 57, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:42:59.039, 100, 1, 83.70, 2880, 13801, 56, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:00.082, 100, 1, 83.70, 2880, 13801, 56, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:01.126, 100, 1, 83.58, 2880, 13801, 56, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:02.169, 100, 1, 83.50, 2880, 13801, 56, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:03.214, 100, 1, 83.42, 2880, 13801, 56, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:04.257, 100, 1, 83.33, 2880, 13801, 56, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:05.300, 100, 1, 83.16, 2880, 13801, 56, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:06.345, 100, 1, 83.06, 2880, 13801, 55, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:07.388, 100, 1, 83.13, 2880, 13801, 55, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:08.431, 100, 1, 82.86, 2880, 13801, 55, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:09.475, 100, 1, 82.91, 2880, 13801, 55, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:10.520, 100, 1, 82.99, 2880, 13801, 55, 1723",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:11.565, 100, 1, 82.93, 2880, 13801, 55, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:12.609, 100, 1, 82.73, 2880, 13801, 55, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:13.653, 100, 1, 82.71, 2880, 13801, 54, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:14.696, 100, 1, 82.65, 2880, 13801, 54, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:15.739, 100, 1, 82.66, 2880, 13801, 54, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:16.782, 100, 1, 82.66, 2880, 13801, 54, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:17.825, 100, 1, 82.54, 2880, 13801, 54, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:18.869, 100, 1, 82.50, 2880, 13801, 54, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:19.912, 100, 1, 82.40, 2880, 13801, 54, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:20.955, 100, 1, 82.37, 2880, 13801, 54, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:22.003, 47, 1, 78.03, 2880, 13801, 53, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:23.046, 100, 1, 80.66, 2880, 13801, 53, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:24.089, 100, 1, 82.06, 2880, 13801, 53, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:25.132, 100, 1, 81.91, 2880, 13801, 53, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:26.175, 100, 1, 81.91, 2880, 13801, 53, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:27.218, 100, 1, 81.80, 2880, 13801, 53, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:28.263, 100, 1, 81.91, 2880, 13801, 53, 1660",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:29.307, 100, 1, 81.83, 2880, 13801, 53, 1638",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:30.353, 99, 1, 81.75, 2880, 13801, 53, 1575",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:31.398, 99, 1, 81.43, 2880, 13801, 53, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:32.442, 100, 1, 81.61, 2880, 13801, 53, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:33.486, 100, 1, 81.57, 2880, 13801, 53, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:34.530, 100, 1, 81.61, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:35.573, 100, 1, 81.52, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:36.617, 100, 1, 81.41, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:37.660, 100, 1, 81.50, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:38.704, 100, 1, 81.36, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:39.747, 100, 1, 81.45, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:40.791, 100, 1, 81.50, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:41.835, 100, 1, 81.37, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:42.878, 100, 1, 81.22, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:43.922, 100, 1, 81.23, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:44.967, 100, 1, 81.17, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:46.009, 100, 1, 81.16, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:47.052, 100, 1, 81.00, 2880, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:48.094, 100, 1, 81.05, 2887, 13801, 52, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:49.136, 100, 1, 81.14, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:50.178, 100, 1, 81.18, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:51.219, 100, 1, 81.23, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:52.260, 100, 1, 81.17, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:43:53.302, 100, 1, 81.06, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:54.348, 100, 1, 76.96, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:55.390, 100, 1, 81.02, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:56.433, 100, 1, 81.12, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:57.474, 100, 1, 80.97, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:58.516, 100, 1, 80.96, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:43:59.558, 100, 1, 80.89, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:00.599, 100, 1, 80.94, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:01.640, 100, 1, 80.95, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:02.682, 100, 1, 81.00, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:03.724, 100, 1, 80.77, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:04.764, 100, 1, 80.74, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:05.805, 100, 1, 80.80, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:06.847, 100, 1, 81.03, 2887, 13801, 51, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:07.888, 100, 1, 80.85, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:08.930, 100, 1, 80.93, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:09.971, 100, 1, 80.69, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:11.011, 100, 1, 80.67, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:12.053, 100, 1, 80.67, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:13.094, 100, 1, 80.62, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:14.137, 100, 1, 80.40, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:15.179, 100, 1, 80.37, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:16.221, 100, 1, 80.53, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:17.264, 100, 1, 80.51, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:18.305, 100, 1, 80.40, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:19.346, 100, 1, 80.56, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:20.387, 100, 1, 80.61, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:21.429, 100, 1, 80.53, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:22.470, 100, 1, 80.41, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:23.512, 100, 1, 80.43, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:24.554, 100, 1, 80.57, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:25.601, 89, 1, 76.47, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:26.642, 100, 1, 80.18, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:27.683, 100, 1, 80.58, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:28.725, 100, 1, 80.57, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:29.767, 100, 1, 80.47, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:30.810, 100, 1, 80.62, 2887, 13801, 50, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:31.851, 100, 1, 80.56, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:32.892, 100, 1, 80.46, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:33.935, 100, 1, 80.35, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:34.977, 100, 1, 80.29, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:36.019, 100, 1, 80.39, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:37.061, 100, 1, 80.16, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:38.103, 100, 1, 80.18, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:39.144, 100, 1, 80.13, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:40.187, 100, 1, 80.16, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:41.228, 100, 1, 80.18, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:42.271, 100, 1, 80.27, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:43.312, 100, 1, 80.42, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:44.354, 100, 1, 80.35, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:45.395, 100, 1, 80.26, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:46.437, 100, 1, 80.22, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:47.479, 100, 1, 80.26, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:48.521, 100, 1, 80.25, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:49.562, 100, 1, 80.38, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:50.604, 100, 1, 80.22, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:51.647, 100, 1, 80.08, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:52.688, 100, 1, 80.16, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:53.730, 100, 1, 80.29, 2887, 13801, 49, 1573",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:54.774, 100, 1, 80.18, 2887, 13801, 49, 1542",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:55.820, 100, 0, 79.95, 2887, 13801, 49, 1544",
+      "returncode": 0
+    },
+    {
+      "window": "boot",
+      "values": "2026/10/29 15:44:56.868, 99, 1, 79.91, 2887, 13801, 49, 1599",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:57.915, 100, 1, 76.40, 2887, 13801, 49, 1599",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:44:58.961, 100, 1, 79.78, 2887, 13801, 49, 1589",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:00.007, 100, 1, 79.81, 2887, 13801, 49, 1589",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:01.050, 100, 1, 79.89, 2887, 13801, 49, 1589",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:02.096, 100, 1, 79.82, 2887, 13801, 49, 1594",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:03.140, 100, 1, 79.84, 2887, 13801, 49, 1594",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:04.184, 100, 1, 80.07, 2887, 13801, 49, 1593",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:05.231, 100, 1, 79.93, 2887, 13801, 49, 1603",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:06.268, 99, 4, 80.13, 2887, 13801, 49, 1635",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:07.318, 100, 2, 80.83, 2887, 13801, 49, 1635",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:08.369, 100, 1, 79.66, 2887, 13801, 49, 1816",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:09.404, 100, 2, 80.37, 2887, 13801, 49, 1849",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:10.453, 100, 1, 81.84, 2887, 13801, 49, 1849",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:11.502, 100, 2, 81.81, 2887, 13801, 49, 1849",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:12.552, 100, 1, 81.72, 2887, 13801, 49, 1849",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:13.600, 100, 1, 81.37, 2887, 13801, 48, 1815",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:14.646, 99, 1, 80.98, 2887, 13801, 48, 1651",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:15.692, 100, 1, 79.93, 2887, 13801, 48, 1651",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:16.740, 99, 1, 80.15, 2887, 13801, 48, 1804",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:17.787, 99, 1, 79.99, 2887, 13801, 48, 1804",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:18.835, 100, 1, 80.06, 2887, 13801, 48, 1797",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:19.884, 99, 1, 79.54, 2887, 13801, 48, 1739",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:20.930, 100, 1, 79.67, 2887, 13801, 48, 1751",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:21.974, 99, 2, 79.75, 2887, 13801, 48, 1735",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:23.023, 99, 1, 79.46, 2887, 13801, 48, 1708",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:24.071, 100, 0, 79.90, 2887, 13801, 48, 1731",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:25.115, 100, 1, 79.75, 2887, 13801, 48, 1721",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:26.160, 100, 1, 79.72, 2887, 13801, 48, 1721",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:27.205, 100, 1, 79.74, 2887, 13801, 48, 1691",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:28.252, 99, 1, 79.63, 2887, 13801, 48, 1680",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render",
+      "values": "2026/10/29 15:45:29.298, 100, 1, 79.50, 2887, 13801, 48, 1681",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:30.348, 100, 1, 75.81, 2887, 13801, 48, 1669",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:31.396, 100, 1, 79.60, 2887, 13801, 48, 1669",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:32.440, 100, 1, 79.70, 2887, 13801, 48, 1696",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:33.485, 100, 1, 79.44, 2887, 13801, 48, 1696",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:34.522, 0, 1, 63.75, 2887, 13801, 46, 1733",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:35.621, 0, 1, 58.25, 2887, 13801, 46, 1718",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:36.767, 100, 1, 62.01, 2887, 13801, 47, 1632",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:37.813, 100, 1, 79.18, 2887, 13801, 48, 1612",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:38.857, 100, 1, 79.30, 2887, 13801, 48, 1605",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:39.904, 100, 1, 79.67, 2887, 13801, 48, 1638",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "2026/10/29 15:45:41.002, 0, 0, 67.22, 2887, 13801, 46, 1638",
+      "returncode": 0
+    }
+  ],
+  "peak_allocated_bytes": 278903808,
+  "peak_reserved_bytes": 295698432
+}

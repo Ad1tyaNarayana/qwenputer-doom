@@ -1,0 +1,154 @@
+{
+  "scripts": {
+    "run_gpu.py": "cddf50648b8e1069922b7584087abb550a8742a2b15bc0087200584e3a1fc074",
+    "fusion.py": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258"
+  },
+  "scope": "Separate 256-token profiler captures; shares use captured stream span.",
+  "expected_feedback_kernels": 1,
+  "windows": {
+    "boot": {
+      "tokens": 256,
+      "stream_us_per_token": 239.1489963531494,
+      "circuit_kernels_per_token": 48,
+      "feedback_kernels_per_token": 1,
+      "groups_us_per_token": {
+        "other_heads": 15.061761718750041,
+        "other_residual_history_apply": 23.7420859374996,
+        "alu_decode_ffn": 55.69956640624952,
+        "code_rom_heads": 10.00208984375002,
+        "ram_heads": 41.34014453125017,
+        "data_rom_heads": 53.21674218749992,
+        "data_rom_apply": 20.49903906249995,
+        "feedback_embedding": 5.7358242187499995,
+        "trace_copy": 0.8216249999999999,
+        "gaps": 13.030117446900192
+      },
+      "ranking": [
+        {
+          "group": "alu_decode_ffn",
+          "us_per_token": 55.69956640624952,
+          "stream_percent": 23.290738098686564
+        },
+        {
+          "group": "data_rom_heads",
+          "us_per_token": 53.21674218749992,
+          "stream_percent": 22.25254673823309
+        },
+        {
+          "group": "ram_heads",
+          "us_per_token": 41.34014453125017,
+          "stream_percent": 17.286355017858202
+        },
+        {
+          "group": "other_residual_history_apply",
+          "us_per_token": 23.7420859374996,
+          "stream_percent": 9.927738062692871
+        },
+        {
+          "group": "data_rom_apply",
+          "us_per_token": 20.49903906249995,
+          "stream_percent": 8.571660084338879
+        },
+        {
+          "group": "other_heads",
+          "us_per_token": 15.061761718750041,
+          "stream_percent": 6.298066037671536
+        },
+        {
+          "group": "gaps",
+          "us_per_token": 13.030117446900192,
+          "stream_percent": 5.448535283693485
+        },
+        {
+          "group": "code_rom_heads",
+          "us_per_token": 10.00208984375002,
+          "stream_percent": 4.182367476458071
+        },
+        {
+          "group": "feedback_embedding",
+          "us_per_token": 5.7358242187499995,
+          "stream_percent": 2.398431231666117
+        },
+        {
+          "group": "trace_copy",
+          "us_per_token": 0.8216249999999999,
+          "stream_percent": 0.3435619687011828
+        }
+      ],
+      "trace_sha256": "fbeca483ecd6584aacdd2bc365eb13726de3829cbac58aeaa32a75daad4812a2",
+      "trace_bytes": 12945133
+    },
+    "frame2_render": {
+      "tokens": 256,
+      "stream_us_per_token": 239.2078514099121,
+      "circuit_kernels_per_token": 48,
+      "feedback_kernels_per_token": 1,
+      "groups_us_per_token": {
+        "other_heads": 15.06458203125003,
+        "other_residual_history_apply": 23.728546874999576,
+        "alu_decode_ffn": 55.722656249999524,
+        "code_rom_heads": 10.017128906250035,
+        "ram_heads": 41.34721484375022,
+        "data_rom_heads": 53.201804687499944,
+        "data_rom_apply": 20.490355468749957,
+        "feedback_embedding": 5.7818984375,
+        "trace_copy": 0.8202421875,
+        "gaps": 13.033421722412811
+      },
+      "ranking": [
+        {
+          "group": "alu_decode_ffn",
+          "us_per_token": 55.722656249999524,
+          "stream_percent": 23.29466023860224
+        },
+        {
+          "group": "data_rom_heads",
+          "us_per_token": 53.201804687499944,
+          "stream_percent": 22.240827119145056
+        },
+        {
+          "group": "ram_heads",
+          "us_per_token": 41.34721484375022,
+          "stream_percent": 17.28505757651603
+        },
+        {
+          "group": "other_residual_history_apply",
+          "us_per_token": 23.728546874999576,
+          "stream_percent": 9.919635469798099
+        },
+        {
+          "group": "data_rom_apply",
+          "us_per_token": 20.490355468749957,
+          "stream_percent": 8.565920954507973
+        },
+        {
+          "group": "other_heads",
+          "us_per_token": 15.06458203125003,
+          "stream_percent": 6.297695473814115
+        },
+        {
+          "group": "gaps",
+          "us_per_token": 13.033421722412811,
+          "stream_percent": 5.448576058683976
+        },
+        {
+          "group": "code_rom_heads",
+          "us_per_token": 10.017128906250035,
+          "stream_percent": 4.187625467645897
+        },
+        {
+          "group": "feedback_embedding",
+          "us_per_token": 5.7818984375,
+          "stream_percent": 2.4171022829815083
+        },
+        {
+          "group": "trace_copy",
+          "us_per_token": 0.8202421875,
+          "stream_percent": 0.3428993583050976
+        }
+      ],
+      "trace_sha256": "1da8c0accd915554105f49ec24392c4e229a1c0167f44e9cc4aed308ff0842a8",
+      "trace_bytes": 12944949
+    }
+  }
+}

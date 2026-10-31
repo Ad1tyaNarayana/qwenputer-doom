@@ -29,6 +29,28 @@ The final frame bytes and all 65,536 bytes of final RAM match the independently 
 3. **Tokens → GPU.** The compiled CPU layers run on Qwenputer's compact Triton circuit executor, using fp32 circuit arithmetic and CUDA graphs.
 4. **RAM → pixels.** At each strip boundary the runner reads the strip, its descriptor and the palette straight out of the circuit's own recurrent state. No reference pixels are used. Python only arranges the strips and converts RGB565 to PNG.
 
+## Making it faster
+
+The same first frame now generates in about half the time. Every run below produced all 6,342,933 tokens with 0 mismatches.
+
+| Run | Network | Generation time |
+| --- | --- | ---: |
+| Original | 44-layer circuit | 3,044.57 s (50.7 min) |
+| Fused executor | Same 44-layer circuit | 1,446.28 s (24.1 min) |
+| Fused executor | Unified 64-layer W=4 network | 1,693.11 s (28.2 min) |
+
+The 2.105× gap between the first two rows is an observed historical ratio, not a controlled speedup measurement: the original run was interrupted and began from warm-up history. The third row runs a different network, so it is not an executor comparison. Stock Hugging Face `generate` matched a 4,096-token prefix of the unified run, which does not complete a frame.
+
+[The full article](docs/articles/doom-on-qwenputer.md) covers the profiling, the fused executor, and why 24 fps stayed out of reach. No game imagery was added, and Doom outputs still require your own WAD to regenerate.
+
+| Directory | What it does |
+| --- | --- |
+| [`experiments/dmc-cuda-profile`](experiments/dmc-cuda-profile/README.md) | GPU profile of the token loop |
+| [`experiments/dmc-rom-fusion`](experiments/dmc-rom-fusion/README.md) | Batches data-ROM heads and diagnoses a cross-warp race |
+| [`experiments/dmc-feedback-fusion`](experiments/dmc-feedback-fusion/README.md) | Fuses token feedback into a single kernel |
+| [`experiments/doom-showcase`](experiments/doom-showcase/README.md) | The new full runs and their evidence |
+| [`experiments/one-instr-design`](experiments/one-instr-design/README.md) | Why one instruction per step stays blocked |
+
 ## What this is, and isn't
 
 - This is one verified frame. It is not interactive gameplay.

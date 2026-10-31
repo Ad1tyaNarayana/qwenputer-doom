@@ -1,0 +1,1130 @@
+{
+  "side": "baseline",
+  "part": "both",
+  "tokens": 65536,
+  "render_tokens": 65536,
+  "chunk_tokens": 4096,
+  "one_bit_recording_control": true,
+  "windows": {
+    "boot": {
+      "tokens": 65536,
+      "reference_mismatches": 0,
+      "first_state_mismatch": null,
+      "final_S_reconstruction_equal": true,
+      "max_delta_words": 142,
+      "seconds": 138.14239269999962,
+      "digests_sha256": "9f453c62bc9638f51e5324abcdadc3442d0d5f283b7a82d3abf658452c68843e",
+      "initial_sha256": "e0747ab561ec6d2b6541f502a0e4420ab22d5265a09856ceb9859bbb0d2bab3c"
+    },
+    "frame2_render": {
+      "tokens": 65536,
+      "reference_mismatches": 0,
+      "first_state_mismatch": null,
+      "final_S_reconstruction_equal": true,
+      "max_delta_words": 151,
+      "seconds": 138.62409079999998,
+      "digests_sha256": "35d9524739e666d9230ca0931773016ae24a4ff374f35b83eb7e28ab1cbc5637",
+      "initial_sha256": "5d65f4d4043dc96f277ef05578a2c24a836221a8d169ec5544c1fc49e80493b6"
+    }
+  },
+  "base": {
+    "mode": "DMC port on faithful compact Triton circuit, fp32 CUDA graph; not stock HF",
+    "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+    "reference_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+    "reference_tokens_total": 6342933,
+    "reference_tokens_used_as_inputs": false,
+    "reference_machine_run_called": false,
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "ram_base": 16777216,
+    "ram_bytes": 65536,
+    "drom_base": 33554432,
+    "drom_bytes": 4194304,
+    "graph": {
+      "chip_layers": 44,
+      "dims": 2679
+    },
+    "setup_seconds": 3.395685200001026,
+    "source_adaptation": "Standalone FreeRun omits merged-chat-only Q embedding table family. Memory map uses frozen prepare.py. Executor2 arithmetic kernels unchanged.",
+    "capture_warmup_seconds": 0.3457273999993049
+  },
+  "scripts": {
+    "isolation.py": "ca4d1c70e7aed1688c0443804349c0d7890a2ae74e6b9dfe7de3ebe2a4d3bb60",
+    "fusion.py": "ccb8abe273c55f100d93369be8938a031620d243af6bd8a645b04e791dceb678"
+  },
+  "method": "SHA256 Merkle digest over raw int32 bits. Every S word compared to previous token on GPU; changed words update CPU 4096-word leaf hashes. Full raw bytes of every dynamic tensor hashed each token. Root hashes ordered tensor digests. No tolerance or lossy reduction.",
+  "state_layout": [
+    {
+      "name": "S:0",
+      "shape": [
+        1,
+        4,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 262144,
+      "pointer": 47439699456,
+      "storage_pointer": 47439699456
+    },
+    {
+      "name": "S:3",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47294971904,
+      "storage_pointer": 47294971904
+    },
+    {
+      "name": "S:4",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47297069056,
+      "storage_pointer": 47297069056
+    },
+    {
+      "name": "S:6",
+      "shape": [
+        1,
+        11,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 720896,
+      "pointer": 47316050432,
+      "storage_pointer": 47316050432
+    },
+    {
+      "name": "S:8",
+      "shape": [
+        1,
+        16,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 1048576,
+      "pointer": 47318094336,
+      "storage_pointer": 47318094336
+    },
+    {
+      "name": "S:10",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47299166208,
+      "storage_pointer": 47299166208
+    },
+    {
+      "name": "S:12",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47301263360,
+      "storage_pointer": 47301263360
+    },
+    {
+      "name": "S:14",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47303360512,
+      "storage_pointer": 47303360512
+    },
+    {
+      "name": "S:16",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47305457664,
+      "storage_pointer": 47305457664
+    },
+    {
+      "name": "S:18",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47307554816,
+      "storage_pointer": 47307554816
+    },
+    {
+      "name": "S:20",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47309651968,
+      "storage_pointer": 47309651968
+    },
+    {
+      "name": "S:21",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47311749120,
+      "storage_pointer": 47311749120
+    },
+    {
+      "name": "S:22",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47313846272,
+      "storage_pointer": 47313846272
+    },
+    {
+      "name": "S:23",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47330623488,
+      "storage_pointer": 47330623488
+    },
+    {
+      "name": "S:24",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47332720640,
+      "storage_pointer": 47332720640
+    },
+    {
+      "name": "S:25",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47334817792,
+      "storage_pointer": 47334817792
+    },
+    {
+      "name": "S:26",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47336914944,
+      "storage_pointer": 47336914944
+    },
+    {
+      "name": "S:27",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47339012096,
+      "storage_pointer": 47339012096
+    },
+    {
+      "name": "S:28",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47341109248,
+      "storage_pointer": 47341109248
+    },
+    {
+      "name": "S:29",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47343206400,
+      "storage_pointer": 47343206400
+    },
+    {
+      "name": "S:30",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47345303552,
+      "storage_pointer": 47345303552
+    },
+    {
+      "name": "S:31",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47347400704,
+      "storage_pointer": 47347400704
+    },
+    {
+      "name": "S:32",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47349497856,
+      "storage_pointer": 47349497856
+    },
+    {
+      "name": "S:33",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47357886464,
+      "storage_pointer": 47357886464
+    },
+    {
+      "name": "S:34",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47359983616,
+      "storage_pointer": 47359983616
+    },
+    {
+      "name": "S:35",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47362080768,
+      "storage_pointer": 47362080768
+    },
+    {
+      "name": "S:36",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47364177920,
+      "storage_pointer": 47364177920
+    },
+    {
+      "name": "S:37",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47366275072,
+      "storage_pointer": 47366275072
+    },
+    {
+      "name": "S:38",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47368372224,
+      "storage_pointer": 47368372224
+    },
+    {
+      "name": "S:39",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47370469376,
+      "storage_pointer": 47370469376
+    },
+    {
+      "name": "S:40",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47372566528,
+      "storage_pointer": 47372566528
+    },
+    {
+      "name": "S:41",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47374663680,
+      "storage_pointer": 47374663680
+    },
+    {
+      "name": "S:42",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47376760832,
+      "storage_pointer": 47376760832
+    },
+    {
+      "name": "S:43",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47387246592,
+      "storage_pointer": 47387246592
+    },
+    {
+      "name": "S:44",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47389343744,
+      "storage_pointer": 47389343744
+    },
+    {
+      "name": "S:45",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47391440896,
+      "storage_pointer": 47391440896
+    },
+    {
+      "name": "S:46",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47393538048,
+      "storage_pointer": 47393538048
+    },
+    {
+      "name": "S:47",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47395635200,
+      "storage_pointer": 47395635200
+    },
+    {
+      "name": "S:48",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47397732352,
+      "storage_pointer": 47397732352
+    },
+    {
+      "name": "S:49",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47399829504,
+      "storage_pointer": 47399829504
+    },
+    {
+      "name": "S:50",
+      "shape": [
+        1,
+        32,
+        128,
+        128
+      ],
+      "dtype": "torch.float32",
+      "bytes": 2097152,
+      "pointer": 47401926656,
+      "storage_pointer": 47401926656
+    },
+    {
+      "name": "residual",
+      "shape": [
+        1,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 10716,
+      "pointer": 47412254208,
+      "storage_pointer": 47412254208
+    },
+    {
+      "name": "x",
+      "shape": [
+        1,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 10716,
+      "pointer": 47412242944,
+      "storage_pointer": 47412242944
+    },
+    {
+      "name": "tok",
+      "shape": [
+        1
+      ],
+      "dtype": "torch.int64",
+      "bytes": 8,
+      "pointer": 47412253696,
+      "storage_pointer": 47412253696
+    },
+    {
+      "name": "y",
+      "shape": [
+        1,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 10716,
+      "pointer": 47412014080,
+      "storage_pointer": 47412014080
+    },
+    {
+      "name": "hist:0",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47439961600,
+      "storage_pointer": 47439961600
+    },
+    {
+      "name": "hist:3",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47441199616,
+      "storage_pointer": 47441199616
+    },
+    {
+      "name": "hist:4",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47441615360,
+      "storage_pointer": 47441615360
+    },
+    {
+      "name": "hist:6",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47316771328,
+      "storage_pointer": 47316771328
+    },
+    {
+      "name": "hist:8",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47319142912,
+      "storage_pointer": 47319142912
+    },
+    {
+      "name": "hist:10",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47320703488,
+      "storage_pointer": 47320703488
+    },
+    {
+      "name": "hist:12",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47322149888,
+      "storage_pointer": 47322149888
+    },
+    {
+      "name": "hist:14",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47324697600,
+      "storage_pointer": 47324697600
+    },
+    {
+      "name": "hist:16",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47326158336,
+      "storage_pointer": 47326158336
+    },
+    {
+      "name": "hist:18",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47326927872,
+      "storage_pointer": 47326927872
+    },
+    {
+      "name": "hist:20",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47327817216,
+      "storage_pointer": 47327817216
+    },
+    {
+      "name": "hist:21",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47328526336,
+      "storage_pointer": 47328526336
+    },
+    {
+      "name": "hist:22",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47329205760,
+      "storage_pointer": 47329205760
+    },
+    {
+      "name": "hist:23",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47329900032,
+      "storage_pointer": 47329900032
+    },
+    {
+      "name": "hist:24",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47351595008,
+      "storage_pointer": 47351595008
+    },
+    {
+      "name": "hist:25",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47352265216,
+      "storage_pointer": 47352265216
+    },
+    {
+      "name": "hist:26",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47352954368,
+      "storage_pointer": 47352954368
+    },
+    {
+      "name": "hist:27",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47353648640,
+      "storage_pointer": 47353648640
+    },
+    {
+      "name": "hist:28",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47354342912,
+      "storage_pointer": 47354342912
+    },
+    {
+      "name": "hist:29",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47355037184,
+      "storage_pointer": 47355037184
+    },
+    {
+      "name": "hist:30",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47355731456,
+      "storage_pointer": 47355731456
+    },
+    {
+      "name": "hist:31",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47356427264,
+      "storage_pointer": 47356427264
+    },
+    {
+      "name": "hist:32",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47357120000,
+      "storage_pointer": 47357120000
+    },
+    {
+      "name": "hist:33",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47357814272,
+      "storage_pointer": 47357814272
+    },
+    {
+      "name": "hist:34",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47379480064,
+      "storage_pointer": 47379480064
+    },
+    {
+      "name": "hist:35",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47380174336,
+      "storage_pointer": 47380174336
+    },
+    {
+      "name": "hist:36",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47380868608,
+      "storage_pointer": 47380868608
+    },
+    {
+      "name": "hist:37",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47381562880,
+      "storage_pointer": 47381562880
+    },
+    {
+      "name": "hist:38",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47382257152,
+      "storage_pointer": 47382257152
+    },
+    {
+      "name": "hist:39",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47382951424,
+      "storage_pointer": 47382951424
+    },
+    {
+      "name": "hist:40",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47383656448,
+      "storage_pointer": 47383656448
+    },
+    {
+      "name": "hist:41",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47384339968,
+      "storage_pointer": 47384339968
+    },
+    {
+      "name": "hist:42",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47385034240,
+      "storage_pointer": 47385034240
+    },
+    {
+      "name": "hist:43",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47385737216,
+      "storage_pointer": 47385737216
+    },
+    {
+      "name": "hist:44",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47386422784,
+      "storage_pointer": 47386422784
+    },
+    {
+      "name": "hist:45",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47387117056,
+      "storage_pointer": 47387117056
+    },
+    {
+      "name": "hist:46",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47408789504,
+      "storage_pointer": 47408789504
+    },
+    {
+      "name": "hist:47",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47409477120,
+      "storage_pointer": 47409477120
+    },
+    {
+      "name": "hist:48",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47410171392,
+      "storage_pointer": 47410171392
+    },
+    {
+      "name": "hist:49",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47410886656,
+      "storage_pointer": 47410886656
+    },
+    {
+      "name": "hist:50",
+      "shape": [
+        1,
+        3,
+        2679
+      ],
+      "dtype": "torch.float32",
+      "bytes": 32148,
+      "pointer": 47411559936,
+      "storage_pointer": 47411559936
+    }
+  ],
+  "graph_debug": "This CUDAGraph API requires the cuda-bindings package; install it with `pip install cuda-bindings`.",
+  "stream": 0,
+  "peak_allocated": 5982441984
+}

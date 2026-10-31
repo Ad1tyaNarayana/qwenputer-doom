@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="45" y="47" font-family="Arial, DejaVu Sans, sans-serif" font-size="28" fill="#222222" text-anchor="start">Complete first-frame generation</text>
+<text x="45" y="80" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#555555" text-anchor="start">Same ELF and trace; run 2 evaluates a different network</text>
+<line x1="380.0" y1="125" x2="380.0" y2="415" stroke="#cccccc" stroke-width="1"/>
+<text x="380.0" y="450" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">0</text>
+<line x1="477.1428571428571" y1="125" x2="477.1428571428571" y2="415" stroke="#cccccc" stroke-width="1"/>
+<text x="477.1428571428571" y="450" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">500</text>
+<line x1="574.2857142857142" y1="125" x2="574.2857142857142" y2="415" stroke="#cccccc" stroke-width="1"/>
+<text x="574.2857142857142" y="450" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">1,000</text>
+<line x1="671.4285714285714" y1="125" x2="671.4285714285714" y2="415" stroke="#cccccc" stroke-width="1"/>
+<text x="671.4285714285714" y="450" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">1,500</text>
+<line x1="768.5714285714286" y1="125" x2="768.5714285714286" y2="415" stroke="#cccccc" stroke-width="1"/>
+<text x="768.5714285714286" y="450" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">2,000</text>
+<line x1="865.7142857142858" y1="125" x2="865.7142857142858" y2="415" stroke="#cccccc" stroke-width="1"/>
+<text x="865.7142857142858" y="450" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">2,500</text>
+<line x1="962.8571428571429" y1="125" x2="962.8571428571429" y2="415" stroke="#cccccc" stroke-width="1"/>
+<text x="962.8571428571429" y="450" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">3,000</text>
+<line x1="1060.0" y1="125" x2="1060.0" y2="415" stroke="#cccccc" stroke-width="1"/>
+<text x="1060.0" y="450" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">3,500</text>
+<text x="362" y="178" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="end">Historical: original (44 layers)</text>
+<rect x="380" y="150" width="591.5173164491465" height="42" fill="#0072B2"/>
+<text x="983.5173164491465" y="178" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">3,044.57 s</text>
+<text x="362" y="273" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="end">Run 1: original (44 layers)</text>
+<rect x="380" y="245" width="280.99083979543195" height="42" fill="#E69F00"/>
+<text x="672.990839795432" y="273" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">1,446.28 s</text>
+<text x="362" y="368" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="end">Run 2: unified W=4 (64 layers)</text>
+<rect x="380" y="340" width="328.9463418719977" height="42" fill="#009E73"/>
+<text x="720.9463418719977" y="368" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">1,693.11 s</text>
+<text x="720" y="495" font-family="Arial, DejaVu Sans, sans-serif" font-size="20" fill="#222222" text-anchor="middle">Generation time (seconds)</text>
+<text x="45" y="545" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Successful generation chunk sums. Historical run resumed; both new runs were uninterrupted.</text>
+<text x="45" y="575" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Unified depth excludes stock padding. Run 2 is not a same-network executor speedup comparison.</text>
+</svg>

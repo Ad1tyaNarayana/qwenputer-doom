@@ -1,0 +1,8690 @@
+{
+  "dims": 2679,
+  "layers": 44,
+  "groups": [
+    {
+      "schedule_index": 18,
+      "level": 21,
+      "heads": [
+        "drom0",
+        "drom1",
+        "drom2",
+        "drom3",
+        "drom4",
+        "drom5",
+        "drom6",
+        "drom7",
+        "drom8",
+        "drom9",
+        "drom10",
+        "drom11",
+        "drom12",
+        "drom13",
+        "drom14",
+        "drom15"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 20,
+      "level": 23,
+      "heads": [
+        "drom16",
+        "drom17",
+        "drom18",
+        "drom19",
+        "drom20",
+        "drom21",
+        "drom22",
+        "drom23",
+        "drom24",
+        "drom25",
+        "drom26",
+        "drom27",
+        "drom28",
+        "drom29",
+        "drom30",
+        "drom31"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 21,
+      "level": 25,
+      "heads": [
+        "drom32",
+        "drom33",
+        "drom34",
+        "drom35",
+        "drom36",
+        "drom37",
+        "drom38",
+        "drom39",
+        "drom40",
+        "drom41",
+        "drom42",
+        "drom43",
+        "drom44",
+        "drom45",
+        "drom46",
+        "drom47"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 22,
+      "level": 27,
+      "heads": [
+        "drom48",
+        "drom49",
+        "drom50",
+        "drom51",
+        "drom52",
+        "drom53",
+        "drom54",
+        "drom55",
+        "drom56",
+        "drom57",
+        "drom58",
+        "drom59",
+        "drom60",
+        "drom61",
+        "drom62",
+        "drom63"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 23,
+      "level": 29,
+      "heads": [
+        "drom64",
+        "drom65",
+        "drom66",
+        "drom67",
+        "drom68",
+        "drom69",
+        "drom70",
+        "drom71",
+        "drom72",
+        "drom73",
+        "drom74",
+        "drom75",
+        "drom76",
+        "drom77",
+        "drom78",
+        "drom79"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 24,
+      "level": 31,
+      "heads": [
+        "drom80",
+        "drom81",
+        "drom82",
+        "drom83",
+        "drom84",
+        "drom85",
+        "drom86",
+        "drom87",
+        "drom88",
+        "drom89",
+        "drom90",
+        "drom91",
+        "drom92",
+        "drom93",
+        "drom94",
+        "drom95"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 25,
+      "level": 33,
+      "heads": [
+        "drom96",
+        "drom97",
+        "drom98",
+        "drom99",
+        "drom100",
+        "drom101",
+        "drom102",
+        "drom103",
+        "drom104",
+        "drom105",
+        "drom106",
+        "drom107",
+        "drom108",
+        "drom109",
+        "drom110",
+        "drom111"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 26,
+      "level": 35,
+      "heads": [
+        "drom112",
+        "drom113",
+        "drom114",
+        "drom115",
+        "drom116",
+        "drom117",
+        "drom118",
+        "drom119",
+        "drom120",
+        "drom121",
+        "drom122",
+        "drom123",
+        "drom124",
+        "drom125",
+        "drom126",
+        "drom127"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 27,
+      "level": 37,
+      "heads": [
+        "drom128",
+        "drom129",
+        "drom130",
+        "drom131",
+        "drom132",
+        "drom133",
+        "drom134",
+        "drom135",
+        "drom136",
+        "drom137",
+        "drom138",
+        "drom139",
+        "drom140",
+        "drom141",
+        "drom142",
+        "drom143"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 28,
+      "level": 39,
+      "heads": [
+        "drom144",
+        "drom145",
+        "drom146",
+        "drom147",
+        "drom148",
+        "drom149",
+        "drom150",
+        "drom151",
+        "drom152",
+        "drom153",
+        "drom154",
+        "drom155",
+        "drom156",
+        "drom157",
+        "drom158",
+        "drom159"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 29,
+      "level": 41,
+      "heads": [
+        "drom160",
+        "drom161",
+        "drom162",
+        "drom163",
+        "drom164",
+        "drom165",
+        "drom166",
+        "drom167",
+        "drom168",
+        "drom169",
+        "drom170",
+        "drom171",
+        "drom172",
+        "drom173",
+        "drom174",
+        "drom175"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 30,
+      "level": 43,
+      "heads": [
+        "drom176",
+        "drom177",
+        "drom178",
+        "drom179",
+        "drom180",
+        "drom181",
+        "drom182",
+        "drom183",
+        "drom184",
+        "drom185",
+        "drom186",
+        "drom187",
+        "drom188",
+        "drom189",
+        "drom190",
+        "drom191"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 31,
+      "level": 45,
+      "heads": [
+        "drom192",
+        "drom193",
+        "drom194",
+        "drom195",
+        "drom196",
+        "drom197",
+        "drom198",
+        "drom199",
+        "drom200",
+        "drom201",
+        "drom202",
+        "drom203",
+        "drom204",
+        "drom205",
+        "drom206",
+        "drom207"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 32,
+      "level": 47,
+      "heads": [
+        "drom208",
+        "drom209",
+        "drom210",
+        "drom211",
+        "drom212",
+        "drom213",
+        "drom214",
+        "drom215",
+        "drom216",
+        "drom217",
+        "drom218",
+        "drom219",
+        "drom220",
+        "drom221",
+        "drom222",
+        "drom223"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 33,
+      "level": 49,
+      "heads": [
+        "drom224",
+        "drom225",
+        "drom226",
+        "drom227",
+        "drom228",
+        "drom229",
+        "drom230",
+        "drom231",
+        "drom232",
+        "drom233",
+        "drom234",
+        "drom235",
+        "drom236",
+        "drom237",
+        "drom238",
+        "drom239"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 34,
+      "level": 51,
+      "heads": [
+        "drom240",
+        "drom241",
+        "drom242",
+        "drom243",
+        "drom244",
+        "drom245",
+        "drom246",
+        "drom247",
+        "drom248",
+        "drom249",
+        "drom250",
+        "drom251",
+        "drom252",
+        "drom253",
+        "drom254",
+        "drom255"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 35,
+      "level": 53,
+      "heads": [
+        "drom256",
+        "drom257",
+        "drom258",
+        "drom259",
+        "drom260",
+        "drom261",
+        "drom262",
+        "drom263",
+        "drom264",
+        "drom265",
+        "drom266",
+        "drom267",
+        "drom268",
+        "drom269",
+        "drom270",
+        "drom271"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 36,
+      "level": 55,
+      "heads": [
+        "drom272",
+        "drom273",
+        "drom274",
+        "drom275",
+        "drom276",
+        "drom277",
+        "drom278",
+        "drom279",
+        "drom280",
+        "drom281",
+        "drom282",
+        "drom283",
+        "drom284",
+        "drom285",
+        "drom286",
+        "drom287"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 37,
+      "level": 57,
+      "heads": [
+        "drom288",
+        "drom289",
+        "drom290",
+        "drom291",
+        "drom292",
+        "drom293",
+        "drom294",
+        "drom295",
+        "drom296",
+        "drom297",
+        "drom298",
+        "drom299",
+        "drom300",
+        "drom301",
+        "drom302",
+        "drom303"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 38,
+      "level": 59,
+      "heads": [
+        "drom304",
+        "drom305",
+        "drom306",
+        "drom307",
+        "drom308",
+        "drom309",
+        "drom310",
+        "drom311",
+        "drom312",
+        "drom313",
+        "drom314",
+        "drom315",
+        "drom316",
+        "drom317",
+        "drom318",
+        "drom319"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 39,
+      "level": 61,
+      "heads": [
+        "drom320",
+        "drom321",
+        "drom322",
+        "drom323",
+        "drom324",
+        "drom325",
+        "drom326",
+        "drom327",
+        "drom328",
+        "drom329",
+        "drom330",
+        "drom331",
+        "drom332",
+        "drom333",
+        "drom334",
+        "drom335"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 40,
+      "level": 63,
+      "heads": [
+        "drom336",
+        "drom337",
+        "drom338",
+        "drom339",
+        "drom340",
+        "drom341",
+        "drom342",
+        "drom343",
+        "drom344",
+        "drom345",
+        "drom346",
+        "drom347",
+        "drom348",
+        "drom349",
+        "drom350",
+        "drom351"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 41,
+      "level": 65,
+      "heads": [
+        "drom352",
+        "drom353",
+        "drom354",
+        "drom355",
+        "drom356",
+        "drom357",
+        "drom358",
+        "drom359",
+        "drom360",
+        "drom361",
+        "drom362",
+        "drom363",
+        "drom364",
+        "drom365",
+        "drom366",
+        "drom367"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 42,
+      "level": 67,
+      "heads": [
+        "drom368",
+        "drom369",
+        "drom370",
+        "drom371",
+        "drom372",
+        "drom373",
+        "drom374",
+        "drom375",
+        "drom376",
+        "drom377",
+        "drom378",
+        "drom379",
+        "drom380",
+        "drom381",
+        "drom382",
+        "drom383"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 43,
+      "level": 69,
+      "heads": [
+        "drom384",
+        "drom385",
+        "drom386",
+        "drom387",
+        "drom388",
+        "drom389",
+        "drom390",
+        "drom391",
+        "drom392",
+        "drom393",
+        "drom394",
+        "drom395",
+        "drom396",
+        "drom397",
+        "drom398",
+        "drom399"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 44,
+      "level": 71,
+      "heads": [
+        "drom400",
+        "drom401",
+        "drom402",
+        "drom403",
+        "drom404",
+        "drom405",
+        "drom406",
+        "drom407",
+        "drom408",
+        "drom409",
+        "drom410",
+        "drom411",
+        "drom412",
+        "drom413",
+        "drom414",
+        "drom415"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 45,
+      "level": 73,
+      "heads": [
+        "drom416",
+        "drom417",
+        "drom418",
+        "drom419",
+        "drom420",
+        "drom421",
+        "drom422",
+        "drom423",
+        "drom424",
+        "drom425",
+        "drom426",
+        "drom427",
+        "drom428",
+        "drom429",
+        "drom430",
+        "drom431"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 46,
+      "level": 75,
+      "heads": [
+        "drom432",
+        "drom433",
+        "drom434",
+        "drom435",
+        "drom436",
+        "drom437",
+        "drom438",
+        "drom439",
+        "drom440",
+        "drom441",
+        "drom442",
+        "drom443",
+        "drom444",
+        "drom445",
+        "drom446",
+        "drom447"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 47,
+      "level": 77,
+      "heads": [
+        "drom448",
+        "drom449",
+        "drom450",
+        "drom451",
+        "drom452",
+        "drom453",
+        "drom454",
+        "drom455",
+        "drom456",
+        "drom457",
+        "drom458",
+        "drom459",
+        "drom460",
+        "drom461",
+        "drom462",
+        "drom463"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 48,
+      "level": 79,
+      "heads": [
+        "drom464",
+        "drom465",
+        "drom466",
+        "drom467",
+        "drom468",
+        "drom469",
+        "drom470",
+        "drom471",
+        "drom472",
+        "drom473",
+        "drom474",
+        "drom475",
+        "drom476",
+        "drom477",
+        "drom478",
+        "drom479"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 49,
+      "level": 81,
+      "heads": [
+        "drom480",
+        "drom481",
+        "drom482",
+        "drom483",
+        "drom484",
+        "drom485",
+        "drom486",
+        "drom487",
+        "drom488",
+        "drom489",
+        "drom490",
+        "drom491",
+        "drom492",
+        "drom493",
+        "drom494",
+        "drom495"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    },
+    {
+      "schedule_index": 50,
+      "level": 83,
+      "heads": [
+        "drom496",
+        "drom497",
+        "drom498",
+        "drom499",
+        "drom500",
+        "drom501",
+        "drom502",
+        "drom503",
+        "drom504",
+        "drom505",
+        "drom506",
+        "drom507",
+        "drom508",
+        "drom509",
+        "drom510",
+        "drom511"
+      ],
+      "value_heads": 32,
+      "reads": {
+        "q": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 850,
+            "name": "bn.ea.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 851,
+            "name": "bn.ea.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 852,
+            "name": "bn.ea.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 853,
+            "name": "bn.ea.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 854,
+            "name": "bn.ea.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 855,
+            "name": "bn.ea.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 857,
+            "name": "bn.ea.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 858,
+            "name": "bn.ea.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 988,
+            "name": "add.r6",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 989,
+            "name": "add.r7",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 990,
+            "name": "add.r8",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 991,
+            "name": "add.r9",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 992,
+            "name": "add.r10",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 993,
+            "name": "add.r11",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 995,
+            "name": "add.r13",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 996,
+            "name": "add.r14",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 997,
+            "name": "add.r15",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 998,
+            "name": "add.r16",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 999,
+            "name": "add.r17",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1000,
+            "name": "add.r18",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1001,
+            "name": "add.r19",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1002,
+            "name": "add.r20",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 1003,
+            "name": "add.r21",
+            "producer_level": 12
+          }
+        ],
+        "k": [],
+        "v": [],
+        "z": [
+          {
+            "lag": 0,
+            "dim": 0,
+            "name": "one",
+            "producer_level": 0
+          },
+          {
+            "lag": 0,
+            "dim": 846,
+            "name": "bn.ea.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 847,
+            "name": "bn.ea.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 848,
+            "name": "bn.ea.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 849,
+            "name": "bn.ea.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 856,
+            "name": "bn.ea.r12",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 984,
+            "name": "add.r2",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 985,
+            "name": "add.r3",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 986,
+            "name": "add.r4",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 987,
+            "name": "add.r5",
+            "producer_level": 12
+          },
+          {
+            "lag": 0,
+            "dim": 994,
+            "name": "add.r12",
+            "producer_level": 12
+          }
+        ],
+        "a": [],
+        "beta": []
+      },
+      "taps": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "output_dims": [
+        2495,
+        2496,
+        2497,
+        2498
+      ],
+      "earlier_drom_output_reads": [],
+      "S_shape_per_batch": [
+        32,
+        128,
+        128
+      ],
+      "S_writes": [],
+      "history_shape_per_batch": [
+        3,
+        2679
+      ],
+      "history_update": "h[2]=old h[1]; h[1]=old h[0]; h[0]=full pre-add residual"
+    }
+  ],
+  "intervening": [
+    {
+      "schedule_index": 19,
+      "level": 22,
+      "nodes": [
+        "bn.dig0",
+        "bn.dig1",
+        "bn.dig2",
+        "bn.dig3",
+        "exit.fam.b2",
+        "exit.fam.b3",
+        "exit.fam.b4"
+      ]
+    }
+  ],
+  "verdict": "Head evaluations independent; shared additive outputs and ordered full histories. Keep group 0 and intervening FFN unchanged; fuse groups 1..31 with ordered apply.",
+  "upstream": "ca13310e2f9f788d1dd3feeea8213c1b0c23913c",
+  "python": "3.13.4",
+  "patches": {
+    "rv/spec.py": {
+      "original_sha256": "30b0095b23d2c9b963a25ff60cff6d21281f100e777adb8b99e024201af600ad",
+      "scratch_sha256": "dc10c15049ed87937b854e626e0940dc26e88ea2504518f95df738e3e507a016",
+      "replacements": [
+        [
+          "DROM_BASE, DROM_WORDS = 0x20000, 1 << 15",
+          "DROM_BASE, DROM_WORDS = 0x02000000, 1048576"
+        ],
+        [
+          "RAM_BASE, RAM_WORDS = 0x0, 1 << 13",
+          "RAM_BASE, RAM_WORDS = 0x01000000, 16384"
+        ],
+        [
+          "DATA_BASE = 0x100",
+          "DATA_BASE = RAM_BASE + 0x100"
+        ]
+      ]
+    },
+    "rv/core.py": {
+      "original_sha256": "2205b32147b9fd8e17819934ace20b0cf33336c2b98c51ddc760b95788c54210",
+      "scratch_sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0",
+      "replacements": [
+        [
+          "def build(target:",
+          "def region_literals(bits, base, size):\n    \"\"\"Upper address literals for an aligned power-of-two memory window.\"\"\"\n    if size <= 0 or size & (size - 1) or base % size or not 0 <= base < base + size <= 1 << 32:\n        raise ValueError((base, size))\n    width = size.bit_length() - 1\n    return [bits[i] if base >> i & 1 else 1 - bits[i] for i in range(width, 32)]\n\n\ndef build(target:"
+        ],
+        [
+          "    c = RvCore(target, text)",
+          "    if text is not None:\n        raise ValueError(\"This memory-map prototype supports the standalone CPU only.\")\n    c = RvCore(target, text)"
+        ],
+        [
+          "hl = lits_of(EA[13:17], h)",
+          "hl = lits_of(EA[13:(4 * S.DROM_WORDS).bit_length() - 1], h)"
+        ],
+        [
+          "in_ram = c.and_([1 - b for b in EA[15:32]], \"in_ram\")",
+          "in_ram = c.and_(region_literals(EA, S.RAM_BASE, 4 * S.RAM_WORDS), \"in_ram\")"
+        ],
+        [
+          "in_drom = c.and_([1 - b for b in EA[18:32]] + [EA[17]], \"in_drom\")",
+          "in_drom = c.and_(region_literals(EA, S.DROM_BASE, 4 * S.DROM_WORDS), \"in_drom\")"
+        ],
+        [
+          "    for h in range(S.RAM_WORDS >> 8):\n        r0, r1 = {}, {}\n        for wi in range(S.RAM_WORDS):\n            if (wi & 15 | (wi >> 12) << 4) != h or not m.ram[wi]:\n                continue\n            row = np.zeros(HD)\n            row[list(REF_COLS)] = A_REF\n            for i in range(32):\n                row[2 + i] = A_BIT * (m.ram[wi] >> i & 1)\n            (r1 if wi >> 4 & 1 else r0)[wi >> 5 & 127] = row\n        c.tables[f\"ram{h}\"].init = [r0, r1]",
+          "    for h in range(S.RAM_WORDS >> 8):\n        c.tables[f\"ram{h}\"].init = [{}, {}]\n    for wi, value in enumerate(m.ram):\n        if not value:\n            continue\n        h = wi & 15 | (wi >> 12) << 4\n        row = np.zeros(HD)\n        row[list(REF_COLS)] = A_REF\n        for i in range(32):\n            row[2 + i] = A_BIT * (value >> i & 1)\n        c.tables[f\"ram{h}\"].init[wi >> 4 & 1][wi >> 5 & 127] = row"
+        ]
+      ]
+    }
+  },
+  "source_sha256": {
+    "rv/core.py": "2205b32147b9fd8e17819934ace20b0cf33336c2b98c51ddc760b95788c54210",
+    "rv/tritonexec.py": "2df86254ccd1f4ee7ca1b64167a606bbaf90db0e3fcf9f88e4437ab3f2e8658f",
+    "rv/fastexec.py": "8c576baa17be216d536d81df8e3f799ec9e9db37e42794a48bd63e9b684e62cd",
+    "q35/ir.py": "cde724f0d85c180dfcf4c5bc2a4c4deeca04cd4e76874b512f17ffa5a5419a7b"
+  },
+  "matches_profile_schedule": true,
+  "upstream_status": ""
+}

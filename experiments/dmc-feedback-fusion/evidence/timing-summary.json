@@ -1,0 +1,136 @@
+{
+  "boot": {
+    "baseline": {
+      "tokens_per_second_median": 2084.3033205177953,
+      "tokens_per_second_range": [
+        2083.784598484019,
+        2084.3788861656285
+      ],
+      "total_us_per_token": 479.7766189575392,
+      "profile_match": {
+        "tokens": 256,
+        "mismatches": 0,
+        "sha256": "1c863e84529e3bcdc295a0c982676cc6b2a4929c96de55dfb821f3d104f47bf7"
+      },
+      "profile": {
+        "tokens": 256,
+        "circuit_kernels_per_token": 108,
+        "data_rom_us_per_token": 260.3907539062371,
+        "data_rom_apply_us_per_token": 41.33177343750101,
+        "trace_sha256": "bb03b4edd4a9a3b60ad6c4beb69fed925ab6b7e5b33eb440b55488f57bc28408",
+        "trace_bytes": 35049656
+      }
+    },
+    "rom": {
+      "tokens_per_second_median": 3972.7157789008183,
+      "tokens_per_second_range": [
+        3968.738193055322,
+        3973.318887208646
+      ],
+      "total_us_per_token": 251.716975402827,
+      "profile_match": {
+        "tokens": 256,
+        "mismatches": 0,
+        "sha256": "1c863e84529e3bcdc295a0c982676cc6b2a4929c96de55dfb821f3d104f47bf7"
+      },
+      "profile": {
+        "tokens": 256,
+        "circuit_kernels_per_token": 48,
+        "data_rom_us_per_token": 53.057531249999954,
+        "data_rom_apply_us_per_token": 20.32175781249998,
+        "trace_sha256": "0aa1e5dec564c54c41833a7c32bfdcd89b329196a62f79ba065506f8ae219a23",
+        "trace_bytes": 20016074
+      }
+    },
+    "fused": {
+      "tokens_per_second_median": 4380.377941408822,
+      "tokens_per_second_range": [
+        4361.2957389943385,
+        4381.252917197449
+      ],
+      "total_us_per_token": 228.29080352787523,
+      "profile_match": {
+        "tokens": 256,
+        "mismatches": 0,
+        "sha256": "1c863e84529e3bcdc295a0c982676cc6b2a4929c96de55dfb821f3d104f47bf7"
+      },
+      "profile": {
+        "tokens": 256,
+        "circuit_kernels_per_token": 48,
+        "data_rom_us_per_token": 53.21674218749992,
+        "data_rom_apply_us_per_token": 20.49903906249995,
+        "trace_sha256": "fbeca483ecd6584aacdd2bc365eb13726de3829cbac58aeaa32a75daad4812a2",
+        "trace_bytes": 12945133
+      }
+    },
+    "cumulative_speedup": 2.1016029184853107,
+    "incremental_speedup": 1.1026154865326905
+  },
+  "frame2_render": {
+    "baseline": {
+      "tokens_per_second_median": 2084.612558489124,
+      "tokens_per_second_range": [
+        2077.611179303114,
+        2084.8467342112954
+      ],
+      "total_us_per_token": 479.7054473876793,
+      "profile_match": {
+        "tokens": 256,
+        "mismatches": 0,
+        "sha256": "aef9c2d1a78a1847d1101454c145f7296a3bdc27dc3ce4fbaf5351d7622cef84"
+      },
+      "profile": {
+        "tokens": 256,
+        "circuit_kernels_per_token": 108,
+        "data_rom_us_per_token": 260.3501835937366,
+        "data_rom_apply_us_per_token": 41.29801562500093,
+        "trace_sha256": "1e1c5ebf3de76ac070aa19568427f42cad919c6ff601eaee922dc35e8cedc41d",
+        "trace_bytes": 35138370
+      }
+    },
+    "rom": {
+      "tokens_per_second_median": 3973.5735531223036,
+      "tokens_per_second_range": [
+        3967.752133283861,
+        3973.793698853355
+      ],
+      "total_us_per_token": 251.66263732911975,
+      "profile_match": {
+        "tokens": 256,
+        "mismatches": 0,
+        "sha256": "aef9c2d1a78a1847d1101454c145f7296a3bdc27dc3ce4fbaf5351d7622cef84"
+      },
+      "profile": {
+        "tokens": 256,
+        "circuit_kernels_per_token": 48,
+        "data_rom_us_per_token": 53.03259765624995,
+        "data_rom_apply_us_per_token": 20.337078124999984,
+        "trace_sha256": "584fed2d4080c3157ec3d0062b8bce95f1195e6989eb3382fd3d03b136675e0f",
+        "trace_bytes": 20051200
+      }
+    },
+    "fused": {
+      "tokens_per_second_median": 4382.977213648178,
+      "tokens_per_second_range": [
+        4361.541118237161,
+        4383.563754926518
+      ],
+      "total_us_per_token": 228.15541839599217,
+      "profile_match": {
+        "tokens": 256,
+        "mismatches": 0,
+        "sha256": "aef9c2d1a78a1847d1101454c145f7296a3bdc27dc3ce4fbaf5351d7622cef84"
+      },
+      "profile": {
+        "tokens": 256,
+        "circuit_kernels_per_token": 48,
+        "data_rom_us_per_token": 53.201804687499944,
+        "data_rom_apply_us_per_token": 20.490355468749957,
+        "trace_sha256": "1da8c0accd915554105f49ec24392c4e229a1c0167f44e9cc4aed308ff0842a8",
+        "trace_bytes": 12944949
+      }
+    },
+    "cumulative_speedup": 2.1025380451631035,
+    "incremental_speedup": 1.1030316049401372
+  }
+}

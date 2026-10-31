@@ -1,0 +1,13 @@
+{
+  "tokens": 8192,
+  "queued_replays": 8192,
+  "mismatched_values": 0,
+  "bad_replays": 0,
+  "first_bad_replay": null,
+  "cases": "All 32 family codes, random 16-bit payloads, signed half-integer rounding controls every seventh case; family and row clamp.",
+  "peak_allocated": 447611392,
+  "scripts": {
+    "fusion.py": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+    "feedback_race.py": "b55698fd4f118c9b2323c85d3d3a7e9dd08449f5eedfdbbe9b28ce625d3d9736"
+  }
+}

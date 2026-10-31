@@ -1,0 +1,50 @@
+{
+  "scope": "count-derived sensitivity; not a new neural timing",
+  "report_sha256": "65931780b7e404ae6d31d2784e0f4c60b7621305a8f612220003e8d9c07ea765",
+  "steady_frames": 9,
+  "instructions_per_frame": 2772503.111111111,
+  "old_tokens_per_frame": 4501708.333333333,
+  "ratio": 1.6236982080533082,
+  "baseline_us_per_token": 228.155,
+  "scenarios": [
+    {
+      "layers": 44,
+      "us_per_instruction": 228.155,
+      "instructions_per_second": 4382.9852512546295,
+      "gain": 1.6236982080533082,
+      "seconds_per_frame": 632.5604473155556
+    },
+    {
+      "layers": 56,
+      "us_per_instruction": 290.3790909090909,
+      "instructions_per_second": 3443.7741259857803,
+      "gain": 1.2757628777561707,
+      "seconds_per_frame": 805.0769329470708
+    },
+    {
+      "layers": 64,
+      "us_per_instruction": 331.8618181818182,
+      "instructions_per_second": 3013.302360237558,
+      "gain": 1.1162925180366494,
+      "seconds_per_frame": 920.0879233680809
+    },
+    {
+      "layers": 80,
+      "us_per_instruction": 414.82727272727277,
+      "instructions_per_second": 2410.641888190046,
+      "gain": 0.8930340144293194,
+      "seconds_per_frame": 1150.1099042101011
+    },
+    {
+      "layers": 96,
+      "us_per_instruction": 497.7927272727273,
+      "instructions_per_second": 2008.8682401583717,
+      "gain": 0.744195012024433,
+      "seconds_per_frame": 1380.131885052121
+    }
+  ],
+  "source_sha256": {
+    "count_protocol.py": "0c71d018c5f220728f84f1d6ffb139b6454acbce578a082ca699e9c04b8008fe",
+    "masked_write_poc.py": "c650b087f9725b60ba3655124e647e425bc301e7beb1bed206af969092211228"
+  }
+}

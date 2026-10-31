@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="45" y="47" font-family="Arial, DejaVu Sans, sans-serif" font-size="28" fill="#222222" text-anchor="start">Projected continuing-frame time remains large</text>
+<text x="45" y="80" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#555555" text-anchor="start">Count-derived projections, not measured neural frame times</text>
+<line x1="330.0" y1="115" x2="330.0" y2="440" stroke="#cccccc" stroke-width="1"/>
+<text x="330.0" y="475" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">0.01</text>
+<line x1="456.66666666666663" y1="115" x2="456.66666666666663" y2="440" stroke="#cccccc" stroke-width="1"/>
+<text x="456.66666666666663" y="475" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">0.1</text>
+<line x1="583.3333333333333" y1="115" x2="583.3333333333333" y2="440" stroke="#cccccc" stroke-width="1"/>
+<text x="583.3333333333333" y="475" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">1</text>
+<line x1="710.0" y1="115" x2="710.0" y2="440" stroke="#cccccc" stroke-width="1"/>
+<text x="710.0" y="475" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">10</text>
+<line x1="836.6666666666666" y1="115" x2="836.6666666666666" y2="440" stroke="#cccccc" stroke-width="1"/>
+<text x="836.6666666666666" y="475" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">100</text>
+<line x1="963.3333333333334" y1="115" x2="963.3333333333334" y2="440" stroke="#cccccc" stroke-width="1"/>
+<text x="963.3333333333334" y="475" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">1000</text>
+<line x1="1090.0" y1="115" x2="1090.0" y2="440" stroke="#cccccc" stroke-width="1"/>
+<text x="1090.0" y="475" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="middle">10000</text>
+<text x="310" y="175" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="end">Original executor</text>
+<rect x="998.6845871416938" y="160" width="14" height="20" fill="#0072B2"/>
+<text x="1023.6845871416938" y="175" font-family="Arial, DejaVu Sans, sans-serif" font-size="19" fill="#222222" text-anchor="start">2,159.5 s/frame</text>
+<text x="310" y="280" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="end">ROM + feedback</text>
+<rect x="957.8036978226083" y="265" width="14" height="20" fill="#E69F00"/>
+<text x="982.8036978226083" y="280" font-family="Arial, DejaVu Sans, sans-serif" font-size="19" fill="#222222" text-anchor="start">1,027.1 s/frame</text>
+<text x="310" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="end">Hypothetical 1 instruction/step</text>
+<rect x="931.1395908341515" y="370" width="14" height="20" fill="#009E73"/>
+<text x="956.1395908341515" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="19" fill="#222222" text-anchor="start">632.6 s/frame</text>
+<text x="710" y="525" font-family="Arial, DejaVu Sans, sans-serif" font-size="20" fill="#222222" text-anchor="middle">Projected generation time per frame (seconds, logarithmic axis)</text>
+<text x="45" y="570" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Counts average later frames in the short walk. The hypothetical design assumes unchanged step cost.</text>
+<text x="45" y="600" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">The target budget and gap ratios are explained in the article; no target timing is measured here.</text>
+</svg>

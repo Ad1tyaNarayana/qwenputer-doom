@@ -1,0 +1,39 @@
+{
+  "doomgeneric_revision": "e257a09527062bfb986b6e5e0780839b6cbd5b71",
+  "qwenputer_revision": "ca13310e2f9f788d1dd3feeea8213c1b0c23913c",
+  "machine": {
+    "ram_bytes": 32768,
+    "ram_after_null_page_bytes": 32512,
+    "maximum_heap_before_static_data_bytes": 28416,
+    "reserved_stack_bytes": 4096,
+    "drom_bytes": 131072,
+    "rom_bytes": 262144
+  },
+  "source_allocations": {
+    "indexed_framebuffer_bytes_within_zone": 64000,
+    "default_output_framebuffer_bytes_outside_zone": 1024000,
+    "default_zone_bytes": 6291456,
+    "default_zone_plus_output_bytes": 7315456,
+    "output_bytes_if_configured_320x200": 256000,
+    "zone_plus_output_if_configured_320x200": 6547456
+  },
+  "gate": "NO_GO: the 64000-byte engine framebuffer alone exceeds all 32768 bytes of writable RAM",
+  "source_sha256": {
+    "doomgeneric/i_video.h": "c3321fc943e421a9a889509b7a2a7ee5b6a848c8fee4ecaab746c66588c15a3d",
+    "doomgeneric/i_video.c": "8b9e1998f344f8af78d904a3e806817733fd0defcf6d54368b03f5c1f61a2eed",
+    "doomgeneric/doomgeneric.h": "d24861dd7aa75d283226724f710ae4226839898bc61b986a0602df7df19df148",
+    "doomgeneric/doomgeneric.c": "5d1cc5ea8b4daf4bb470f681b365f393d11fe077ecb36ea3230865a757472656",
+    "doomgeneric/i_system.c": "e547a31d179f5aeb3a377f4d4fe22d46d212e737d2dedde8b64b0d253a4d71f9"
+  },
+  "crosscompile": {
+    "kind": "Unpruned relocatable engine objects; not a runnable port or live-size lower bound",
+    "target": "RV32IM+Zba, ILP32, Linux musl headers only",
+    "engine_translation_units": 80,
+    "excluded_platform_translation_unit": "doomgeneric_xlib.c",
+    "libc_linked": false,
+    "linked": false,
+    "writable_allocated_bytes": 297309,
+    "readonly_allocated_bytes": 136105,
+    "code_bytes": 215444
+  }
+}

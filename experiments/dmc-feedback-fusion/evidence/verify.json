@@ -1,0 +1,861 @@
+{
+  "mode": "verify",
+  "baseline_control": false,
+  "tokens": 65536,
+  "base": {
+    "mode": "DMC port on faithful compact Triton circuit, fp32 CUDA graph; not stock HF",
+    "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+    "reference_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+    "reference_tokens_total": 6342933,
+    "reference_tokens_used_as_inputs": false,
+    "reference_machine_run_called": false,
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "ram_base": 16777216,
+    "ram_bytes": 65536,
+    "drom_base": 33554432,
+    "drom_bytes": 4194304,
+    "graph": {
+      "chip_layers": 44,
+      "dims": 2679
+    },
+    "setup_seconds": 3.4448192000018025,
+    "source_adaptation": "Standalone FreeRun omits merged-chat-only Q embedding table family. Memory map uses frozen prepare.py. Executor2 arithmetic kernels unchanged.",
+    "capture_warmup_seconds": 0.3426614999989397
+  },
+  "seed": {
+    "reference_seeded": true,
+    "token_offset": 6470215,
+    "instruction_offset": 3966856,
+    "pc": 407652,
+    "lag_histories": "reset at reference record boundary"
+  },
+  "scripts": {
+    "run_gpu.py": "cddf50648b8e1069922b7584087abb550a8742a2b15bc0087200584e3a1fc074",
+    "fusion.py": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258"
+  },
+  "rom_fusion_sha256": "ccb8abe273c55f100d93369be8938a031620d243af6bd8a645b04e791dceb678",
+  "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.14.1+cu130",
+  "triton": "3.8.0",
+  "cuda": "13.0",
+  "windows": {
+    "boot": {
+      "state_equal": true,
+      "tokens_checked": 65536,
+      "mismatched_words": 0,
+      "max_abs_difference": 0.0,
+      "baseline_reference": {
+        "tokens": 65536,
+        "mismatches": 0,
+        "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+      },
+      "fused_reference": {
+        "tokens": 65536,
+        "mismatches": 0,
+        "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+      },
+      "verification_seconds": 85.46348620000208
+    },
+    "frame2_render": {
+      "state_equal": true,
+      "tokens_checked": 65536,
+      "mismatched_words": 0,
+      "max_abs_difference": 0.0,
+      "baseline_reference": {
+        "tokens": 65536,
+        "mismatches": 0,
+        "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+      },
+      "fused_reference": {
+        "tokens": 65536,
+        "mismatches": 0,
+        "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+      },
+      "verification_seconds": 85.32435880000048
+    }
+  },
+  "controls": [
+    {
+      "mutation": "S:0",
+      "mismatched_words": 1
+    },
+    {
+      "mutation": "hist:0",
+      "mismatched_words": 1
+    },
+    {
+      "mutation": "x",
+      "mismatched_words": 1
+    },
+    {
+      "mutation": "tok",
+      "mismatched_words": 1
+    },
+    {
+      "mutation": "y",
+      "mismatched_words": 1
+    },
+    {
+      "mutation": "residual",
+      "mismatched_words": 1
+    }
+  ],
+  "gpu_before": "Thu Oct 29 18:43:13 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 617.42                 KMD Version: 617.42        CUDA UMD Version: 13.4     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 5070 Ti   WDDM  |   00000000:01:00.0 Off |                  N/A |\n| 30%   43C    P5             17W /  300W |    1881MiB /  16303MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A             748    C+G   C:\\Windows\\System32\\dwm.exe           N/A      |\n|    0   N/A  N/A            2188    C+G   ...1g1gvanyjgm\\WhatsApp.Root.exe      N/A      |\n|    0   N/A  N/A            4568    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A            6368    C+G   ..._1mmjbktjj1mkp\\GBT_DL_LIB.exe      N/A      |\n|    0   N/A  N/A            7936    C+G   ...nmj9wpt2a\\Raycast\\Raycast.exe      N/A      |\n|    0   N/A  N/A            8336    C+G   ...GABYTE\\Control Center\\GCC.exe      N/A      |\n|    0   N/A  N/A            8500    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A            8708    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A            8964    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A            9476    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           11168    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           11208    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A           12544    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           15412    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A           15524    C+G   ...xyewy\\ShellExperienceHost.exe      N/A      |\n|    0   N/A  N/A           16076    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           16352    C+G   ...\\codex-computer-use-swift.exe      N/A      |\n|    0   N/A  N/A           17184    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n|    0   N/A  N/A           18272    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           19276    C+G   ...ntrolPanel\\SystemSettings.exe      N/A      |\n|    0   N/A  N/A           19988    C+G   ...twinkle-tray\\Twinkle Tray.exe      N/A      |\n|    0   N/A  N/A           20632    C+G   ...onsoftware\\RadeonSoftware.exe      N/A      |\n|    0   N/A  N/A           20688      C   ...pythoncore-3.14-64\\python.exe      N/A      |\n|    0   N/A  N/A           20812    C+G   ...adeonsoftware\\AMDRSSrcExt.exe      N/A      |\n|    0   N/A  N/A           21520    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+  "capture_stream": 2475685395648,
+  "graph_topology": {
+    "nodes": 186,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        14,
+        15
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        20,
+        21
+      ],
+      [
+        21,
+        22
+      ],
+      [
+        22,
+        23
+      ],
+      [
+        23,
+        24
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        26,
+        27
+      ],
+      [
+        27,
+        28
+      ],
+      [
+        28,
+        29
+      ],
+      [
+        29,
+        30
+      ],
+      [
+        30,
+        31
+      ],
+      [
+        31,
+        32
+      ],
+      [
+        32,
+        33
+      ],
+      [
+        33,
+        34
+      ],
+      [
+        34,
+        35
+      ],
+      [
+        35,
+        36
+      ],
+      [
+        36,
+        37
+      ],
+      [
+        37,
+        38
+      ],
+      [
+        38,
+        39
+      ],
+      [
+        39,
+        40
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        41,
+        42
+      ],
+      [
+        42,
+        43
+      ],
+      [
+        43,
+        44
+      ],
+      [
+        44,
+        45
+      ],
+      [
+        45,
+        46
+      ],
+      [
+        46,
+        47
+      ],
+      [
+        47,
+        48
+      ],
+      [
+        48,
+        49
+      ],
+      [
+        49,
+        50
+      ],
+      [
+        50,
+        51
+      ],
+      [
+        51,
+        52
+      ],
+      [
+        52,
+        53
+      ],
+      [
+        53,
+        54
+      ],
+      [
+        54,
+        55
+      ],
+      [
+        55,
+        56
+      ],
+      [
+        56,
+        57
+      ],
+      [
+        57,
+        58
+      ],
+      [
+        58,
+        59
+      ],
+      [
+        59,
+        60
+      ],
+      [
+        60,
+        61
+      ],
+      [
+        61,
+        62
+      ],
+      [
+        62,
+        63
+      ],
+      [
+        63,
+        64
+      ],
+      [
+        64,
+        65
+      ],
+      [
+        65,
+        66
+      ],
+      [
+        66,
+        67
+      ],
+      [
+        67,
+        68
+      ],
+      [
+        68,
+        69
+      ],
+      [
+        69,
+        70
+      ],
+      [
+        70,
+        71
+      ],
+      [
+        71,
+        72
+      ],
+      [
+        72,
+        73
+      ],
+      [
+        73,
+        74
+      ],
+      [
+        74,
+        75
+      ],
+      [
+        75,
+        76
+      ],
+      [
+        76,
+        77
+      ],
+      [
+        77,
+        78
+      ],
+      [
+        78,
+        79
+      ],
+      [
+        79,
+        80
+      ],
+      [
+        80,
+        81
+      ],
+      [
+        81,
+        82
+      ],
+      [
+        82,
+        83
+      ],
+      [
+        83,
+        84
+      ],
+      [
+        84,
+        85
+      ],
+      [
+        85,
+        86
+      ],
+      [
+        86,
+        87
+      ],
+      [
+        87,
+        88
+      ],
+      [
+        88,
+        89
+      ],
+      [
+        89,
+        90
+      ],
+      [
+        90,
+        91
+      ],
+      [
+        91,
+        92
+      ],
+      [
+        92,
+        93
+      ],
+      [
+        93,
+        94
+      ],
+      [
+        94,
+        95
+      ],
+      [
+        95,
+        96
+      ],
+      [
+        96,
+        97
+      ],
+      [
+        97,
+        98
+      ],
+      [
+        98,
+        99
+      ],
+      [
+        99,
+        100
+      ],
+      [
+        100,
+        101
+      ],
+      [
+        101,
+        102
+      ],
+      [
+        102,
+        103
+      ],
+      [
+        103,
+        104
+      ],
+      [
+        104,
+        105
+      ],
+      [
+        105,
+        106
+      ],
+      [
+        106,
+        107
+      ],
+      [
+        107,
+        108
+      ],
+      [
+        108,
+        109
+      ],
+      [
+        109,
+        110
+      ],
+      [
+        110,
+        111
+      ],
+      [
+        111,
+        112
+      ],
+      [
+        112,
+        113
+      ],
+      [
+        113,
+        114
+      ],
+      [
+        114,
+        115
+      ],
+      [
+        115,
+        116
+      ],
+      [
+        116,
+        117
+      ],
+      [
+        117,
+        118
+      ],
+      [
+        118,
+        119
+      ],
+      [
+        119,
+        120
+      ],
+      [
+        120,
+        121
+      ],
+      [
+        121,
+        122
+      ],
+      [
+        122,
+        123
+      ],
+      [
+        123,
+        124
+      ],
+      [
+        124,
+        125
+      ],
+      [
+        125,
+        126
+      ],
+      [
+        126,
+        127
+      ],
+      [
+        127,
+        128
+      ],
+      [
+        128,
+        129
+      ],
+      [
+        129,
+        130
+      ],
+      [
+        130,
+        131
+      ],
+      [
+        131,
+        132
+      ],
+      [
+        132,
+        133
+      ],
+      [
+        133,
+        134
+      ],
+      [
+        134,
+        135
+      ],
+      [
+        135,
+        136
+      ],
+      [
+        136,
+        137
+      ],
+      [
+        137,
+        138
+      ],
+      [
+        138,
+        139
+      ],
+      [
+        139,
+        140
+      ],
+      [
+        140,
+        141
+      ],
+      [
+        141,
+        142
+      ],
+      [
+        142,
+        143
+      ],
+      [
+        143,
+        144
+      ],
+      [
+        144,
+        145
+      ],
+      [
+        145,
+        146
+      ],
+      [
+        146,
+        147
+      ],
+      [
+        147,
+        148
+      ],
+      [
+        148,
+        149
+      ],
+      [
+        149,
+        150
+      ],
+      [
+        150,
+        151
+      ],
+      [
+        151,
+        152
+      ],
+      [
+        152,
+        153
+      ],
+      [
+        153,
+        154
+      ],
+      [
+        154,
+        155
+      ],
+      [
+        155,
+        156
+      ],
+      [
+        156,
+        157
+      ],
+      [
+        157,
+        158
+      ],
+      [
+        158,
+        159
+      ],
+      [
+        159,
+        160
+      ],
+      [
+        160,
+        161
+      ],
+      [
+        161,
+        162
+      ],
+      [
+        162,
+        163
+      ],
+      [
+        163,
+        164
+      ],
+      [
+        164,
+        165
+      ],
+      [
+        165,
+        166
+      ],
+      [
+        166,
+        167
+      ],
+      [
+        167,
+        168
+      ],
+      [
+        168,
+        169
+      ],
+      [
+        169,
+        170
+      ],
+      [
+        170,
+        171
+      ],
+      [
+        171,
+        172
+      ],
+      [
+        172,
+        173
+      ],
+      [
+        173,
+        174
+      ],
+      [
+        174,
+        175
+      ],
+      [
+        175,
+        176
+      ],
+      [
+        176,
+        177
+      ],
+      [
+        177,
+        178
+      ],
+      [
+        178,
+        179
+      ],
+      [
+        179,
+        180
+      ],
+      [
+        180,
+        181
+      ],
+      [
+        181,
+        182
+      ],
+      [
+        182,
+        183
+      ],
+      [
+        183,
+        184
+      ],
+      [
+        184,
+        185
+      ]
+    ]
+  },
+  "comparison": {
+    "state_tensors": 86,
+    "bytes_per_executor_per_token": 83073616,
+    "method": "Every 32-bit word, including both halves of int64 tokens; no hashes or tolerance.",
+    "residual": "Compared before token feedback",
+    "scratch": "Baseline y compared each token; fused private y checked zero after each window."
+  },
+  "peak_allocated": 428075008,
+  "peak_reserved": 465567744
+}
