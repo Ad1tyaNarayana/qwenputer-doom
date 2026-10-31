@@ -1,0 +1,69 @@
+{
+    "cpu":  {
+                "LoadPercentage":  0,
+                "NumberOfLogicalProcessors":  12
+            },
+    "processors":  "12",
+    "processes":  [
+                      {
+                          "Name":  "System",
+                          "CPU":  529.140625,
+                          "WorkingSet64":  4968448
+                      },
+                      {
+                          "Name":  "GCC",
+                          "CPU":  210.46875,
+                          "WorkingSet64":  78557184
+                      },
+                      {
+                          "Name":  "MsMpEng",
+                          "CPU":  185.359375,
+                          "WorkingSet64":  373141504
+                      },
+                      {
+                          "Name":  "ChatGPT",
+                          "CPU":  74.125,
+                          "WorkingSet64":  360882176
+                      },
+                      {
+                          "Name":  "dwm",
+                          "CPU":  64.75,
+                          "WorkingSet64":  129019904
+                      },
+                      {
+                          "Name":  "NVDisplay.Container",
+                          "CPU":  58.65625,
+                          "WorkingSet64":  54996992
+                      },
+                      {
+                          "Name":  "ChatGPT",
+                          "CPU":  45.765625,
+                          "WorkingSet64":  540442624
+                      },
+                      {
+                          "Name":  "services",
+                          "CPU":  41.765625,
+                          "WorkingSet64":  21372928
+                      },
+                      {
+                          "Name":  "nvsphelper64",
+                          "CPU":  40.671875,
+                          "WorkingSet64":  18079744
+                      },
+                      {
+                          "Name":  "WhatsApp.Root",
+                          "CPU":  37,
+                          "WorkingSet64":  303255552
+                      },
+                      {
+                          "Name":  "RadeonSoftware",
+                          "CPU":  35.6875,
+                          "WorkingSet64":  68403200
+                      },
+                      {
+                          "Name":  "GBT_DL_LIB",
+                          "CPU":  31.734375,
+                          "WorkingSet64":  30236672
+                      }
+                  ]
+}

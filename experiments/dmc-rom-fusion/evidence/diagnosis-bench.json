@@ -1,0 +1,2667 @@
+{
+  "mode": "bench",
+  "baseline_control": false,
+  "tokens": 65536,
+  "base": {
+    "mode": "DMC port on faithful compact Triton circuit, fp32 CUDA graph; not stock HF",
+    "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+    "reference_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+    "reference_tokens_total": 6342933,
+    "reference_tokens_used_as_inputs": false,
+    "reference_machine_run_called": false,
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "ram_base": 16777216,
+    "ram_bytes": 65536,
+    "drom_base": 33554432,
+    "drom_bytes": 4194304,
+    "graph": {
+      "chip_layers": 44,
+      "dims": 2679
+    },
+    "setup_seconds": 3.3673275000001013,
+    "source_adaptation": "Standalone FreeRun omits merged-chat-only Q embedding table family. Memory map uses frozen prepare.py. Executor2 arithmetic kernels unchanged.",
+    "capture_warmup_seconds": 0.3387681000003795
+  },
+  "seed": {
+    "reference_seeded": true,
+    "token_offset": 6470215,
+    "instruction_offset": 3966856,
+    "pc": 407652,
+    "lag_histories": "reset at reference record boundary"
+  },
+  "scripts": {
+    "run_gpu.py": "6719d5a60e89c0852c6bc11a02e7c887deb4d279eae40c645a89bf7feea73d76",
+    "fusion.py": "a68f013e5a67388feb7c8e3d5e303423a707aa94060bc1370503376eee111e5e",
+    "analyze.py": "c1aebdc67c5582bdd7390b625212154b45a8fee491b448da2d7a052580a2ee4f"
+  },
+  "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.14.1+cu130",
+  "triton": "3.8.0",
+  "cuda": "13.0",
+  "windows": {
+    "boot": {
+      "baseline": {
+        "runs": [
+          {
+            "seconds": 31.419953000000532,
+            "tokens_per_second": 2085.8083396878055,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+            }
+          },
+          {
+            "seconds": 31.41436590000012,
+            "tokens_per_second": 2086.179304354501,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+            }
+          },
+          {
+            "seconds": 31.412159699999393,
+            "tokens_per_second": 2086.3258249639316,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+            }
+          },
+          {
+            "seconds": 31.413633000000118,
+            "tokens_per_second": 2086.227976242027,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+            }
+          },
+          {
+            "seconds": 31.412349300000642,
+            "tokens_per_second": 2086.313232229296,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+            }
+          }
+        ],
+        "tokens_per_second_median": 2086.227976242027,
+        "tokens_per_second_range": [
+          2085.8083396878055,
+          2086.3258249639316
+        ],
+        "total_us_per_token": 479.3339996337908,
+        "profile_match": {
+          "tokens": 256,
+          "mismatches": 0,
+          "sha256": "1c863e84529e3bcdc295a0c982676cc6b2a4929c96de55dfb821f3d104f47bf7"
+        },
+        "profile": {
+          "tokens": 256,
+          "circuit_kernels_per_token": 108,
+          "data_rom_us_per_token": 259.73757031247953,
+          "data_rom_apply_us_per_token": 41.39133203125054,
+          "trace_sha256": "3db2c7bd05af16457ee8d41ac875e9ec3618e20acf385f299ad0a5ea6b3130bb",
+          "trace_bytes": 35052191
+        }
+      },
+      "fused": {
+        "runs": [
+          {
+            "seconds": 16.63034990000051,
+            "tokens_per_second": 3940.7469111637865,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+            }
+          },
+          {
+            "seconds": 16.63183519999984,
+            "tokens_per_second": 3940.394984192762,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+            }
+          },
+          {
+            "seconds": 16.629820199999813,
+            "tokens_per_second": 3940.8724334855247,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+            }
+          },
+          {
+            "seconds": 16.63084010000057,
+            "tokens_per_second": 3940.6307562296724,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+            }
+          },
+          {
+            "seconds": 16.630236400000285,
+            "tokens_per_second": 3940.7738064384266,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "514d885d9573cc947ea3b6b5fdc172bd22b675bc113f5fde4658f97457e3652e"
+            }
+          }
+        ],
+        "tokens_per_second_median": 3940.7469111637865,
+        "tokens_per_second_range": [
+          3940.394984192762,
+          3940.8724334855247
+        ],
+        "total_us_per_token": 253.75900115967576,
+        "profile_match": {
+          "tokens": 256,
+          "mismatches": 0,
+          "sha256": "1c863e84529e3bcdc295a0c982676cc6b2a4929c96de55dfb821f3d104f47bf7"
+        },
+        "profile": {
+          "tokens": 256,
+          "circuit_kernels_per_token": 48,
+          "data_rom_us_per_token": 53.22286718750002,
+          "data_rom_apply_us_per_token": 21.647203124999965,
+          "trace_sha256": "a4728bd1debe33e0df21774ebd9fa9e1e6a015bc88f18a41e382bddb3ac54221",
+          "trace_bytes": 20017620
+        }
+      }
+    },
+    "frame2_render": {
+      "baseline": {
+        "runs": [
+          {
+            "seconds": 31.41093340000043,
+            "tokens_per_second": 2086.407276263847,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+            }
+          },
+          {
+            "seconds": 31.41018090000034,
+            "tokens_per_second": 2086.4572607411915,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+            }
+          },
+          {
+            "seconds": 31.410147900000084,
+            "tokens_per_second": 2086.4594528063276,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+            }
+          },
+          {
+            "seconds": 31.41180920000079,
+            "tokens_per_second": 2086.349104654512,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+            }
+          },
+          {
+            "seconds": 31.410282099999677,
+            "tokens_per_second": 2086.450538436924,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+            }
+          }
+        ],
+        "tokens_per_second_median": 2086.450538436924,
+        "tokens_per_second_range": [
+          2086.349104654512,
+          2086.4594528063276
+        ],
+        "total_us_per_token": 479.2828689575146,
+        "profile_match": {
+          "tokens": 256,
+          "mismatches": 0,
+          "sha256": "aef9c2d1a78a1847d1101454c145f7296a3bdc27dc3ce4fbaf5351d7622cef84"
+        },
+        "profile": {
+          "tokens": 256,
+          "circuit_kernels_per_token": 108,
+          "data_rom_us_per_token": 259.68115234372885,
+          "data_rom_apply_us_per_token": 41.356269531250696,
+          "trace_sha256": "0b067afba2e52a9f848bfb07875d37e07199e4e6a449ed7daa565ef42421748d",
+          "trace_bytes": 35141188
+        }
+      },
+      "fused": {
+        "runs": [
+          {
+            "seconds": 16.627268899999763,
+            "tokens_per_second": 3941.4771237626965,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+            }
+          },
+          {
+            "seconds": 16.626137400000516,
+            "tokens_per_second": 3941.7453629366714,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+            }
+          },
+          {
+            "seconds": 16.62860570000157,
+            "tokens_per_second": 3941.1602621615957,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+            }
+          },
+          {
+            "seconds": 16.62717319999865,
+            "tokens_per_second": 3941.4998094808634,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+            }
+          },
+          {
+            "seconds": 16.6263342000002,
+            "tokens_per_second": 3941.6987058998975,
+            "match": {
+              "tokens": 65536,
+              "mismatches": 0,
+              "sha256": "26ad5f553b567aa9b8b4144207d9b20647cf46a1c6f033b9069c7abecad51de7"
+            }
+          }
+        ],
+        "tokens_per_second_median": 3941.4998094808634,
+        "tokens_per_second_range": [
+          3941.1602621615957,
+          3941.7453629366714
+        ],
+        "total_us_per_token": 253.71052856443254,
+        "profile_match": {
+          "tokens": 256,
+          "mismatches": 0,
+          "sha256": "aef9c2d1a78a1847d1101454c145f7296a3bdc27dc3ce4fbaf5351d7622cef84"
+        },
+        "profile": {
+          "tokens": 256,
+          "circuit_kernels_per_token": 48,
+          "data_rom_us_per_token": 53.21666406249996,
+          "data_rom_apply_us_per_token": 21.664691406249972,
+          "trace_sha256": "655e337b98aa2009fd2bfdf89cba41aa9023b657fe1362937711f16b1457cfd2",
+          "trace_bytes": 20052749
+        }
+      }
+    }
+  },
+  "controls": [],
+  "gpu_before": "Thu Oct 29 16:45:04 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 617.42                 KMD Version: 617.42        CUDA UMD Version: 13.4     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 5070 Ti   WDDM  |   00000000:01:00.0 Off |                  N/A |\n| 30%   43C    P5             17W /  300W |    1858MiB /  16303MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A             748    C+G   C:\\Windows\\System32\\dwm.exe           N/A      |\n|    0   N/A  N/A            2188    C+G   ...1g1gvanyjgm\\WhatsApp.Root.exe      N/A      |\n|    0   N/A  N/A            4568    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A            6368    C+G   ..._1mmjbktjj1mkp\\GBT_DL_LIB.exe      N/A      |\n|    0   N/A  N/A            7936    C+G   ...nmj9wpt2a\\Raycast\\Raycast.exe      N/A      |\n|    0   N/A  N/A            8336    C+G   ...GABYTE\\Control Center\\GCC.exe      N/A      |\n|    0   N/A  N/A            8500    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A            8708    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A            8964    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A            9476    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           11168    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           11208    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A           12544    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           15412    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A           15524    C+G   ...xyewy\\ShellExperienceHost.exe      N/A      |\n|    0   N/A  N/A           16052      C   ...pythoncore-3.14-64\\python.exe      N/A      |\n|    0   N/A  N/A           16076    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           16352    C+G   ...\\codex-computer-use-swift.exe      N/A      |\n|    0   N/A  N/A           17184    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n|    0   N/A  N/A           18272    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           19276    C+G   ...ntrolPanel\\SystemSettings.exe      N/A      |\n|    0   N/A  N/A           19988    C+G   ...twinkle-tray\\Twinkle Tray.exe      N/A      |\n|    0   N/A  N/A           20632    C+G   ...onsoftware\\RadeonSoftware.exe      N/A      |\n|    0   N/A  N/A           20812    C+G   ...adeonsoftware\\AMDRSSrcExt.exe      N/A      |\n|    0   N/A  N/A           21520    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+  "samples": [
+    {
+      "window": null,
+      "values": "0, 0, 247, 8.22, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 41.26, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.68, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.76, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.71, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.70, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.94, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.91, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.98, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.99, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.82, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.77, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.80, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.76, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.74, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.86, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.69, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.81, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.70, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.62, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.69, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.80, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.85, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.87, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.85, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.98, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.85, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.85, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.86, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.67, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.68, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 83.15, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.32, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.28, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.35, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.43, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.50, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.62, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.65, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.54, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.67, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.81, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.61, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.71, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.65, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.73, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.72, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "46, 0, 2887, 84.15, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.09, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.14, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.16, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.25, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.13, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.10, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.00, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.04, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.96, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.13, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.25, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.01, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.03, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.10, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.16, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.22, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.27, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.29, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.17, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.20, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.22, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.13, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.00, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.11, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.16, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.10, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.90, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.00, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.01, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2887, 79.11, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.54, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.62, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.64, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.69, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.65, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.73, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.65, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.88, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.75, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.79, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.70, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.47, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.56, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.57, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.57, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 92.06, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 87.78, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.49, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.47, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.57, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.63, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.63, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.71, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.62, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.63, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.67, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.69, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.68, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.68, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.57, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.78, 1914",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "100, 0, 2880, 93.85, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 81.30, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.36, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.37, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.26, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.09, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.10, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.20, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.12, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.14, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.24, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.24, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.36, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.13, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.06, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.09, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.11, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.04, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.96, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.02, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.95, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.98, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.17, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.21, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.13, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.06, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.07, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.22, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.36, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.28, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.18, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2887, 75.39, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.46, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.50, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.65, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.66, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.75, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.75, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.77, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.83, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.75, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.69, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.71, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.74, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.76, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.82, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.75, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 85.73, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.27, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.22, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.10, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.98, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.03, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.09, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.18, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.00, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.83, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.00, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.93, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.91, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.00, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.96, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.91, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.84, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.79, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.14, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.23, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.01, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.05, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.84, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.77, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.78, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.91, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.02, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.95, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.87, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.87, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "95, 0, 2887, 77.75, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 74.04, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.96, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.93, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.93, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.76, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.74, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.69, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.73, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.81, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.83, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.93, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.89, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.06, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.89, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.75, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.69, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.80, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.89, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.94, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.73, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.71, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.80, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.68, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.47, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.59, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.55, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.66, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.70, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.59, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.58, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2887, 82.53, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.46, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.38, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.47, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.36, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.36, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.46, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.36, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.50, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.67, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.63, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.68, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.59, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.33, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.32, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.44, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.75, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.78, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.95, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.97, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.86, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.91, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.01, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.99, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.85, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.93, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.73, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.84, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.89, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.82, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.82, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.73, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.74, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.76, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.90, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.93, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.80, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.92, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.89, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.70, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.66, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.80, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.81, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.86, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.81, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.03, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2887, 77.90, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.29, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.40, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.29, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.50, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.48, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.47, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.53, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.48, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.80, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.84, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 94.02, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.81, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.85, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.85, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.95, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.96, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 87.38, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.75, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.63, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.50, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.51, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.53, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.55, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.67, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.78, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.86, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.72, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.74, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.83, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.72, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.76, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2880, 90.32, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.11, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.19, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.13, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.02, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.15, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.19, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.18, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.15, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.24, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.07, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.16, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.02, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.24, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.22, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.10, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.07, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.13, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.16, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.19, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.08, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.04, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.02, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.13, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.98, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.07, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.91, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.16, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.28, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.09, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.95, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 81.51, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.51, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.54, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.61, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.67, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.53, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.67, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.77, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.78, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.88, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.71, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.77, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.80, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.80, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.86, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.99, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 86.91, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.34, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.45, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.41, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.24, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.31, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.24, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.30, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.41, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.40, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.44, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.33, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.34, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.27, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.27, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.27, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.22, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.14, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.03, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.90, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.09, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.19, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.25, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.22, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.04, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.07, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.11, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.21, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.21, 1914",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.11, 1928",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 74.21, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.09, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.10, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.14, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.93, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.92, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.03, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.08, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.11, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.02, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.02, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.02, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.90, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 77.97, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.02, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.13, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.01, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.18, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.00, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.22, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.18, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.39, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.28, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.30, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.35, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.23, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.27, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.25, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.36, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/baseline",
+      "values": "100, 0, 2887, 78.17, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2887, 78.15, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 89.41, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.65, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.70, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.71, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.85, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.93, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.97, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.93, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.81, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.83, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.86, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.97, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.99, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 93.96, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "boot/fused",
+      "values": "100, 0, 2880, 94.09, 1929",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "100, 0, 2880, 93.97, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 80.66, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.26, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.50, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.42, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.20, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.15, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.21, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.17, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.11, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.25, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.26, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.09, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.11, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.05, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.98, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.03, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.07, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.11, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.97, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.96, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.92, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.90, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.04, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 77.95, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.01, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.14, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.07, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.02, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.10, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/baseline",
+      "values": "100, 0, 2887, 78.05, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 84.48, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.69, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.59, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.56, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.67, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.69, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.70, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.80, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.92, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.88, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.89, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.69, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.72, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.85, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.77, 1929",
+      "returncode": 0
+    },
+    {
+      "window": "frame2_render/fused",
+      "values": "100, 0, 2880, 93.84, 1929",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "0, 0, 2887, 78.93, 1929",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "27, 0, 2887, 57.35, 1967",
+      "returncode": 0
+    },
+    {
+      "window": null,
+      "values": "0, 0, 2887, 59.79, 1967",
+      "returncode": 0
+    }
+  ],
+  "peak_allocated": 461825024,
+  "peak_reserved": 478150656
+}

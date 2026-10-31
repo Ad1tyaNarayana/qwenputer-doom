@@ -1,0 +1,22 @@
+{
+  "run": "unified-full",
+  "tokens_compared": 6342933,
+  "differing_tokens": 0,
+  "independent_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+  "actual_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+  "frame_rgb565_sha256": "6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+  "frame_bytes_equal_mac_observer": true,
+  "chunks": 788,
+  "full_size_chunks": 762,
+  "chunk_hashes_verified": true,
+  "microseconds_per_token_full_chunks": {
+    "min": 266.7166503906859,
+    "median": 266.8337341308336,
+    "max": 268.2981201171941
+  },
+  "retained_chunk_seconds": 1693.106171399988,
+  "uninterrupted_end_to_end_seconds": 1715.4851406999987,
+  "speedup_vs_historical_retained": 1.7982182537215223,
+  "historical_retained_seconds": 3044.574422900019,
+  "final_ram_bytes_equal_mac_observer": true
+}

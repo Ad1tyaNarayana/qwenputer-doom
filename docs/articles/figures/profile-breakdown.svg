@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="45" y="47" font-family="Arial, DejaVu Sans, sans-serif" font-size="28" fill="#222222" text-anchor="start">Where device-stream time goes</text>
+<text x="45" y="80" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#555555" text-anchor="start">Frame-2 rendering windows, reference-seeded; separate profiler captures</text>
+<line x1="230.0" y1="115" x2="230.0" y2="435" stroke="#cccccc" stroke-width="1"/>
+<text x="230.0" y="465" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">0</text>
+<line x1="375.0" y1="115" x2="375.0" y2="435" stroke="#cccccc" stroke-width="1"/>
+<text x="375.0" y="465" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">100</text>
+<line x1="520.0" y1="115" x2="520.0" y2="435" stroke="#cccccc" stroke-width="1"/>
+<text x="520.0" y="465" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">200</text>
+<line x1="665.0" y1="115" x2="665.0" y2="435" stroke="#cccccc" stroke-width="1"/>
+<text x="665.0" y="465" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">300</text>
+<line x1="810.0" y1="115" x2="810.0" y2="435" stroke="#cccccc" stroke-width="1"/>
+<text x="810.0" y="465" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">400</text>
+<line x1="955.0" y1="115" x2="955.0" y2="435" stroke="#cccccc" stroke-width="1"/>
+<text x="955.0" y="465" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">500</text>
+<line x1="1100.0" y1="115" x2="1100.0" y2="435" stroke="#cccccc" stroke-width="1"/>
+<text x="1100.0" y="465" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#222222" text-anchor="middle">600</text>
+<text x="210" y="173" font-family="Arial, DejaVu Sans, sans-serif" font-size="20" fill="#222222" text-anchor="end">Original</text>
+<rect x="230" y="145" width="377.19759082031254" height="48" fill="#0072B2"/>
+<rect x="607.1975908203126" y="145" width="59.869542773437495" height="48" fill="#E69F00"/>
+<rect x="667.0671335937501" y="145" width="14.441093749999999" height="48" fill="#009E73"/>
+<rect x="681.5082273437501" y="145" width="80.65995996093751" height="48" fill="#CC79A7"/>
+<rect x="762.1681873046876" y="145" width="21.708374804687498" height="48" fill="#56B4E9"/>
+<rect x="783.8765621093752" y="145" width="94.7890375" height="48" fill="#D55E00"/>
+<rect x="878.6655996093752" y="145" width="42.8686326171875" height="48" fill="#777777"/>
+<rect x="921.5342322265627" y="145" width="43.171313103485026" height="48" fill="#333333"/>
+<text x="974.7055453300477" y="175" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">506.7</text>
+<text x="210" y="278" font-family="Arial, DejaVu Sans, sans-serif" font-size="20" fill="#222222" text-anchor="end">ROM fusion</text>
+<rect x="230" y="250" width="77.12491660156239" height="48" fill="#0072B2"/>
+<rect x="307.1249166015624" y="250" width="59.93311621093771" height="48" fill="#E69F00"/>
+<rect x="367.05803281250013" y="250" width="14.519155859375042" height="48" fill="#009E73"/>
+<rect x="381.57718867187515" y="250" width="80.87913652343673" height="48" fill="#CC79A7"/>
+<rect x="462.4563251953119" y="250" width="22.04169921875013" height="48" fill="#56B4E9"/>
+<rect x="484.498024414062" y="250" width="64.10977324218688" height="48" fill="#D55E00"/>
+<rect x="548.6077976562489" y="250" width="43.32411953125" height="48" fill="#777777"/>
+<rect x="591.9319171874988" y="250" width="26.968510440064616" height="48" fill="#333333"/>
+<text x="628.9004276275634" y="280" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">268.2</text>
+<text x="210" y="383" font-family="Arial, DejaVu Sans, sans-serif" font-size="20" fill="#222222" text-anchor="end">ROM + feedback</text>
+<rect x="230" y="355" width="77.14261679687492" height="48" fill="#0072B2"/>
+<rect x="307.1426167968749" y="355" width="59.953461523437824" height="48" fill="#E69F00"/>
+<rect x="367.0960783203127" y="355" width="14.524836914062549" height="48" fill="#009E73"/>
+<rect x="381.6209152343753" y="355" width="80.7978515624993" height="48" fill="#CC79A7"/>
+<rect x="462.4187667968746" y="355" width="21.843643945312543" height="48" fill="#56B4E9"/>
+<rect x="484.2624107421871" y="355" width="64.11740839843682" height="48" fill="#D55E00"/>
+<rect x="548.3798191406239" y="355" width="8.383752734375" height="48" fill="#777777"/>
+<rect x="556.7635718749989" y="355" width="20.087812669373577" height="48" fill="#333333"/>
+<text x="586.8513845443724" y="385" font-family="Arial, DejaVu Sans, sans-serif" font-size="18" fill="#222222" text-anchor="start">239.2</text>
+<text x="660" y="505" font-family="Arial, DejaVu Sans, sans-serif" font-size="20" fill="#222222" text-anchor="middle">Profiler device-stream span (µs/token)</text>
+<rect x="45" y="539" width="18" height="18" fill="#0072B2"/>
+<text x="73" y="555" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Data-ROM heads</text>
+<rect x="430" y="539" width="18" height="18" fill="#E69F00"/>
+<text x="458" y="555" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">RAM heads</text>
+<rect x="815" y="539" width="18" height="18" fill="#009E73"/>
+<text x="843" y="555" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Code-ROM heads</text>
+<rect x="45" y="579" width="18" height="18" fill="#CC79A7"/>
+<text x="73" y="595" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">ALU / decode FFNs</text>
+<rect x="430" y="579" width="18" height="18" fill="#56B4E9"/>
+<text x="458" y="595" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Other heads</text>
+<rect x="815" y="579" width="18" height="18" fill="#D55E00"/>
+<text x="843" y="595" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Residual / history apply</text>
+<rect x="45" y="619" width="18" height="18" fill="#777777"/>
+<text x="73" y="635" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Feedback / embedding</text>
+<rect x="430" y="619" width="18" height="18" fill="#333333"/>
+<text x="458" y="635" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Trace copy + stream gaps</text>
+<text x="45" y="695" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#222222" text-anchor="start">Stream spans are not wall time. Captures use different harness revisions.</text>
+</svg>

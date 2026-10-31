@@ -1,0 +1,179 @@
+{
+  "mode": "verify",
+  "baseline_control": false,
+  "tokens": 65536,
+  "base": {
+    "mode": "DMC port on faithful compact Triton circuit, fp32 CUDA graph; not stock HF",
+    "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+    "reference_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+    "reference_tokens_total": 6342933,
+    "reference_tokens_used_as_inputs": false,
+    "reference_machine_run_called": false,
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "ram_base": 16777216,
+    "ram_bytes": 65536,
+    "drom_base": 33554432,
+    "drom_bytes": 4194304,
+    "graph": {
+      "chip_layers": 44,
+      "dims": 2679
+    },
+    "setup_seconds": 3.3482793000002857,
+    "source_adaptation": "Standalone FreeRun omits merged-chat-only Q embedding table family. Memory map uses frozen prepare.py. Executor2 arithmetic kernels unchanged.",
+    "capture_warmup_seconds": 0.33639949999997043
+  },
+  "seed": {
+    "reference_seeded": true,
+    "token_offset": 6470215,
+    "instruction_offset": 3966856,
+    "pc": 407652,
+    "lag_histories": "reset at reference record boundary"
+  },
+  "scripts": {
+    "run_gpu.py": "16b595eaca0c0be7b901d6031eea181ea7a7e65e3aba26862902fc8c38759748",
+    "fusion.py": "71e514b9271cadfbee73b4811a454e89615d7a78988710ec04968d880ce8a82f",
+    "analyze.py": "c1aebdc67c5582bdd7390b625212154b45a8fee491b448da2d7a052580a2ee4f"
+  },
+  "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.14.1+cu130",
+  "triton": "3.8.0",
+  "cuda": "13.0",
+  "windows": {
+    "boot": {
+      "state_equal": false,
+      "first_bad_token": 2382,
+      "mismatched_words": 366,
+      "max_abs_difference": 1.0,
+      "first_token_differences": [
+        {
+          "tensor": "residual",
+          "mismatched_words": 7
+        },
+        {
+          "tensor": "hist:28",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:29",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:30",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:31",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:32",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:33",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:34",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:35",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:36",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:37",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:38",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:39",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:40",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:41",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:42",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:43",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:44",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:45",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:46",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:47",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:48",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:49",
+          "mismatched_words": 1
+        },
+        {
+          "tensor": "hist:50",
+          "mismatched_words": 1
+        }
+      ],
+      "end_of_chunk_differences": [],
+      "baseline_token_mismatches": 0,
+      "fused_token_mismatches": 0
+    }
+  },
+  "controls": [
+    {
+      "mutation": "S:0",
+      "mismatched_words": 1
+    },
+    {
+      "mutation": "hist:0",
+      "mismatched_words": 1
+    },
+    {
+      "mutation": "x",
+      "mismatched_words": 1
+    },
+    {
+      "mutation": "tok",
+      "mismatched_words": 1
+    },
+    {
+      "mutation": "y",
+      "mismatched_words": 1
+    },
+    {
+      "mutation": "residual",
+      "mismatched_words": 1
+    }
+  ],
+  "gpu_before": "Thu Oct 29 16:03:59 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 617.42                 KMD Version: 617.42        CUDA UMD Version: 13.4     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 5070 Ti   WDDM  |   00000000:01:00.0  On |                  N/A |\n|  0%   45C    P5             29W /  300W |    1868MiB /  16303MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A             748    C+G   C:\\Windows\\System32\\dwm.exe           N/A      |\n|    0   N/A  N/A            2188    C+G   ...1g1gvanyjgm\\WhatsApp.Root.exe      N/A      |\n|    0   N/A  N/A            4568    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A            6368    C+G   ..._1mmjbktjj1mkp\\GBT_DL_LIB.exe      N/A      |\n|    0   N/A  N/A            7188      C   ...pythoncore-3.14-64\\python.exe      N/A      |\n|    0   N/A  N/A            7936    C+G   ...nmj9wpt2a\\Raycast\\Raycast.exe      N/A      |\n|    0   N/A  N/A            8336    C+G   ...GABYTE\\Control Center\\GCC.exe      N/A      |\n|    0   N/A  N/A            8500    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A            8708    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A            8964    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A            9476    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           11168    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           11208    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A           12544    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           15412    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A           15524    C+G   ...xyewy\\ShellExperienceHost.exe      N/A      |\n|    0   N/A  N/A           16076    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           16352    C+G   ...\\codex-computer-use-swift.exe      N/A      |\n|    0   N/A  N/A           17184    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n|    0   N/A  N/A           18084    C+G   ...8bbwe\\PhoneExperienceHost.exe      N/A      |\n|    0   N/A  N/A           18272    C+G   ....0.4314.50\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           19276    C+G   ...ntrolPanel\\SystemSettings.exe      N/A      |\n|    0   N/A  N/A           19988    C+G   ...twinkle-tray\\Twinkle Tray.exe      N/A      |\n|    0   N/A  N/A           20632    C+G   ...onsoftware\\RadeonSoftware.exe      N/A      |\n|    0   N/A  N/A           20812    C+G   ...adeonsoftware\\AMDRSSrcExt.exe      N/A      |\n|    0   N/A  N/A           21520    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n"
+}

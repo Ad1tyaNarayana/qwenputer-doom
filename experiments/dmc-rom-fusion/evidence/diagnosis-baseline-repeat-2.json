@@ -1,0 +1,36 @@
+{
+  "left": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-a3",
+  "right": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-a4",
+  "windows": {
+    "boot": {
+      "tokens": 65536,
+      "digest_mismatches": 0,
+      "first": null,
+      "files": [
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-a3\\boot-digests.jsonl",
+          "sha256": "9f453c62bc9638f51e5324abcdadc3442d0d5f283b7a82d3abf658452c68843e"
+        },
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-a4\\boot-digests.jsonl",
+          "sha256": "9f453c62bc9638f51e5324abcdadc3442d0d5f283b7a82d3abf658452c68843e"
+        }
+      ]
+    },
+    "frame2_render": {
+      "tokens": 65536,
+      "digest_mismatches": 0,
+      "first": null,
+      "files": [
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-a3\\frame2_render-digests.jsonl",
+          "sha256": "35d9524739e666d9230ca0931773016ae24a4ff374f35b83eb7e28ab1cbc5637"
+        },
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-a4\\frame2_render-digests.jsonl",
+          "sha256": "35d9524739e666d9230ca0931773016ae24a4ff374f35b83eb7e28ab1cbc5637"
+        }
+      ]
+    }
+  }
+}

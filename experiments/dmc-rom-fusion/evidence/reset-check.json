@@ -1,0 +1,8 @@
+{
+  "torch": "2.15.0",
+  "advanced_index_zero_remaining": 24,
+  "full_zero_remaining": 0,
+  "source": "tritonexec.py:260-263; fastexec.py:292-296",
+  "finding": "FreeRun.load calls reset([row]), whose advanced-index zero_ operates on a copy. Experiment explicitly calls reset() for both executors.",
+  "upstream_modified": false
+}

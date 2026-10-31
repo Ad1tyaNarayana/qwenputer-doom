@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-29",
+  "root_cause": "Cross-warp read-before-clear race in _ordered_apply output buffer. Triton assigns different layouts to load and zero store.",
+  "location": "fusion.py:35-38",
+  "within_first_512_words_of_tile": {
+    "load_thread_t": "4*t through 4*t+3",
+    "clear_thread_t": "t, t+128, t+256, t+384",
+    "example": "Warp 0 can clear word 128 before warp 1 loads it."
+  },
+  "actual_circuit_localization": {
+    "unpatched_control_token": 6119,
+    "first_lost_dimension": 2495,
+    "byte_loss": 0.09765625,
+    "reading_warp": 3,
+    "clearing_warp": 1,
+    "first_bad_history_schedule_index": 28,
+    "preceding_schedule_index": 27,
+    "preceding_heads": "drom128 through drom143",
+    "S_mismatches": 0,
+    "maximum_downstream_residual_difference": 1.0
+  },
+  "fix": "Block barrier after consuming each group output and before clearing it.",
+  "original_fusion_sha256": "71e514b9271cadfbee73b4811a454e89615d7a78988710ec04968d880ce8a82f",
+  "fixed_fusion_sha256": "a68f013e5a67388feb7c8e3d5e303423a707aa94060bc1370503376eee111e5e",
+  "original_apply_ptx_sha256": "78a5f2f8c70ffb470823394d041c7510d356c6162a875b7270b3d8b1832b6128",
+  "upstream_changes": false,
+  "circuit_or_weight_changes": false,
+  "head_skipping": false,
+  "tolerance_acceptance": false,
+  "principles": {
+    "Fix Root Causes": "The standalone queued reproducer isolates load/clear ordering before changing the prototype.",
+    "Prove It Works": "Timing stays gated on isolated raw-bit records and full per-word verification.",
+    "Model the Domain": "The recorder separates recurrent S raw-bit deltas from full dynamic tensor byte snapshots."
+  }
+}

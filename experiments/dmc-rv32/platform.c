@@ -33,6 +33,31 @@
 #include "pad.h"
 #include "r_strip.h"
 
+#ifdef QP_CONTINUING
+#include "d_event.h"
+#include "doomkeys.h"
+#include "qp_workload.h"
+static unsigned qp_displayed, qp_clock, qp_input_index, qp_keys;
+
+__attribute__((noinline, used)) void qp_frame_ready(void)
+{
+    __asm__ volatile("" ::: "memory");
+}
+
+void __real_TryRunTics(void);
+void __wrap_TryRunTics(void)
+{
+    static unsigned calls, remainder;
+    unsigned count = 1;
+    if (calls++) {
+        remainder += 35;
+        count = remainder / 24;
+        remainder %= 24;
+    }
+    while (count--) __real_TryRunTics();
+}
+#endif
+
 byte *I_VideoBuffer;
 volatile uint32_t qp_plan_arena,qp_frame_bytes,qp_frame_base;
 
@@ -70,12 +95,20 @@ void I_Tactile(int on, int off, int total)
 
 int I_GetTime(void)
 {
+#ifdef QP_CONTINUING
+    return qp_clock;
+#else
     static int ticks; return ticks++;
+#endif
 }
 
 int I_GetTimeMS(void)
 {
+#ifdef QP_CONTINUING
+    return (qp_clock * 1000u) / 35u;
+#else
     static int ms; return ms++;
+#endif
 }
 
 void I_Sleep(int ms)
@@ -102,6 +135,23 @@ void I_StartFrame(void)
 
 void I_StartTic(void)
 {
+#ifdef QP_CONTINUING
+    static const int keys[] = {KEY_UPARROW, KEY_DOWNARROW, KEY_LEFTARROW,
+        KEY_RIGHTARROW, KEY_FIRE, KEY_USE, KEY_RSHIFT, KEY_STRAFE_L, KEY_STRAFE_R};
+    unsigned now = qp_keys;
+    while (qp_input_index < QP_INPUT_COUNT &&
+           qp_input[qp_input_index].tic <= (unsigned)gametic)
+        now = qp_input[qp_input_index++].keys;
+    for (unsigned i = 0; i < sizeof(keys) / sizeof(keys[0]); ++i) {
+        if ((now ^ qp_keys) & (1u << i)) {
+            event_t ev = {.type = now & (1u << i) ? ev_keydown : ev_keyup,
+                          .data1 = keys[i]};
+            D_PostEvent(&ev);
+        }
+    }
+    qp_keys = now;
+    ++qp_clock;
+#endif
 }
 
 void I_UpdateNoBlit(void)
@@ -120,6 +170,10 @@ void I_FinishUpdate(void)
 {
     R_PumpIdle();
     uint32_t n; qp_frame_base=(uintptr_t)R_FrameRegion(&n);qp_frame_bytes=n;qp_plan_arena=M.plan.arena_bytes;
+#ifdef QP_CONTINUING
+    qp_frame_ready();
+    if (++qp_displayed < QP_DISPLAY_FRAMES) return;
+#endif
     puts("QWENPUTER_DMC_FRAME_READY");
     exit(0);
 }

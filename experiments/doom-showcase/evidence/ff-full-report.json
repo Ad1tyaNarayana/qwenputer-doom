@@ -1,0 +1,110 @@
+{
+  "workload": "first-frame",
+  "requested_frames": 1,
+  "complete": true,
+  "reference_tokens_used_as_inputs": false,
+  "reference_pixels_used": false,
+  "reference_state_used_for_resume": false,
+  "mismatches": 0,
+  "timed_work": "perf_counter around successful fr.run chunks including self-feedback, output copies and CPU transfer",
+  "wall_scope": "Module entry until final report serialization begins; includes setup, capture, comparison, extraction, IO and checkpoints",
+  "inputs": {
+    "doom.elf": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+    "reference.tokens.u32": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+    "strips.json": "8045dd146345a67eeabeb48a15d71978a7cbd8b7d83c582de5aef99746d132b4",
+    "reference-trace.json": "ac05ee297f7c9cd04bdf3b5bf156e54b546e774a7dd94e58c7119ab64834571d"
+  },
+  "fusion": {
+    "feedback": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+    "rom": "ccb8abe273c55f100d93369be8938a031620d243af6bd8a645b04e791dceb678"
+  },
+  "sources": {
+    "runtime.py": "8f9ff6803b9f67df458bafd1878b2dbba63adc14addef8795deb3268635ed2a0",
+    "worker": "a478544732ae3e489ac769c9dd2a706a5fb0badaa46842f0772a98d965d9c659",
+    "helpers/prepare.py": "54e47fd4b31e34825805b25583e558554dc78851691d9e7f17faf1808b73e9ba",
+    "helpers/state.py": "d87fb4c0b4918d6043bbc03ee9e4d4a46f11e35df41816e5dc9b06ecb71ccb34"
+  },
+  "frames": 1,
+  "fusion_acceptance": {
+    "checks.json": {
+      "sha256": "f0c01fa78605815dd9e94bf2a684cce1a6bceac23827d7affde0543f7dd99118",
+      "feedback_sha256": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+      "rom_sha256": "ccb8abe273c55f100d93369be8938a031620d243af6bd8a645b04e791dceb678"
+    },
+    "verify.json": {
+      "sha256": "b90e99cf46e737a4636dbcb7ccea846a184a40d6af86d15b4ad6c82883632397",
+      "feedback_sha256": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+      "rom_sha256": "ccb8abe273c55f100d93369be8938a031620d243af6bd8a645b04e791dceb678"
+    }
+  },
+  "gpu_start": {
+    "values": "NVIDIA GeForce RTX 5070 Ti, 180, 0, 6.71, 869",
+    "returncode": 0,
+    "stderr": ""
+  },
+  "runtime": {
+    "mode": "DMC port on faithful compact Triton circuit, fp32 CUDA graph; not stock HF",
+    "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+    "reference_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+    "reference_tokens_total": 6342933,
+    "reference_tokens_used_as_inputs": false,
+    "reference_machine_run_called": false,
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "ram_base": 16777216,
+    "ram_bytes": 65536,
+    "drom_base": 33554432,
+    "drom_bytes": 4194304,
+    "graph": {
+      "chip_layers": 44,
+      "dims": 2679
+    },
+    "setup_seconds": 3.556498800000554,
+    "source_adaptation": "Standalone FreeRun omits merged-chat-only Q embedding table family. Memory map uses frozen prepare.py. Executor2 arithmetic kernels unchanged.",
+    "capture_warmup_seconds": 7.20229290000043
+  },
+  "fused_capture_and_reset_seconds": 3.1625513999997565,
+  "setup_seconds": 16.464480399999957,
+  "interruptions": 0,
+  "started_from_checkpoint_offset": 0,
+  "uninterrupted_wall_claim_valid": true,
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "setup_and_restore_seconds": 16.468077200000153,
+  "generated_tokens": 6342933,
+  "tokens": 6342933,
+  "frame_hashes": [
+    {
+      "frame": 1,
+      "generated_token_offset": 6342933,
+      "frame_sha256": "6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+      "updated_pixels": 76800
+    }
+  ],
+  "completed_strips": 25,
+  "retained_chunk_seconds": 1446.2763813000174,
+  "tokens_per_second": 4385.699083530988,
+  "microseconds_per_token": 228.01381967932144,
+  "actual_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+  "checkpoint_offset": 6342933,
+  "halted": true,
+  "final_gpu_ram_sha256": "b9ea6e4ad1a05162f571970604e1a085078d8cf6ae21da48749b47f4dd80b3ef",
+  "historical_comparison": {
+    "retained_chunk_seconds": 3044.574422900019,
+    "scope": "Historical first-frame retained generation only, interrupted and resumed",
+    "same_workload": true,
+    "chunk_sum_speedup": 2.105112454483517,
+    "chunk_seconds_delta": -1598.2980416000014
+  },
+  "cuda_peak_allocated_bytes": 325747712,
+  "cuda_peak_reserved_bytes": 394264576,
+  "gpu_end": {
+    "values": "NVIDIA GeForce RTX 5070 Ti, 2887, 63, 90.35, 1420",
+    "returncode": 0,
+    "stderr": ""
+  },
+  "process_wall_seconds": 1469.4132961000005,
+  "post_setup_wall_seconds": 1452.9452199000007,
+  "uninterrupted_end_to_end_seconds": 1469.4132961000005,
+  "uninterrupted_post_setup_seconds": 1452.9452199000007
+}

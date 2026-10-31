@@ -1,0 +1,35 @@
+{
+  "phase_a": "independent head math; ordered additive residual and history updates",
+  "accepted": false,
+  "timing_ran": false,
+  "full_65536_token_gate_passed": false,
+  "boot_first_state_mismatch": 2382,
+  "reference_seeded_rendering_first_state_mismatch": 28,
+  "maximum_observed_abs_difference": 1.0,
+  "numerical_root_cause": "not isolated",
+  "upstream_modified": false,
+  "fusion_sha256": "71e514b9271cadfbee73b4811a454e89615d7a78988710ec04968d880ce8a82f",
+  "files": {
+    "dependencies.json": "b07392e5706653fef64aa51dbb8a469563bba62cf8ce9fd06c2b0d552c42cb3e",
+    "reset-check.json": "ce1ee828c915a11fcaa2bba23d7d93fc1191802ff85e05937c20344cda32ba90",
+    "smoke-failure.json": "1a0b47e55861962433c983544b6d0aa078c2fb97835d899166091431e66e92fe",
+    "smoke-detail.json": "9de3cd6fcc88f8ddaf6aace0fa3dfd3c003ff68c9ebf55be4db5f5f1a494304c",
+    "short-28.json": "46bc1a06e686372d7188bb506c5bfcf3a68b6f8eec86951b8c7e777b744a477b",
+    "synchronized-smoke.json": "2c142ba8941f15f4344e727b4b00a9d36d5b15190bffee9b39897b60badd7551",
+    "equivalence-failure.json": "78471a1dafafda1db9fd411b80bed25d3b789dcf1bc0a0d6e04e7dbc02bc0333",
+    "baseline-control-256.json": "2ce6d284ca84e940ae7d283f0810b60155b351dc0ada5e1878346498091c4e62",
+    "baseline-control-4096.json": "666ad1dad011f2403ad0475973da3dd231fb5f5d50e725ad54295afea4e08571"
+  },
+  "current_scripts": {
+    "analyze.py": "c1aebdc67c5582bdd7390b625212154b45a8fee491b448da2d7a052580a2ee4f",
+    "fusion.py": "71e514b9271cadfbee73b4811a454e89615d7a78988710ec04968d880ce8a82f",
+    "run_gpu.py": "6790d3876f50cbb860bf8a9b997a00a71c6a60c4489051e8edf319bacc817a1e"
+  },
+  "limits": [
+    "No timing or speedup claim.",
+    "No full 65536-token state-equivalence pass.",
+    "Frame-2 window is reference-seeded.",
+    "Unchanged-executor determinism control is bounded to 4096 tokens.",
+    "Explicit full reset differs from profile reset setup."
+  ]
+}

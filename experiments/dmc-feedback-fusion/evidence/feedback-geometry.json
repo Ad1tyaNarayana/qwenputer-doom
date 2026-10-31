@@ -1,0 +1,70 @@
+{
+  "D": 2679,
+  "families": 20,
+  "payload_bits": 16,
+  "shapes": {
+    "fam_idx": [
+      5
+    ],
+    "pay_idx": [
+      16
+    ],
+    "base": [
+      20,
+      2679
+    ],
+    "bits": [
+      20,
+      16,
+      2679
+    ],
+    "ids": [
+      20
+    ],
+    "small": [
+      20
+    ],
+    "row0": [
+      20
+    ],
+    "table": [
+      948,
+      2679
+    ]
+  },
+  "max_nonzero_bit_terms_per_coordinate": 1,
+  "bit_values": [
+    0.0,
+    1.0,
+    256.0
+  ],
+  "base_values": [
+    -128.0,
+    0.0,
+    1.0,
+    128.0
+  ],
+  "small_families": [
+    false,
+    false,
+    false,
+    true,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "runtime_sha256": "8f9ff6803b9f67df458bafd1878b2dbba63adc14addef8795deb3268635ed2a0"
+}

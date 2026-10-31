@@ -1,0 +1,23 @@
+{
+  "main_generated_tokens_checked": 672768,
+  "queue_generated_tokens_checked": 8768,
+  "mismatches": 0,
+  "script_matches_measured_sha256": true,
+  "upstream_clean": true,
+  "scheduled_sublayers_per_token": 54,
+  "graph_kernel_nodes_per_token": 133,
+  "profiler_shares_sum_to_100": true,
+  "files": {
+    "inventory_gpu.py": "f721158424df0cefce2e8bffdfb986be96637c2cbb47855a46c78157800abb57",
+    "queue_probe.py": "cfc0067279b7c581d745c072fe1e80a2bdeb868bdce122479bf327eb6c2b1e49",
+    "summarize.py": "fc7918b1aa9d89b58f5bf309324f1616c55139f709d0b88132f6ff6bcd34b0a1",
+    "README.md": "8e89c0834d2a0d870f76d9fbfb7ded3489364e7e4a176b2629a98a7a14f613dc",
+    "profile_gpu.py": "c26004d9e6e162eb982d2500717f233235050e808eb94895ee923ab465e7c119",
+    "verify_reference.py": "b67c507aeadd73488c77ce33c906ceeee33cf040528c425ca48b8b69ae3cd832",
+    "evidence/profile-summary.json": "2f4428d506038f8cb86500981878d50677a5696052a3508a5d080cd26f6f776c",
+    "evidence/report.json": "72941e813e7f2bb45cf50e255cc3e3a2b03e1fb459b67c5edc550631c49ddcf8",
+    "evidence/reference-recheck.json": "7348498bcee4b86399a116a937510137f8f43b3a358e87f513e3d589a216c94d",
+    "evidence/queue-probe.json": "7371d44ffec0a9d8f75800ca391cccb78a8ee52ad4db38842405093b9f92d62e",
+    "evidence/inventory.json": "8f35ee43c9f60d620619e85e59db64fd33c4f76dd6a25b37ad9ef470efb6642e"
+  }
+}

@@ -1,6 +1,8 @@
 import hashlib,json,sys,time,types
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
+sys.path.insert(0,str(ROOT.parents[1]/'tiny-llm-ndot'))
+from checkpoint_integrity import seal,verify
 ELF_SHA='9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340'
 TRACE_SHA='23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38'
 TOTAL_TOKENS=6342933
@@ -36,11 +38,14 @@ def save_checkpoint(fr,offset,path):
  assert torch.count_nonzero(fr.ex.y).item()==0
  heads=[s for s in fr.ex.steps if s['kind']=='head']
  data={'elf_sha256':ELF_SHA,'offset':offset,'x':fr.x.detach().cpu().clone(),'tok':fr.tok.detach().cpu().clone(),'heads':[{'S':s['S'].detach().cpu().clone(),'hist':s['hist'].detach().cpu().clone()} for s in heads]}
+ seal(data)
  temporary=path.with_suffix('.tmp');torch.save(data,temporary);temporary.replace(path)
 
 def restore_checkpoint(fr,path):
  import torch
- data=torch.load(path,map_location='cpu',weights_only=True);assert data['elf_sha256']==ELF_SHA
+ data=torch.load(path,map_location='cpu',weights_only=True)
+ verify(data)
+ assert data['elf_sha256']==ELF_SHA
  heads=[s for s in fr.ex.steps if s['kind']=='head'];assert len(heads)==len(data['heads'])
  for state,saved in zip(heads,data['heads']):
   assert state['S'].shape==saved['S'].shape and state['hist'].shape==saved['hist'].shape
