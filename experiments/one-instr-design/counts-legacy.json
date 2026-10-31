@@ -1,0 +1,409 @@
+{
+  "scope": "software reference protocol accounting, not neural execution",
+  "upstream_revision": "ca13310e2f9f788d1dd3feeea8213c1b0c23913c",
+  "elf_sha256": "358e455b411fd0c17659e5b1a68bd1231524b20eb43e395b8c86533ac0604e99",
+  "instructions": 3885544,
+  "tokens": 6342933,
+  "tokens_per_instruction": 1.6324440026930591,
+  "by_op": {
+    "ADD": {
+      "instructions": 378966,
+      "tokens": 804040,
+      "lengths": {
+        "2": 294660,
+        "1": 19099,
+        "3": 65207
+      }
+    },
+    "ADDI": {
+      "instructions": 741918,
+      "tokens": 1253997,
+      "lengths": {
+        "2": 510057,
+        "1": 230850,
+        "3": 1011
+      }
+    },
+    "AND": {
+      "instructions": 21174,
+      "tokens": 28187,
+      "lengths": {
+        "1": 14208,
+        "2": 6919,
+        "3": 47
+      }
+    },
+    "ANDI": {
+      "instructions": 94990,
+      "tokens": 94993,
+      "lengths": {
+        "1": 94987,
+        "2": 3
+      }
+    },
+    "AUIPC": {
+      "instructions": 53255,
+      "tokens": 106510,
+      "lengths": {
+        "2": 53255
+      }
+    },
+    "BEQ": {
+      "instructions": 59307,
+      "tokens": 59307,
+      "lengths": {
+        "1": 59307
+      }
+    },
+    "BGE": {
+      "instructions": 48069,
+      "tokens": 48069,
+      "lengths": {
+        "1": 48069
+      }
+    },
+    "BGEU": {
+      "instructions": 77052,
+      "tokens": 77052,
+      "lengths": {
+        "1": 77052
+      }
+    },
+    "BLT": {
+      "instructions": 51147,
+      "tokens": 51147,
+      "lengths": {
+        "1": 51147
+      }
+    },
+    "BLTU": {
+      "instructions": 26595,
+      "tokens": 26595,
+      "lengths": {
+        "1": 26595
+      }
+    },
+    "BNE": {
+      "instructions": 181647,
+      "tokens": 181647,
+      "lengths": {
+        "1": 181647
+      }
+    },
+    "DIV": {
+      "instructions": 41,
+      "tokens": 199,
+      "lengths": {
+        "2": 16,
+        "3": 1,
+        "9": 6,
+        "10": 5,
+        "5": 6,
+        "4": 6,
+        "6": 1
+      }
+    },
+    "DIVU": {
+      "instructions": 927,
+      "tokens": 6518,
+      "lengths": {
+        "8": 605,
+        "6": 68,
+        "5": 254
+      }
+    },
+    "ECALL": {
+      "instructions": 72,
+      "tokens": 72,
+      "lengths": {
+        "1": 72
+      }
+    },
+    "JAL": {
+      "instructions": 80360,
+      "tokens": 80360,
+      "lengths": {
+        "1": 80360
+      }
+    },
+    "JALR": {
+      "instructions": 98117,
+      "tokens": 98117,
+      "lengths": {
+        "1": 98117
+      }
+    },
+    "LB": {
+      "instructions": 494,
+      "tokens": 494,
+      "lengths": {
+        "1": 494
+      }
+    },
+    "LBU": {
+      "instructions": 300127,
+      "tokens": 300127,
+      "lengths": {
+        "1": 300127
+      }
+    },
+    "LH": {
+      "instructions": 18108,
+      "tokens": 18349,
+      "lengths": {
+        "1": 17867,
+        "2": 241
+      }
+    },
+    "LHU": {
+      "instructions": 30248,
+      "tokens": 31430,
+      "lengths": {
+        "1": 29066,
+        "2": 1182
+      }
+    },
+    "LUI": {
+      "instructions": 173156,
+      "tokens": 348730,
+      "lengths": {
+        "2": 170466,
+        "1": 136,
+        "3": 2554
+      }
+    },
+    "LW": {
+      "instructions": 383030,
+      "tokens": 619670,
+      "lengths": {
+        "1": 158543,
+        "2": 212334,
+        "3": 12153
+      }
+    },
+    "MUL": {
+      "instructions": 31461,
+      "tokens": 72119,
+      "lengths": {
+        "1": 7197,
+        "2": 7870,
+        "3": 16394
+      }
+    },
+    "MULH": {
+      "instructions": 23055,
+      "tokens": 23055,
+      "lengths": {
+        "1": 23055
+      }
+    },
+    "MULHU": {
+      "instructions": 2,
+      "tokens": 4,
+      "lengths": {
+        "2": 2
+      }
+    },
+    "OR": {
+      "instructions": 35595,
+      "tokens": 60681,
+      "lengths": {
+        "1": 11106,
+        "2": 23892,
+        "3": 597
+      }
+    },
+    "ORI": {
+      "instructions": 662,
+      "tokens": 664,
+      "lengths": {
+        "1": 660,
+        "2": 2
+      }
+    },
+    "REFRESH": {
+      "instructions": 0,
+      "tokens": 3420,
+      "lengths": {
+        "1": 3420
+      }
+    },
+    "REM": {
+      "instructions": 195,
+      "tokens": 575,
+      "lengths": {
+        "4": 65,
+        "3": 55,
+        "2": 75
+      }
+    },
+    "SB": {
+      "instructions": 224427,
+      "tokens": 897708,
+      "lengths": {
+        "4": 224427
+      }
+    },
+    "SH": {
+      "instructions": 15834,
+      "tokens": 63336,
+      "lengths": {
+        "4": 15834
+      }
+    },
+    "SH1ADD": {
+      "instructions": 37787,
+      "tokens": 60788,
+      "lengths": {
+        "1": 14901,
+        "2": 22771,
+        "3": 115
+      }
+    },
+    "SH2ADD": {
+      "instructions": 38704,
+      "tokens": 60561,
+      "lengths": {
+        "2": 21857,
+        "1": 16847
+      }
+    },
+    "SH3ADD": {
+      "instructions": 9207,
+      "tokens": 18383,
+      "lengths": {
+        "2": 9176,
+        "1": 31
+      }
+    },
+    "SLL": {
+      "instructions": 15910,
+      "tokens": 22230,
+      "lengths": {
+        "1": 10510,
+        "2": 4480,
+        "3": 920
+      }
+    },
+    "SLLI": {
+      "instructions": 89430,
+      "tokens": 140576,
+      "lengths": {
+        "1": 47047,
+        "2": 33620,
+        "3": 8763
+      }
+    },
+    "SLT": {
+      "instructions": 5818,
+      "tokens": 5818,
+      "lengths": {
+        "1": 5818
+      }
+    },
+    "SLTI": {
+      "instructions": 55,
+      "tokens": 55,
+      "lengths": {
+        "1": 55
+      }
+    },
+    "SLTIU": {
+      "instructions": 4162,
+      "tokens": 4162,
+      "lengths": {
+        "1": 4162
+      }
+    },
+    "SLTU": {
+      "instructions": 8686,
+      "tokens": 8686,
+      "lengths": {
+        "1": 8686
+      }
+    },
+    "SRA": {
+      "instructions": 1495,
+      "tokens": 1511,
+      "lengths": {
+        "1": 1479,
+        "2": 16
+      }
+    },
+    "SRAI": {
+      "instructions": 13282,
+      "tokens": 13817,
+      "lengths": {
+        "1": 12747,
+        "2": 535
+      }
+    },
+    "SRL": {
+      "instructions": 22086,
+      "tokens": 22352,
+      "lengths": {
+        "1": 21840,
+        "2": 226,
+        "3": 20
+      }
+    },
+    "SRLI": {
+      "instructions": 179109,
+      "tokens": 263288,
+      "lengths": {
+        "1": 94934,
+        "2": 84171,
+        "3": 4
+      }
+    },
+    "SUB": {
+      "instructions": 70008,
+      "tokens": 98979,
+      "lengths": {
+        "1": 41589,
+        "2": 27867,
+        "3": 552
+      }
+    },
+    "SW": {
+      "instructions": 211199,
+      "tokens": 211199,
+      "lengths": {
+        "1": 211199
+      }
+    },
+    "XOR": {
+      "instructions": 16933,
+      "tokens": 41714,
+      "lengths": {
+        "1": 1428,
+        "3": 9276,
+        "2": 6229
+      }
+    },
+    "XORI": {
+      "instructions": 11642,
+      "tokens": 11642,
+      "lengths": {
+        "1": 11642
+      }
+    }
+  },
+  "token_families": {
+    "BYTE": 71,
+    "F0": 1201669,
+    "F1": 1492436,
+    "F2": 117613,
+    "HALT": 1,
+    "J": 406382,
+    "NT": 215912,
+    "QD": 4361,
+    "QS": 1163,
+    "R": 3420,
+    "SS0": 103780,
+    "SS1": 136481,
+    "ST0": 97872,
+    "ST1": 113327,
+    "V": 2448445
+  }
+}

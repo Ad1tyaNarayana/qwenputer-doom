@@ -1,0 +1,208 @@
+{
+  "windows": {
+    "boot": {
+      "token": 6119,
+      "S_mismatched_words": 0,
+      "tensors": [
+        {
+          "name": "residual",
+          "mismatched_words": 4,
+          "flat_word_indices": [
+            2495,
+            2499,
+            2502,
+            2503
+          ],
+          "max_abs_difference": 1.0
+        },
+        {
+          "name": "hist:28",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:29",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:30",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:31",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:32",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:33",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:34",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:35",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:36",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:37",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:38",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:39",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:40",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:41",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:42",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:43",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:44",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:45",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:46",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:47",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:48",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:49",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        },
+        {
+          "name": "hist:50",
+          "mismatched_words": 1,
+          "flat_word_indices": [
+            2495
+          ],
+          "max_abs_difference": 0.09765625
+        }
+      ]
+    },
+    "frame2_render": {
+      "first": null
+    }
+  }
+}

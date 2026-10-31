@@ -1,0 +1,114 @@
+{
+  "repeats_per_side_per_window": 5,
+  "tokens_per_run": 65536,
+  "windows": {
+    "boot": {
+      "baseline": {
+        "tokens_per_second_median": 2086.227976242027,
+        "tokens_per_second_range": [
+          2085.8083396878055,
+          2086.3258249639316
+        ],
+        "total_us_per_token": 479.3339996337908,
+        "profile": {
+          "tokens": 256,
+          "circuit_kernels_per_token": 108,
+          "data_rom_us_per_token": 259.73757031247953,
+          "data_rom_apply_us_per_token": 41.39133203125054,
+          "trace_sha256": "3db2c7bd05af16457ee8d41ac875e9ec3618e20acf385f299ad0a5ea6b3130bb",
+          "trace_bytes": 35052191
+        }
+      },
+      "fused": {
+        "tokens_per_second_median": 3940.7469111637865,
+        "tokens_per_second_range": [
+          3940.394984192762,
+          3940.8724334855247
+        ],
+        "total_us_per_token": 253.75900115967576,
+        "profile": {
+          "tokens": 256,
+          "circuit_kernels_per_token": 48,
+          "data_rom_us_per_token": 53.22286718750002,
+          "data_rom_apply_us_per_token": 21.647203124999965,
+          "trace_sha256": "a4728bd1debe33e0df21774ebd9fa9e1e6a015bc88f18a41e382bddb3ac54221",
+          "trace_bytes": 20017620
+        }
+      },
+      "speedup": 1.8889339784726449,
+      "time_reduction_fraction": 0.4706008725574514
+    },
+    "frame2_render": {
+      "baseline": {
+        "tokens_per_second_median": 2086.450538436924,
+        "tokens_per_second_range": [
+          2086.349104654512,
+          2086.4594528063276
+        ],
+        "total_us_per_token": 479.2828689575146,
+        "profile": {
+          "tokens": 256,
+          "circuit_kernels_per_token": 108,
+          "data_rom_us_per_token": 259.68115234372885,
+          "data_rom_apply_us_per_token": 41.356269531250696,
+          "trace_sha256": "0b067afba2e52a9f848bfb07875d37e07199e4e6a449ed7daa565ef42421748d",
+          "trace_bytes": 35141188
+        }
+      },
+      "fused": {
+        "tokens_per_second_median": 3941.4998094808634,
+        "tokens_per_second_range": [
+          3941.1602621615957,
+          3941.7453629366714
+        ],
+        "total_us_per_token": 253.71052856443254,
+        "profile": {
+          "tokens": 256,
+          "circuit_kernels_per_token": 48,
+          "data_rom_us_per_token": 53.21666406249996,
+          "data_rom_apply_us_per_token": 21.664691406249972,
+          "trace_sha256": "655e337b98aa2009fd2bfdf89cba41aa9023b657fe1362937711f16b1457cfd2",
+          "trace_bytes": 20052749
+        }
+      },
+      "speedup": 1.8890933366834854,
+      "time_reduction_fraction": 0.47064553106962315
+    }
+  },
+  "normal_path_tokens_matched": 1310720,
+  "profile_tokens_matched": 1024,
+  "gpu_samples": {
+    "boot/baseline": {
+      "samples": 152,
+      "median_utilization_percent": 100.0,
+      "median_memory_utilization_percent": 0.0,
+      "median_sm_clock_mhz": 2887.0,
+      "median_power_w": 78.02,
+      "median_memory_used_mib": 1914.0
+    },
+    "boot/fused": {
+      "samples": 80,
+      "median_utilization_percent": 100.0,
+      "median_memory_utilization_percent": 0.0,
+      "median_sm_clock_mhz": 2880.0,
+      "median_power_w": 93.63,
+      "median_memory_used_mib": 1914.0
+    },
+    "frame2_render/baseline": {
+      "samples": 150,
+      "median_utilization_percent": 100.0,
+      "median_memory_utilization_percent": 0.0,
+      "median_sm_clock_mhz": 2887.0,
+      "median_power_w": 78.05,
+      "median_memory_used_mib": 1914.0
+    },
+    "frame2_render/fused": {
+      "samples": 80,
+      "median_utilization_percent": 100.0,
+      "median_memory_utilization_percent": 0.0,
+      "median_sm_clock_mhz": 2880.0,
+      "median_power_w": 93.695,
+      "median_memory_used_mib": 1914.0
+    }
+  }
+}

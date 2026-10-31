@@ -1,0 +1,7 @@
+<AUDIT_WORKDIR>/doomgeneric/doomgeneric/r_segs.c:399:19: warning: taking the absolute value of unsigned type 'angle_t' (aka 'unsigned int') has no effect [-Wabsolute-value]
+  399 |     offsetangle = abs(rw_normalangle-rw_angle1);
+      |                   ^
+<AUDIT_WORKDIR>/doomgeneric/doomgeneric/r_segs.c:399:19: note: remove the call to 'abs' since unsigned values cannot be negative
+  399 |     offsetangle = abs(rw_normalangle-rw_angle1);
+      |                   ^~~
+1 warning generated.

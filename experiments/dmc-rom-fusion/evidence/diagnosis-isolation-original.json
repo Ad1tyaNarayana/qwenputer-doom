@@ -1,0 +1,113 @@
+{
+  "left": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-a2",
+  "right": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-b",
+  "windows": {
+    "boot": {
+      "tokens": 65536,
+      "digest_mismatches": 45,
+      "first": {
+        "token": 3200,
+        "tensors": [
+          "residual",
+          "hist:28",
+          "hist:29",
+          "hist:30",
+          "hist:31",
+          "hist:32",
+          "hist:33",
+          "hist:34",
+          "hist:35",
+          "hist:36",
+          "hist:37",
+          "hist:38",
+          "hist:39",
+          "hist:40",
+          "hist:41",
+          "hist:42",
+          "hist:43",
+          "hist:44",
+          "hist:45",
+          "hist:46",
+          "hist:47",
+          "hist:48",
+          "hist:49",
+          "hist:50"
+        ],
+        "left_token": 10851,
+        "right_token": 10851
+      },
+      "files": [
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-a2\\boot-digests.jsonl",
+          "sha256": "9f453c62bc9638f51e5324abcdadc3442d0d5f283b7a82d3abf658452c68843e"
+        },
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-b\\boot-digests.jsonl",
+          "sha256": "2f0a9101546e3debcd45c9d653371eb97daab0daf0c74025c021ade54ede6d77"
+        }
+      ],
+      "snapshots": {
+        "boot-token-2382.npz": {
+          "S": {
+            "words": 0,
+            "first_words": []
+          },
+          "dynamic": {
+            "words": 0,
+            "first_words": []
+          }
+        }
+      }
+    },
+    "frame2_render": {
+      "tokens": 4096,
+      "digest_mismatches": 3,
+      "first": {
+        "token": 1107,
+        "tensors": [
+          "residual",
+          "hist:35",
+          "hist:36",
+          "hist:37",
+          "hist:38",
+          "hist:39",
+          "hist:40",
+          "hist:41",
+          "hist:42",
+          "hist:43",
+          "hist:44",
+          "hist:45",
+          "hist:46",
+          "hist:47",
+          "hist:48",
+          "hist:49",
+          "hist:50"
+        ],
+        "left_token": 32769,
+        "right_token": 32769
+      },
+      "files": [
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-a2\\frame2_render-digests.jsonl",
+          "sha256": "2dbd2873cf4a112ccef4ddc2e582706c41e6df1522a1b8bb451c80d022f9e11e"
+        },
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-isolation-b\\frame2_render-digests.jsonl",
+          "sha256": "ca75c5606cab2416c0b08cd3cfb4bf4c6c3597469bf0fbdd58d6cb4947716fed"
+        }
+      ],
+      "snapshots": {
+        "frame2_render-token-2382.npz": {
+          "S": {
+            "words": 0,
+            "first_words": []
+          },
+          "dynamic": {
+            "words": 0,
+            "first_words": []
+          }
+        }
+      }
+    }
+  }
+}

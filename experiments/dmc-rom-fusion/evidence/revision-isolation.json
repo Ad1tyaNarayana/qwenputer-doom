@@ -1,0 +1,36 @@
+{
+  "left": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-revision-base",
+  "right": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-revision-fused",
+  "windows": {
+    "boot": {
+      "tokens": 65536,
+      "digest_mismatches": 0,
+      "first": null,
+      "files": [
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-revision-base\\boot-digests.jsonl",
+          "sha256": "9f453c62bc9638f51e5324abcdadc3442d0d5f283b7a82d3abf658452c68843e"
+        },
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-revision-fused\\boot-digests.jsonl",
+          "sha256": "b3a7be5e1289ac6eff0b6dbb2e5606451d44a4781dcd68b654a985e52f441a91"
+        }
+      ]
+    },
+    "frame2_render": {
+      "tokens": 65536,
+      "digest_mismatches": 0,
+      "first": null,
+      "files": [
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-revision-base\\frame2_render-digests.jsonl",
+          "sha256": "35d9524739e666d9230ca0931773016ae24a4ff374f35b83eb7e28ab1cbc5637"
+        },
+        {
+          "path": "C:\\Users\\Admin\\qwenputer-games-work\\artifacts\\rom-revision-fused\\frame2_render-digests.jsonl",
+          "sha256": "d5c3b77f09616a9b663117e4d636f48639ce052179f1c4270a41230ff897322d"
+        }
+      ]
+    }
+  }
+}

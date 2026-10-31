@@ -1,0 +1,48 @@
+{
+  "files": {
+    "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer\\experimental\\riscv\\chipformer\\rv\\tritonexec.py": {
+      "bytes": 13743,
+      "sha256": "247be289400eced1699ed3a1cf648820b8f09c3ad824c02987ec7a9dd74a65bf"
+    },
+    "C:\\Users\\Admin\\qwenputer-games-work\\.upstream\\qwenputer\\experimental\\riscv\\chipformer\\rv\\fastexec.py": {
+      "bytes": 19802,
+      "sha256": "41cbbaef0ab8476356e26e828026ff1e5eca4eb35ca6c410a8849981fffd55a7"
+    },
+    "C:\\Users\\Admin\\qwenputer-games-work\\probes\\dmc-frame-20261029\\scratch\\chipformer\\rv\\tritonexec.py": {
+      "bytes": 13743,
+      "sha256": "247be289400eced1699ed3a1cf648820b8f09c3ad824c02987ec7a9dd74a65bf"
+    },
+    "C:\\Users\\Admin\\qwenputer-games-work\\probes\\dmc-frame-20261029\\runtime.py": {
+      "bytes": 3821,
+      "sha256": "8f9ff6803b9f67df458bafd1878b2dbba63adc14addef8795deb3268635ed2a0"
+    },
+    "C:\\Users\\Admin\\qwenputer-games-work\\probes\\dmc-frame-20261029\\helpers\\prepare.py": {
+      "bytes": 4285,
+      "sha256": "54e47fd4b31e34825805b25583e558554dc78851691d9e7f17faf1808b73e9ba"
+    },
+    "C:\\Users\\Admin\\qwenputer-games-work\\probes\\dmc-frame-20261029\\inputs\\doom.elf": {
+      "bytes": 3526312,
+      "sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340"
+    },
+    "C:\\Users\\Admin\\qwenputer-games-work\\probes\\dmc-frame-20261029\\inputs\\reference.tokens.u32": {
+      "bytes": 25371732,
+      "sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38"
+    }
+  },
+  "upstream_status": "",
+  "gpu_properties": {
+    "name": "NVIDIA GeForce RTX 5070 Ti",
+    "multiprocessors": 70,
+    "total_memory": 17066033152
+  },
+  "triton_windows_distribution": "3.8.0.post29",
+  "existing_checkpoint": {
+    "path": "C:\\Users\\Admin\\qwenputer-games-work\\probes\\dmc-frame-20261029\\private-run\\checkpoint.pt",
+    "bytes": 83076085,
+    "elf_sha256": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+    "offset": 6342933,
+    "use_for_walk": false,
+    "reason": "Legacy first-frame ELF differs from the continuing walk ELF."
+  },
+  "processes": "pid, process_name\n748, C:\\Windows\\System32\\dwm.exe\n4568, C:\\Windows\\System32\\ShellHost.exe\n8964, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n8708, C:\\Windows\\explorer.exe\n8500, C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\CEF\\NVIDIA Overlay.exe\n9476, C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\CEF\\NVIDIA Overlay.exe\n11208, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n11168, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n12544, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.50\\msedgewebview2.exe\n2188, C:\\Program Files\\WindowsApps\\5319275A.WhatsAppDesktop_2.2640.100.0_x64__cv1g1gvanyjgm\\WhatsApp.Root.exe\n7936, C:\\Program Files\\WindowsApps\\Raycast.Raycast_2.9.0.0_x64__qypenmj9wpt2a\\Raycast\\Raycast.exe\n15524, C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe\n16076, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.50\\msedgewebview2.exe\n18084, C:\\Program Files\\WindowsApps\\Microsoft.YourPhone_1.26082.121.0_x64__8wekyb3d8bbwe\\PhoneExperienceHost.exe\n15412, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n8336, C:\\Program Files\\GIGABYTE\\Control Center\\GCC.exe\n19988, C:\\Users\\Admin\\AppData\\Local\\Programs\\twinkle-tray\\Twinkle Tray.exe\n6368, C:\\Program Files\\WindowsApps\\65d483df-b37e-4fcf-94de-8b795233db63_25.1.23.0_x64__1mmjbktjj1mkp\\GBT_DL_LIB.exe\n20812, C:\\Program Files\\WindowsApps\\AdvancedMicroDevicesInc-2.AMDRadeonSoftware_10.25.10326.0_x64__0a9344xs7nr4m\\radeonsoftware\\AMDRSSrcExt.exe\n21520, C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1023.6621.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n16352, C:\\Users\\Admin\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\6ef99b3d04073aa7\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe\n20632, C:\\Program Files\\WindowsApps\\AdvancedMicroDevicesInc-2.AMDRadeonSoftware_10.25.10326.0_x64__0a9344xs7nr4m\\radeonsoftware\\RadeonSoftware.exe\n17184, C:\\Windows\\System32\\ApplicationFrameHost.exe\n19276, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n18272, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.50\\msedgewebview2.exe\n18840, C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe\n5556, C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\n27556, C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\n"
+}

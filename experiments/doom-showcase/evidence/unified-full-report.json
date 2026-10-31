@@ -1,0 +1,229 @@
+{
+  "workload": "first-frame",
+  "complete": true,
+  "reference_tokens_used_as_inputs": false,
+  "reference_pixels_used": false,
+  "reference_state_used_for_resume": false,
+  "mismatches": 0,
+  "timed_work": "perf_counter around successful fr.run chunks including self-feedback, output copies and CPU transfer",
+  "wall_scope": "Module entry until final report serialization begins; includes setup, capture, comparison, extraction, IO and checkpoints",
+  "gpu_start": {
+    "values": "NVIDIA GeForce RTX 5070 Ti, 180, 0, 7.11, 871",
+    "returncode": 0,
+    "stderr": ""
+  },
+  "runtime": {
+    "mode": "unified W=4 unchanged circuit with data-ROM batching and single-kernel feedback",
+    "stock_hf": false,
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "constructor": {
+      "base_sha256": "a746a1d9826ca99a4a93c905fe2e9f0560cc900cc435e6fc97bc6e546409f620",
+      "constructor_sha256": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+      "generated_sha256": "5e156bdb8fa6c543d96f0760a1a4d18dfea4cba3e558673a909bed1be0fde7da",
+      "arithmetic_sha256": "aaa5e1d5e282783c85297160056f675a38c3c23e72debda6e3bd6162eadb611a",
+      "reuse_sha256": "c4bf60662e18a5defaae09d08dfc6884bb8199ca87b15e030e0a4e1169c0d966",
+      "reduced": true,
+      "stock_integer_counters": true,
+      "integer_counters_sha256": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+      "counter_ir_sha256": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+      "replacement_sites": [
+        "from chipformer.rv import ref as RF",
+        "2: mis_ld, 3: mis_st, 4: oor_ld, 5: oor_st,",
+        "    n_plain = len(srcs)",
+        "+ uops[\"MUL\"] + mulhs + any_of(*RF.ZBA) + sltish + sltuish)",
+        "\"imm\": imm, \"r\": r, \"val\": val,"
+      ]
+    },
+    "geometry": {
+      "layers": 64,
+      "dims": 2113,
+      "heads": 627,
+      "ffn_units": 68923,
+      "max_units": 8260,
+      "max_heads": 16
+    },
+    "prepare_manifest": {
+      "rv/spec.py": {
+        "original_sha256": "30b0095b23d2c9b963a25ff60cff6d21281f100e777adb8b99e024201af600ad",
+        "scratch_sha256": "dc10c15049ed87937b854e626e0940dc26e88ea2504518f95df738e3e507a016",
+        "replacements": [
+          [
+            "DROM_BASE, DROM_WORDS = 0x20000, 1 << 15",
+            "DROM_BASE, DROM_WORDS = 0x02000000, 1048576"
+          ],
+          [
+            "RAM_BASE, RAM_WORDS = 0x0, 1 << 13",
+            "RAM_BASE, RAM_WORDS = 0x01000000, 16384"
+          ],
+          [
+            "DATA_BASE = 0x100",
+            "DATA_BASE = RAM_BASE + 0x100"
+          ]
+        ]
+      },
+      "rv/core.py": {
+        "original_sha256": "2205b32147b9fd8e17819934ace20b0cf33336c2b98c51ddc760b95788c54210",
+        "scratch_sha256": "67ecdb22f0db7b46bcd22c1c68646717da7548969f9ab4fafe26f3ce7fcac8c0",
+        "replacements": [
+          [
+            "def build(target:",
+            "def region_literals(bits, base, size):\n    \"\"\"Upper address literals for an aligned power-of-two memory window.\"\"\"\n    if size <= 0 or size & (size - 1) or base % size or not 0 <= base < base + size <= 1 << 32:\n        raise ValueError((base, size))\n    width = size.bit_length() - 1\n    return [bits[i] if base >> i & 1 else 1 - bits[i] for i in range(width, 32)]\n\n\ndef build(target:"
+          ],
+          [
+            "    c = RvCore(target, text)",
+            "    if text is not None:\n        raise ValueError(\"This memory-map prototype supports the standalone CPU only.\")\n    c = RvCore(target, text)"
+          ],
+          [
+            "hl = lits_of(EA[13:17], h)",
+            "hl = lits_of(EA[13:(4 * S.DROM_WORDS).bit_length() - 1], h)"
+          ],
+          [
+            "in_ram = c.and_([1 - b for b in EA[15:32]], \"in_ram\")",
+            "in_ram = c.and_(region_literals(EA, S.RAM_BASE, 4 * S.RAM_WORDS), \"in_ram\")"
+          ],
+          [
+            "in_drom = c.and_([1 - b for b in EA[18:32]] + [EA[17]], \"in_drom\")",
+            "in_drom = c.and_(region_literals(EA, S.DROM_BASE, 4 * S.DROM_WORDS), \"in_drom\")"
+          ],
+          [
+            "    for h in range(S.RAM_WORDS >> 8):\n        r0, r1 = {}, {}\n        for wi in range(S.RAM_WORDS):\n            if (wi & 15 | (wi >> 12) << 4) != h or not m.ram[wi]:\n                continue\n            row = np.zeros(HD)\n            row[list(REF_COLS)] = A_REF\n            for i in range(32):\n                row[2 + i] = A_BIT * (m.ram[wi] >> i & 1)\n            (r1 if wi >> 4 & 1 else r0)[wi >> 5 & 127] = row\n        c.tables[f\"ram{h}\"].init = [r0, r1]",
+            "    for h in range(S.RAM_WORDS >> 8):\n        c.tables[f\"ram{h}\"].init = [{}, {}]\n    for wi, value in enumerate(m.ram):\n        if not value:\n            continue\n        h = wi & 15 | (wi >> 12) << 4\n        row = np.zeros(HD)\n        row[list(REF_COLS)] = A_REF\n        for i in range(32):\n            row[2 + i] = A_BIT * (value >> i & 1)\n        c.tables[f\"ram{h}\"].init[wi >> 4 & 1][wi >> 5 & 127] = row"
+          ]
+        ]
+      }
+    },
+    "ram_bytes": 65536,
+    "drom_bytes": 4194304,
+    "code_rom_bytes": 262144,
+    "reference_tokens_used_as_inputs": false,
+    "reference_machine_run_called": false,
+    "boot_state_only": true,
+    "explicit_full_history_reset": true,
+    "scripts": {
+      "experiments\\tiny-llm-ndot\\worker.py": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+      "experiments\\neural-accelerator\\constructor.py": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+      "experiments\\neural-accelerator\\compact.py": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+      "experiments\\neural-accelerator\\integer_counters.py": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+      "experiments\\neural-accelerator\\counter_ir.py": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+      "experiments\\tiny-llm-ndot-fused\\story.py": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+      "experiments\\tiny-llm-ndot-fused\\fusion.py": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+      "experiments\\tiny-llm-ndot-fused\\runtime.py": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+      "experiments\\dmc-feedback-fusion\\fusion.py": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+      "experiments/showcase/gpu_worker.py": "75ece4f5ecbee9935c48ac46d8e6a3522f403fcaae6e91931425a5ce66067459"
+    },
+    "rom_batches": [
+      {
+        "indices": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "value_heads": 896,
+        "widths": {
+          "KQ": 16,
+          "KK": 2,
+          "KV": 2,
+          "KZ": 2,
+          "QHOT": 2
+        }
+      }
+    ],
+    "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+    "weight_binding": "stock-emitted BF16 hash; identical generic constructor source manifest, no guest specialization"
+  },
+  "inputs": {
+    "doom.elf": "9effb70dfe4cad579f0381a657ac3711564da0278a1410f59789e61fa26ca340",
+    "reference.tokens.u32": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+    "strips.json": "8045dd146345a67eeabeb48a15d71978a7cbd8b7d83c582de5aef99746d132b4",
+    "reference-trace.json": "ac05ee297f7c9cd04bdf3b5bf156e54b546e774a7dd94e58c7119ab64834571d"
+  },
+  "fused_acceptance": {
+    "fusion.py": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+    "runtime.py": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82"
+  },
+  "scripts": {
+    "experiments\\tiny-llm-ndot\\worker.py": "10212c55cf965cf3488c339c9bf01377c1be102c7f60e66eaf617a4d99480469",
+    "experiments\\neural-accelerator\\constructor.py": "836fd8dbbffad7b60dfd9a24129e68e3c8f3589bcc4b5c711a1004a167932ef9",
+    "experiments\\neural-accelerator\\compact.py": "1a9854fcc55971e41ef73028e3fc9f051f69caede6cea01c3e8c3ddac6ba662c",
+    "experiments\\neural-accelerator\\integer_counters.py": "2248062aa5592face5421d38d77092d2dc01586b9b064093bbbcbae009824be8",
+    "experiments\\neural-accelerator\\counter_ir.py": "6db4da312d2a4d1103b3b556132a40f4a725c23dad42b10317055a0637d05caa",
+    "experiments\\tiny-llm-ndot-fused\\story.py": "8a58570f98bd9583579c876ad7de17b1743e0e86e3421d57f884a16344401c12",
+    "experiments\\tiny-llm-ndot-fused\\fusion.py": "b2680ebc0b04c7b99f1580766725d9646b2f35cd8654627c32a1b6d9a9d54247",
+    "experiments\\tiny-llm-ndot-fused\\runtime.py": "3a2976278f95aa35a34a9d9404836f216e969734fe81d46c1b3c607f54a4ab82",
+    "experiments\\dmc-feedback-fusion\\fusion.py": "943e5e4bed66317955dd76f76c94be3c625d1438b34478747fa9b6e1ccd15258",
+    "experiments/showcase/gpu_worker.py": "75ece4f5ecbee9935c48ac46d8e6a3522f403fcaae6e91931425a5ce66067459"
+  },
+  "worker": "b94a42151668ae80078248a171ef08a595c781db5f79383143b1385599d85cd9",
+  "showcase_worker": "a478544732ae3e489ac769c9dd2a706a5fb0badaa46842f0772a98d965d9c659",
+  "network_weight_sha256": "0e515bbb3109997a130c903deb40dce3447f8991e15b6637e0071c71f8b6e07d",
+  "startup_state": "ELF boot snapshot in the unified circuit; every lag history, residual and fusion scratch buffer asserted zero",
+  "setup_seconds": 15.415186899999753,
+  "interruptions": 0,
+  "started_from_checkpoint_offset": 0,
+  "uninterrupted_wall_claim_valid": true,
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "setup_and_restore_seconds": 15.417953699999998,
+  "generated_tokens": 6342933,
+  "tokens": 6342933,
+  "frame_hashes": [
+    {
+      "frame": 1,
+      "generated_token_offset": 6342933,
+      "frame_sha256": "6d60d53e30603c046bc61d6fdc1818cc9318f227064ec9b77285b1bda15d0db2",
+      "updated_pixels": 76800,
+      "unique_rgb565_colors": 147
+    }
+  ],
+  "completed_strips": 25,
+  "retained_chunk_seconds": 1693.106171399988,
+  "tokens_per_second": 3746.3291476607073,
+  "microseconds_per_token": 266.92796083452055,
+  "actual_trace_sha256": "23d6d7138e2612dfd971f3d86ac3f711c98a0cd2ac90e77410bcc38240edde38",
+  "checkpoint_offset": 6342933,
+  "halted": true,
+  "final_gpu_ram_sha256": "b9ea6e4ad1a05162f571970604e1a085078d8cf6ae21da48749b47f4dd80b3ef",
+  "final_registers_match": true,
+  "historical_comparison": {
+    "retained_chunk_seconds": 3044.574422900019,
+    "scope": "Historical first frame on the original circuit, unfused, interrupted and resumed; different network",
+    "chunk_seconds_ratio": 1.7982182537215223
+  },
+  "cuda_peak_allocated_bytes": 265773568,
+  "cuda_peak_reserved_bytes": 308281344,
+  "gpu_end": {
+    "values": "NVIDIA GeForce RTX 5070 Ti, 2887, 2, 76.04, 1399",
+    "returncode": 0,
+    "stderr": ""
+  },
+  "process_wall_seconds": 1715.4851406999987,
+  "post_setup_wall_seconds": 1700.0671880999998,
+  "uninterrupted_end_to_end_seconds": 1715.4851406999987,
+  "uninterrupted_post_setup_seconds": 1700.0671880999998
+}

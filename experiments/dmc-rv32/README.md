@@ -6,6 +6,10 @@ strips. The Qwenputer glue here runs that real engine to E1M1 in a software
 RV32 reference machine with 64 KiB writable RAM. This result does not by
 itself establish compiled neural execution.
 
+An opt-in [continuing reference workload](CONTINUING.md) adds deterministic
+35 Hz simulation, a 24 Hz display schedule, recorded keyboard input, and
+per-frame phase counts. The default build retains this first-frame fixture.
+
 The pinned source is atc1441/Vape_DOOM_ScreenShare commit
 `710f452b59decb07e8b34bad9a66875657d63484`, directory
 `PixoAspire_DOOM_Port`. Its converter uses Doomgeneric commit
